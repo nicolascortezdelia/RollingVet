@@ -13,7 +13,7 @@ const Staff = () => {
     <Container className="mb-3">
       <Row>
         <Col sm={12} md={3} className="d-flex mb-4">
-          <Card style={{ width: "18rem" }}>
+          <Card style={{ width: "18rem" }} className="shadow">
             <Card.Img
               variant="top"
               src="https://images.squarespace-cdn.com/content/v1/53aa5722e4b0ada1a70119f2/1529694594561-7ERUUT9270RZI2R946J1/CORP20180521-Freeman+%284+of+6%29-Edit.jpg?format=2500w"
@@ -37,7 +37,7 @@ const Staff = () => {
           </Card>
         </Col>
         <Col sm={12} md={3} className="d-flex mb-4">
-          <Card style={{ width: "18rem" }}>
+          <Card style={{ width: "18rem" }} className="shadow">
             <Card.Img
               variant="top"
               src="https://images.squarespace-cdn.com/content/v1/53aa5722e4b0ada1a70119f2/1529694594561-7ERUUT9270RZI2R946J1/CORP20180521-Freeman+%284+of+6%29-Edit.jpg?format=2500w"
@@ -61,7 +61,7 @@ const Staff = () => {
           </Card>
         </Col>
         <Col sm={12} md={3} className="d-flex mb-4">
-        <Card style={{ width: "18rem" }}>
+        <Card style={{ width: "18rem" }} className="shadow">
             <Card.Img
               variant="top"
               src="https://images.squarespace-cdn.com/content/v1/53aa5722e4b0ada1a70119f2/1529694594561-7ERUUT9270RZI2R946J1/CORP20180521-Freeman+%284+of+6%29-Edit.jpg?format=2500w"
@@ -85,7 +85,7 @@ const Staff = () => {
           </Card>
         </Col>
         <Col sm={12} md={3} className="d-flex mb-4">
-          <Card style={{ width: "18rem" }}>
+          <Card style={{ width: "18rem" }} className="shadow">
             <Card.Img
               variant="top"
               src="https://images.squarespace-cdn.com/content/v1/53aa5722e4b0ada1a70119f2/1529694594561-7ERUUT9270RZI2R946J1/CORP20180521-Freeman+%284+of+6%29-Edit.jpg?format=2500w"

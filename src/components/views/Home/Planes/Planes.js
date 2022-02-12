@@ -6,7 +6,7 @@ const Planes = () => {
         <Container>
       <Row>
         <Col sm={12} md={4}>
-          <Card className="text-center">
+          <Card className="text-center shadow">
             <Card.Body>
               <Card.Title>Planes para Perros</Card.Title>
               <Card.Text>
@@ -17,7 +17,7 @@ const Planes = () => {
           </Card>
         </Col>
         <Col sm={12} md={4}>
-          <Card className="text-center">
+          <Card className="text-center shadow">
             <Card.Body>
               <Card.Title>Planes para Gatos</Card.Title>
               <Card.Text>
@@ -28,7 +28,7 @@ const Planes = () => {
           </Card>
         </Col>
         <Col sm={12} md={4}>
-          <Card className="text-center">
+          <Card className="text-center shadow">
             <Card.Body>
               <Card.Title>Planes para Caballos</Card.Title>
               <Card.Text>

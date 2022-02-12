@@ -8,19 +8,25 @@ import {
   ListGroupItem,
   Image,
 } from "react-bootstrap";
+import "./clientes.css"
+import Romina from "../img/Romina.png"
+
+import Bautista from "../img/Bautista.png"
+import Lorena from "../img/Lorena.png"
 
 const Clientes = () => {
   return (
-    <Container>
-      <Row>
-        <Col sm={12} md={4}>
-          <Card border="light" style={{ width: "18rem" }}>
-            <Card.Img
-              variant="top"
-              src="https://images.squarespace-cdn.com/content/v1/53aa5722e4b0ada1a70119f2/1529694594561-7ERUUT9270RZI2R946J1/CORP20180521-Freeman+%284+of+6%29-Edit.jpg?format=2500w"
-              className="rounded"
-            />
-            <Card.Body>
+    <Container >
+      <Row className="justify-content-around">
+        <Col sm={12} md={4} >
+        
+            <div className="text-center" > <img src={Romina} alt="" className="img-redonda" /> </div>
+            
+              
+              
+           
+            
+              <Card.Body>
               <Card.Text className="text-center fst-italic">
                 "La mejor atención y los mejores profesionales toda la ciudad.
                 100% recomendado"
@@ -30,45 +36,42 @@ const Clientes = () => {
               </Card.Title>
               <p className="text-center fw-lighter">Dueña de Dylan</p>
             </Card.Body>
-          </Card>
+         
         </Col>
         <Col sm={12} md={4}>
-          <Card border="light" style={{ width: "18rem" }}>
-            <Card.Img
-              variant="top"
-              src="https://images.squarespace-cdn.com/content/v1/53aa5722e4b0ada1a70119f2/1529694594561-7ERUUT9270RZI2R946J1/CORP20180521-Freeman+%284+of+6%29-Edit.jpg?format=2500w"
-              className="rounded"
-            />
-            <Card.Body>
+        
+            <div className="text-center" > <img src={Bautista} alt="" className="img-redonda" /> </div>
+
+            
+              <Card.Body>
               <Card.Text className="text-center fst-italic">
-                "La mejor atención y los mejores profesionales toda la ciudad.
-                100% recomendado"
+                "Amo como tratan tanto a las mascotas como a las personas"
               </Card.Text>
               <Card.Title className="text-center text-danger fw-bold">
-                Romina González
+                Damián Petrelli
               </Card.Title>
-              <p className="text-center fw-lighter">Dueña de Dylan</p>
+              <p className="text-center fw-lighter">Dueño de Bobby</p>
             </Card.Body>
-          </Card>
+          
         </Col>
         <Col sm={12} md={4}>
-          <Card border="light" style={{ width: "18rem" }}>
-            <Card.Img
-              variant="top"
-              src="https://images.squarespace-cdn.com/content/v1/53aa5722e4b0ada1a70119f2/1529694594561-7ERUUT9270RZI2R946J1/CORP20180521-Freeman+%284+of+6%29-Edit.jpg?format=2500w"
-              className="rounded"
-            />
-            <Card.Body>
+          
+            <div className="text-center" > <img src={Lorena} alt="" className="img-redonda" /> </div>
+            
+              
+              
+           
+            
+              <Card.Body>
               <Card.Text className="text-center fst-italic">
-                "La mejor atención y los mejores profesionales toda la ciudad.
-                100% recomendado"
+                "Tengo muchos gatitos que amo y los llevo siempre al mejor lugar, RollingVet"
               </Card.Text>
               <Card.Title className="text-center text-danger fw-bold">
-                Romina González
+              Lorena Nelegatti
               </Card.Title>
-              <p className="text-center fw-lighter">Dueña de Dylan</p>
+              <p className="text-center fw-lighter">Dueña de Michifuz</p>
             </Card.Body>
-          </Card>
+          
         </Col>
       </Row>
     </Container>

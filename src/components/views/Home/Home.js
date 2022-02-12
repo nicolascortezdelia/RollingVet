@@ -16,6 +16,7 @@ const Home = () => {
       <h1 className="text-center mb-3">Planes</h1>
       <Planes />
       <h1 className="text-center mb-3">Testimonios</h1>
+      <h3 className="text-center fw-lighter mb-3">Lo que dicen nuestros clientes</h3>
       <Clientes></Clientes>
 
         </div>
