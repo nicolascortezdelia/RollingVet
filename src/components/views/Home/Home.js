@@ -15,6 +15,7 @@ const Home = () => {
       <Staff /> 
       <h1 className="text-center mb-3">Planes</h1>
       <Planes />
+      <h1 className="text-center mb-3">Testimonios</h1>
       <Clientes></Clientes>
 
         </div>
