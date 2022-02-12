@@ -12,13 +12,15 @@ import {
   Routes,
   Route
 } from "react-router-dom";
+import Login from "./components/layout/Login";
 
 
 function App() {
   return (
-    <div>
+    <div className = "container">
       <BrowserRouter>
       <Navigation />
+      <Login></Login>
       <main>
       <Routes>
       <Route exact path="/" element={<Home/>}/>
