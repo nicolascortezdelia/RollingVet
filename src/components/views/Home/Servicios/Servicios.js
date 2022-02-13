@@ -23,7 +23,7 @@ const Servicios = () => {
               <Card.Text>
                 Llamanos las 24 hs y te agendamos un examen urgente o respondemos tu consulta de emergencia 
               </Card.Text>
-              <Card.Link className="text-c" href="#">Another Link</Card.Link>
+              <Card.Link className="text-secondary" href="#">Ver Más</Card.Link>
             </Card.Body>
           </Card>
         </Col>
@@ -39,7 +39,7 @@ const Servicios = () => {
                 Equipados con la tecnología más sofisticada te garantizamos el
                 mejor diagnóstico para tu mascota.
               </Card.Text>
-              <Card.Link href="#">Card Link</Card.Link>
+              <Card.Link className="text-secondary" href="#">Ver Más</Card.Link>
             </Card.Body>
           </Card>
         </Col>
@@ -55,7 +55,7 @@ const Servicios = () => {
                 Contamos con los mejores especialistas en cirugías en múltiples
                 especialidades.
               </Card.Text>
-              <Card.Link href="#">Card Link</Card.Link>
+              <Card.Link className="text-secondary" href="#">Ver Más</Card.Link>
             </Card.Body>
           </Card>
         </Col>
@@ -71,7 +71,7 @@ const Servicios = () => {
                 Podés dejar a tus mascotas en nuestra clínica para que sean
                 cuidadas por unas horas
               </Card.Text>
-              <Card.Link href="#">Another Link</Card.Link>
+              <Card.Link className="text-secondary" href="#">Ver Más</Card.Link>
             </Card.Body>
           </Card>
         </Col>
