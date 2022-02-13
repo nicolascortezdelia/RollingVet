@@ -16,9 +16,6 @@ const Footer = () => {
                 className="logo img-responsive"
                 alt="logo de rolling vet"
               />
-              <p>
-                <b>&copy; Todos los derechos reservados</b>
-              </p>
             </Col>
 
             <Col sm={12} md={4}>
@@ -38,6 +35,7 @@ const Footer = () => {
               <p>Teléfono: 0381 578-3X3X</p>
             </Col>
           </Row>
+          <p className="my-5"><b>&copy; Todos los derechos reservados</b></p>
         </Container>
       </section>
     </>
