@@ -1,8 +1,10 @@
 import React from 'react';
 import { Container, Row, Col, Card, Button } from "react-bootstrap";
+import Fade from "react-reveal/Fade";
 
 const Planes = () => {
     return (
+      <Fade bottom>
         <Container>
       <Row>
         <Col sm={12} md={4}>
@@ -40,6 +42,7 @@ const Planes = () => {
         </Col>
       </Row>
     </Container>
+    </Fade>
     );
 };
 

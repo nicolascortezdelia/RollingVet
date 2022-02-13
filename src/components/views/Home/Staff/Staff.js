@@ -7,9 +7,11 @@ import {
   ListGroup,
   ListGroupItem,
 } from "react-bootstrap";
+import Fade from "react-reveal/Fade";
 
 const Staff = () => {
   return (
+    <Fade bottom>
     <Container className="mb-3">
       <Row>
         <Col sm={12} md={3} className="d-flex mb-4">
@@ -110,6 +112,7 @@ const Staff = () => {
         </Col>
       </Row>
     </Container>
+    </Fade>
   );
 };
 
