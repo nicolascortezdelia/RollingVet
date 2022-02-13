@@ -12,6 +12,8 @@ import {
   Routes,
   Route
 } from "react-router-dom";
+import ContactUs from "./components/views/ContactUs/ContactUs";
+
 
 
 function App() {
@@ -20,14 +22,15 @@ function App() {
       <BrowserRouter>
       <Navigation />
       <main>
-      <Routes>
+      {/* <Routes>
       <Route exact path="/" element={<Home/>}/>
       <Route exact path="/product/table" element={<ProductsTable />}/>
       <Route exact path="/product/create" element={<ProductCreate/>}/>
       <Route exact path="/product/edit" element={<ProductEdit/>}/>
       <Route exact path="*" element={<Error404/>}/>
-      </Routes>
-
+      </Routes> */}
+      <ContactUs />
+      
       </main>
       <Footer />
       </BrowserRouter>
