@@ -17,7 +17,7 @@ import Login from "./components/layout/Login";
 
 function App() {
   return (
-    <div className = "container">
+    
       <BrowserRouter>
       <Navigation />
       <Login></Login>
@@ -34,7 +34,6 @@ function App() {
       <Footer />
       </BrowserRouter>
 
-    </div>
   );
 }
 

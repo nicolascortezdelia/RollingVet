@@ -8,7 +8,7 @@ import {
   ListGroupItem,
   Image,
 } from "react-bootstrap";
-import Fade from "react-reveal/Fade";
+
 import "./clientes.css"
 import Romina from "../img/Romina.png"
 
@@ -17,7 +17,7 @@ import Lorena from "../img/Lorena.png"
 
 const Clientes = () => {
   return (
-  <Fade bottom>
+  
     <Container >
       <Row className="justify-content-around">
         <Col sm={12} md={4} >
@@ -77,7 +77,7 @@ const Clientes = () => {
         </Col>
       </Row>
     </Container>
-    </Fade>
+    
   );
 };
 
