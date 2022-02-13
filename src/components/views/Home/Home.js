@@ -4,6 +4,7 @@ import Planes from "./Planes/Planes";
 import Staff from './Staff/Staff';
 import Servicios from './Servicios/Servicios';
 import Clientes from './Clientes/Clientes';
+import Publicidad from './Publicidad/Publicidad';
 import Fade from "react-reveal/Fade";
 
 const Home = () => {
@@ -17,6 +18,7 @@ const Home = () => {
       
       <h1 className="text-center my-3">Planes</h1>
       <Planes />
+      <Publicidad ></Publicidad>
       {/*aquí va la publicidad*/}
       <h1 className="text-center mb-4 mt-5">Nuestros profesionales</h1>
       <Staff /> 
