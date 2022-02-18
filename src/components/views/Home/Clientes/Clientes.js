@@ -3,10 +3,7 @@ import {
   Col,
   Container,
   Row,
-  Card,
-  ListGroup,
-  ListGroupItem,
-  Image,
+  Card
 } from "react-bootstrap";
 
 import "./clientes.css";
