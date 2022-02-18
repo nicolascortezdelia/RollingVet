@@ -4,9 +4,10 @@ import Home from "./components/views/Home/Home";
 import Navigation from "./components/layout/Navigation";
 import Footer from "./components/layout/Footer";
 import ProductsTable from "./components/views/ProductTable/ProductTable";
-import ProductCreate from "./components/views/ProductCreate/ProductCreate";
+// import ProductCreate from "./components/views/ProductCreate/ProductCreate";
 import ProductEdit from "./components/views/ProductEdit/ProductEdit";
 import Error404 from "./components/views/Error404/Error404";
+import FormClientes from './components/views/FormClientes/FromCLientes';
 import {
   BrowserRouter,
   Routes,
@@ -29,8 +30,8 @@ function App() {
       <Route exact path="/product/edit" element={<ProductEdit/>}/>
       <Route exact path="*" element={<Error404/>}/>
       </Routes> */}
-      <ContactUs />
-      
+      {/* <ContactUs /> */}
+      <FormClientes />
       </main>
       <Footer />
       </BrowserRouter>
