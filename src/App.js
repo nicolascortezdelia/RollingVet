@@ -7,13 +7,15 @@ import ProductsTable from "./components/views/ProductTable/ProductTable";
 // import ProductCreate from "./components/views/ProductCreate/ProductCreate";
 import ProductEdit from "./components/views/ProductEdit/ProductEdit";
 import Error404 from "./components/views/Error404/Error404";
-import FormClientes from './components/views/FormClientes/FromCLientes';
+
 import {
   BrowserRouter,
   Routes,
   Route
 } from "react-router-dom";
 import ContactUs from "./components/views/ContactUs/ContactUs";
+import AdminClientes from "./components/views/AdminClientes/AdminClientes";
+import AdminTurnos from "./components/views/AdminTurnos/AdminTurnos";
 
 
 
@@ -31,7 +33,8 @@ function App() {
       <Route exact path="*" element={<Error404/>}/>
       </Routes> */}
       {/* <ContactUs /> */}
-      <FormClientes />
+      {/* <AdminClientes /> */}
+      <AdminTurnos />
       </main>
       <Footer />
       </BrowserRouter>
