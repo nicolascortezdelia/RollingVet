@@ -5,7 +5,7 @@ import "./Footer.css";
 const Footer = () => {
   return (
     <>
-      <section className="bg-primary text-center my-0 footer">
+      <section className="bg-dark text-light text-center my-0 footer">
         <Container>
           
           <Row>

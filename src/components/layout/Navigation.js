@@ -6,7 +6,7 @@ import "./Navigation.css";
 const Navigation = () => {
   return (
     <>
-      <Navbar bg="primary fw-bolder" expand="lg" className="d-flex Container">
+      <Navbar bg="withe fw-bolder" expand="lg" className="d-flex Container">
         <Container>
           <Navbar.Brand href="#/">
             <img
