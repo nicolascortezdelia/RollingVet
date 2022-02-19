@@ -43,7 +43,7 @@ const Staff = () => {
               src="https://images.pexels.com/photos/6234616/pexels-photo-6234616.jpeg?auto=compress&cs=tinysrgb&dpr=1&w=500"
             />
             <Card.Body>
-              <Card.Title className="text-center text-danger fw-bold">Dr Andrián Muñoz</Card.Title>
+              <Card.Title className="text-center text-danger fw-bold">Dr Adrián Muñoz</Card.Title>
               <Card.Text className="text-center">
               6 años de experiencia en cirugía canina. 
               </Card.Text>

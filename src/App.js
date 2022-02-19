@@ -20,7 +20,7 @@ function App() {
     
       <BrowserRouter>
       <Navigation />
-      <Login></Login>
+      
       <main>
       <Routes>
       <Route exact path="/" element={<Home/>}/>
