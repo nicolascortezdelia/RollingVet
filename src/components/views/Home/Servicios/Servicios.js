@@ -19,7 +19,7 @@ const Servicios = () => {
               src="https://vsn.shindiristudio.com/wp-content/uploads/2020/01/Emergency-Vet.jpg"
             />
             <Card.Body>
-              <Card.Title>Card Title</Card.Title>
+              <Card.Title>Emergencias</Card.Title>
               <Card.Text>
                 Llamanos las 24 hs y te agendamos un examen urgente o respondemos tu consulta de emergencia 
               </Card.Text>

@@ -2,6 +2,7 @@ import React from "react";
 import { Button, Container, Nav, NavLink } from "react-bootstrap";
 import Navbar from "react-bootstrap/Navbar";
 import "./Navigation.css";
+import { Link } from "react-router-dom";
 
 const Navigation = () => {
   return (
@@ -22,8 +23,8 @@ const Navigation = () => {
             <Navbar.Toggle aria-controls="basic-navbar-nav" />
             <Navbar.Collapse id="basic-navbar-nav">
               <Nav className="me-auto">
-                <NavLink href="#home">Contactanos</NavLink>
-                <NavLink href="#link">Sobre Nosotros</NavLink>
+                <Link className="nav-link" to="/contactos">Contactanos</Link>
+                <Link className="nav-link" to="/">Sobre Nosotros</Link>
                 <Button variant="outline-dark">LOGIN</Button>
               </Nav>
             </Navbar.Collapse>

@@ -3,6 +3,7 @@ import "bootstrap/dist/css/bootstrap.min.css";
 import Home from "./components/views/Home/Home";
 import Navigation from "./components/layout/Navigation";
 import Footer from "./components/layout/Footer";
+import ContactUs from "./components/views/ContactUs/ContactUs"
 
 import Error404 from "./components/views/Error404/Error404";
 import {
@@ -23,7 +24,8 @@ function App() {
       <main>
        <Routes>
       <Route exact path="/" element={<Home/>}/>
-      {/*<Route exact path="/product/table" element={<ProductsTable />}/>
+      <Route exact path="/contactos" element={<ContactUs />}/>
+      {/*
       <Route exact path="/product/create" element={<ProductCreate/>}/>
       <Route exact path="/product/edit" element={<ProductEdit/>}/>
       <Route exact path="*" element={<Error404/>}/>*/}
