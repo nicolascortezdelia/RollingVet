@@ -12,9 +12,13 @@ const Login = () => {
 };
   
   return (
-    <div>
-      <Form onSubmit = {hundleSubmit}>
-        <Form.Group className="mb-3" controlId="formBasicEmail">
+
+    <div className="container mb-3">
+      
+      <h1 className="display-2 text-center">Ingrese aquí</h1>
+      <hr />
+      <Form onSubmit = {hundleSubmit} className=" mx-5">
+        <Form.Group className="mb-3 " controlId="formBasicEmail">
           <Form.Label>Dirección</Form.Label>
           <Form.Control
             type="email"
@@ -34,7 +38,7 @@ const Login = () => {
               setImput(e.target.value);
             }} 
           />
-          <Button variant="primary" type="submit">
+          <Button variant="primary" type="submit" className="mt-2">
             Ingresar
           </Button>
         </Form.Group>
