@@ -7,7 +7,7 @@ import { Link } from "react-router-dom";
 const Navigation = () => {
   return (
     <>
-      <Navbar bg="withe fw-bolder" expand="lg" className="d-flex Container">
+      <Navbar bg=" fw-bolder" expand="lg" className="d-flex Container">
         <Container>
           <Navbar.Brand href="#/">
           <Link className="nav-link text-dark" to="/" >
@@ -28,7 +28,7 @@ const Navigation = () => {
               <Nav className="me-auto">
                 <Link className="nav-link" to="/contactos">Contactanos</Link>
                 <Link className="nav-link" to="*">Sobre Nosotros</Link>
-                <Link className="btn outline-dark border border-dark" to="/login">LOGIN</Link>
+                <Link className=" nav-link outline-dark border border-dark rounded" to="/login">LOGIN</Link>
               </Nav>
             </Navbar.Collapse>
           </div>

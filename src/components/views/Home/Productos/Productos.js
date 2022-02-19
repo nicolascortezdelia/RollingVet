@@ -14,7 +14,7 @@ const Productos = () => {
             <span className="text-center">Cada fórmula se crea para
           brindar una nutrición que se adapte a las necesidades de salud de tu
           perro, independientemente de su tamaño, raza, edad o estilo de vida.</span>
-          <Button variant="link" className="btn btn-light mt-2 text-danger border border-danger rounded-pill text-decoration-none"> Ver Todos los Productos</Button>
+          <Button variant="link" className="btn btn-white mt-2 text-danger border border-danger rounded-pill text-decoration-none"> Ver Todos los Productos</Button>
 
         </Col>
       </Row>
