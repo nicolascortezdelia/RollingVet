@@ -14,7 +14,7 @@ const Home = () => {
         <div>
           <Fade bottom>
         <HomeCarousel />
-      <h1 className="lead display-1 text-center mb-3 mt-2">Rolling Vet</h1>
+      
       
       <Container>
       <h1 className="text-center my-3">Nuestros Servicios</h1>
