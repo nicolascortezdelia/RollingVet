@@ -4,112 +4,87 @@ import {
   Container,
   Row,
   Card,
-  ListGroup,
-  ListGroupItem,
+  
+  
 } from "react-bootstrap";
+
 
 const Staff = () => {
   return (
+    
     <Container className="mb-3">
-      <Row>
-        <Col sm={12} md={3} className="d-flex mb-4">
-          <Card style={{ width: "18rem" }}>
+      <Row className="d-flex justify-content-around">
+        <Col sm={12} md={3} className="d-flex justify-content-center mb-4 ">
+        <Card border="light" style={{ width: "18rem", height: "35rem" }} className="shadow">
             <Card.Img
               variant="top"
-              src="https://images.squarespace-cdn.com/content/v1/53aa5722e4b0ada1a70119f2/1529694594561-7ERUUT9270RZI2R946J1/CORP20180521-Freeman+%284+of+6%29-Edit.jpg?format=2500w"
+              src="https://images.pexels.com/photos/6234609/pexels-photo-6234609.jpeg?auto=compress&cs=tinysrgb&dpr=1&w=500"
             />
             <Card.Body>
-              <Card.Title>Card Title</Card.Title>
-              <Card.Text>
-                Some quick example text to build on the card title and make up
-                the bulk of the card's content.
+              <Card.Title className="text-center text-danger fw-bold">Dra Liza Morgan </Card.Title>
+              <Card.Text className="text-center">
+                Más de 5 años de experiencia en oncología.
+  
+                
               </Card.Text>
+              
             </Card.Body>
-            <ListGroup className="list-group-flush">
-              <ListGroupItem>Cras justo odio</ListGroupItem>
-              <ListGroupItem>Dapibus ac facilisis in</ListGroupItem>
-              <ListGroupItem>Vestibulum at eros</ListGroupItem>
-            </ListGroup>
-            <Card.Body>
-              <Card.Link href="#">Card Link</Card.Link>
-              <Card.Link href="#">Another Link</Card.Link>
-            </Card.Body>
+
           </Card>
+          
         </Col>
-        <Col sm={12} md={3} className="d-flex mb-4">
-          <Card style={{ width: "18rem" }}>
+       
+       
+
+        <Col sm={12} md={3} className="d-flex justify-content-center mb-4 ">
+        <Card border="light" style={{ width: "18rem", height: "35rem" }} className="shadow">
             <Card.Img
               variant="top"
-              src="https://images.squarespace-cdn.com/content/v1/53aa5722e4b0ada1a70119f2/1529694594561-7ERUUT9270RZI2R946J1/CORP20180521-Freeman+%284+of+6%29-Edit.jpg?format=2500w"
+              src="https://images.pexels.com/photos/6234616/pexels-photo-6234616.jpeg?auto=compress&cs=tinysrgb&dpr=1&w=500"
             />
             <Card.Body>
-              <Card.Title>Card Title</Card.Title>
-              <Card.Text>
-                Some quick example text to build on the card title and make up
-                the bulk of the card's content.
+              <Card.Title className="text-center text-danger fw-bold">Dr Adrián Muñoz</Card.Title>
+              <Card.Text className="text-center">
+              6 años de experiencia en cirugía canina. 
               </Card.Text>
+              
             </Card.Body>
-            <ListGroup className="list-group-flush">
-              <ListGroupItem>Cras justo odio</ListGroupItem>
-              <ListGroupItem>Dapibus ac facilisis in</ListGroupItem>
-              <ListGroupItem>Vestibulum at eros</ListGroupItem>
-            </ListGroup>
-            <Card.Body>
-              <Card.Link href="#">Card Link</Card.Link>
-              <Card.Link href="#">Another Link</Card.Link>
-            </Card.Body>
+
           </Card>
+          
+         
         </Col>
-        <Col sm={12} md={3} className="d-flex mb-4">
-        <Card style={{ width: "18rem" }}>
+        <Col sm={12} md={3} className="d-flex justify-content-center mb-4 ">
+        <Card style={{ width: "18rem", height: "35rem" }} className="shadow roundedCircle">
             <Card.Img
               variant="top"
-              src="https://images.squarespace-cdn.com/content/v1/53aa5722e4b0ada1a70119f2/1529694594561-7ERUUT9270RZI2R946J1/CORP20180521-Freeman+%284+of+6%29-Edit.jpg?format=2500w"
+              src="https://images.pexels.com/photos/6235666/pexels-photo-6235666.jpeg?auto=compress&cs=tinysrgb&dpr=1&w=500"
             />
             <Card.Body>
-              <Card.Title>Card Title</Card.Title>
-              <Card.Text>
-                Some quick example text to build on the card title and make up
-                the bulk of the card's content.
+              <Card.Title className="text-center text-danger fw-bold">Dr Rolando Schiavi </Card.Title>
+             
+              <Card.Text className="text-center">
+               <b> Fundador de RollingVet </b>
+                Actualmente dedicado a la investigación
               </Card.Text>
+              
             </Card.Body>
-            <ListGroup className="list-group-flush">
-              <ListGroupItem>Cras justo odio</ListGroupItem>
-              <ListGroupItem>Dapibus ac facilisis in</ListGroupItem>
-              <ListGroupItem>Vestibulum at eros</ListGroupItem>
-            </ListGroup>
-            <Card.Body>
-              <Card.Link href="#">Card Link</Card.Link>
-              <Card.Link href="#">Another Link</Card.Link>
-            </Card.Body>
+
           </Card>
+          
+         
+          
         </Col>
-        <Col sm={12} md={3} className="d-flex mb-4">
-          <Card style={{ width: "18rem" }}>
-            <Card.Img
-              variant="top"
-              src="https://images.squarespace-cdn.com/content/v1/53aa5722e4b0ada1a70119f2/1529694594561-7ERUUT9270RZI2R946J1/CORP20180521-Freeman+%284+of+6%29-Edit.jpg?format=2500w"
-            />
-            <Card.Body>
-              <Card.Title>Card Title</Card.Title>
-              <Card.Text>
-                Some quick example text to build on the card title and make up
-                the bulk of the card's content.
-              </Card.Text>
-            </Card.Body>
-            <ListGroup className="list-group-flush">
-              <ListGroupItem>Cras justo odio</ListGroupItem>
-              <ListGroupItem>Dapibus ac facilisis in</ListGroupItem>
-              <ListGroupItem>Vestibulum at eros</ListGroupItem>
-            </ListGroup>
-            <Card.Body>
-              <Card.Link href="#">Card Link</Card.Link>
-              <Card.Link href="#">Another Link</Card.Link>
-            </Card.Body>
-          </Card>
-        </Col>
+      
+        {/*<Col sm={12} md={6} className="bg-light">
+          <h2>expertos profesionales</h2>
+         <h4>Apostamos por la formación continua, comprometidos por mejorar cada día la atención veterinaria y el cuidado en cada detalle de la salud de las mascotas.</h4>
+        </Col>*/}
+        
+       
       </Row>
     </Container>
+    
   );
 };
 

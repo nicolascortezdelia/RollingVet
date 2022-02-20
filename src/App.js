@@ -3,9 +3,9 @@ import "bootstrap/dist/css/bootstrap.min.css";
 import Home from "./components/views/Home/Home";
 import Navigation from "./components/layout/Navigation";
 import Footer from "./components/layout/Footer";
-import ProductsTable from "./components/views/ProductTable/ProductTable";
-import ProductCreate from "./components/views/ProductCreate/ProductCreate";
-import ProductEdit from "./components/views/ProductEdit/ProductEdit";
+import ContactUs from "./components/views/ContactUs/ContactUs"
+import Login from "./components/layout/Login";
+
 import Error404 from "./components/views/Error404/Error404";
 import {
   BrowserRouter,
@@ -14,25 +14,33 @@ import {
 } from "react-router-dom";
 
 
+
+
 function App() {
   return (
-    <div>
+    
       <BrowserRouter>
       <Navigation />
+      
       <main>
-      <Routes>
+       <Routes>
       <Route exact path="/" element={<Home/>}/>
-      <Route exact path="/product/table" element={<ProductsTable />}/>
+      <Route exact path="/contactos" element={<ContactUs />}/>
+      <Route exact path="/login" element={<Login/>}/>
+      
+      <Route exact path="*" element={<Error404/>}/>
+      {/*
+      <Route exact path="/nosotros" element={Nosotros/>}/>
       <Route exact path="/product/create" element={<ProductCreate/>}/>
       <Route exact path="/product/edit" element={<ProductEdit/>}/>
-      <Route exact path="*" element={<Error404/>}/>
-      </Routes>
-
+      */}
+      </Routes> 
+      
+      
       </main>
       <Footer />
       </BrowserRouter>
 
-    </div>
   );
 }
 

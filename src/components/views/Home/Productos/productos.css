@@ -1,0 +1,20 @@
+/*/* Xtra Small devices (phones, between 320px and 599px) */
+@media only screen and (min-width: 279px) and (max-width: 319px) {
+
+    .product-size{
+        width: 280px;
+    height: 200px;
+    }
+}
+
+/* Small devices (phones, between 320px and 599px) */
+/*width: 300px;
+    height: 200px;*/
+@media only screen and (min-width: 320px) and (max-width: 599px) {
+
+    .product-size{
+        width: 340px;
+        height: 190px;
+        margin: 3px;
+    }
+}

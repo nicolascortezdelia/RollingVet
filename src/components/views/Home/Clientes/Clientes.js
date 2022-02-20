@@ -1,34 +1,74 @@
-import React from 'react';
+import React from "react";
 import {
-    Col,
-    Container,
-    Row,
-    Card,
-    ListGroup,
-    ListGroupItem,
-    Image
-  } from "react-bootstrap";
+  Col,
+  Container,
+  Row,
+  Card
+} from "react-bootstrap";
+
+import "./clientes.css";
+import Romina from "../img/Romina.png";
+
+import Bautista from "../img/Bautista.png";
+import Lorena from "../img/Lorena.png";
 
 const Clientes = () => {
-    return (
-        <div>
-              <Card border="light" style={{ width: '18rem' }}>
-    
-    <Card.Img 
-    
-              variant="top"
-              src="https://images.squarespace-cdn.com/content/v1/53aa5722e4b0ada1a70119f2/1529694594561-7ERUUT9270RZI2R946J1/CORP20180521-Freeman+%284+of+6%29-Edit.jpg?format=2500w"
-              className='roundedCircle'/>
-            <Card.Body>
-              <Card.Title>Card Title</Card.Title>
-              <Card.Text>
-                Some quick example text to build on the card title and make up
-                the bulk of the card's content.
-              </Card.Text>
-            </Card.Body>
-  </Card>
-        </div>
-    );
+  return (
+    <Container>
+      <Row className="justify-content-around">
+        <Col sm={12} md={4}>
+          <div className="text-center">
+            {" "}
+            <img src={Romina} alt="" className="img-redonda" />{" "}
+          </div>
+
+          <Card.Body>
+            <Card.Text className="text-center fst-italic">
+              "La mejor atención y los mejores profesionales toda la ciudad.
+              100% recomendado"
+            </Card.Text>
+            <Card.Title className="text-center text-danger fw-bold">
+              Romina González
+            </Card.Title>
+            <p className="text-center fw-lighter">Dueña de Firulais</p>
+          </Card.Body>
+        </Col>
+        <Col sm={12} md={4}>
+          <div className="text-center">
+            {" "}
+            <img src={Bautista} alt="" className="img-redonda" />{" "}
+          </div>
+
+          <Card.Body>
+            <Card.Text className="text-center fst-italic">
+              "Amo como tratan tanto a las mascotas como a las personas"
+            </Card.Text>
+            <Card.Title className="text-center text-danger fw-bold">
+              Damián Petrelli
+            </Card.Title>
+            <p className="text-center fw-lighter">Dueño de Bobby</p>
+          </Card.Body>
+        </Col>
+        <Col sm={12} md={4}>
+          <div className="text-center">
+            {" "}
+            <img src={Lorena} alt="" className="img-redonda" />{" "}
+          </div>
+
+          <Card.Body>
+            <Card.Text className="text-center fst-italic">
+              "Tengo muchos gatitos que amo y los llevo siempre al mejor lugar,
+              RollingVet"
+            </Card.Text>
+            <Card.Title className="text-center text-danger fw-bold">
+              Lorena Nelegatti
+            </Card.Title>
+            <p className="text-center fw-lighter">Dueña de Michifuz</p>
+          </Card.Body>
+        </Col>
+      </Row>
+    </Container>
+  );
 };
 
 export default Clientes;
