@@ -16,11 +16,11 @@ const AdminTurnos = () => {
         <Table bordered hover responsive className="align-middle mt-3">
           <thead>
             <tr>
-              <th>Horario</th>
-              <th>Veterinario</th>
               <th>Nombre Mascota</th>
+              <th>Veterinario</th>
               <th>Detalle de la cita</th>
               <th>Fecha</th>
+              <th>Horario</th>
             </tr>
           </thead>
           <tbody>

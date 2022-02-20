@@ -3,9 +3,9 @@ import "bootstrap/dist/css/bootstrap.min.css";
 import Home from "./components/views/Home/Home";
 import Navigation from "./components/layout/Navigation";
 import Footer from "./components/layout/Footer";
-import ProductsTable from "./components/views/ProductTable/ProductTable";
+// import ProductsTable from "./components/views/ProductTable/ProductTable";
 // import ProductCreate from "./components/views/ProductCreate/ProductCreate";
-import ProductEdit from "./components/views/ProductEdit/ProductEdit";
+// import ProductEdit from "./components/views/ProductEdit/ProductEdit";
 import Error404 from "./components/views/Error404/Error404";
 
 import {
@@ -14,8 +14,12 @@ import {
   Route
 } from "react-router-dom";
 import ContactUs from "./components/views/ContactUs/ContactUs";
-import AdminClientes from "./components/views/AdminClientes/AdminClientes";
+import AdminClientesCreate from "./components/views/AdminClientes/AdminClientesCreate";
 import AdminTurnos from "./components/views/AdminTurnos/AdminTurnos";
+import AdminTurnosCreate from "./components/views/AdminTurnos/AdminTurnosCreate";
+import ListaTurnos from "./components/views/AdminTurnos/ListaTurnos/ListaTurnos";
+import ListaClientes from "./components/views/AdminClientes/ListaClientes/ListaClientes";
+import AdminClientes from "./components/views/AdminClientes/AdminClientes";
 
 
 
@@ -33,8 +37,10 @@ function App() {
       <Route exact path="*" element={<Error404/>}/>
       </Routes> */}
       {/* <ContactUs /> */}
-      {/* <AdminClientes /> */}
-      <AdminTurnos />
+      {/* <AdminClientesCreate /> */}
+      {/* <AdminTurnos /> */}
+      {/* <AdminTurnosCreate /> */}
+      <AdminClientes />
       </main>
       <Footer />
       </BrowserRouter>
