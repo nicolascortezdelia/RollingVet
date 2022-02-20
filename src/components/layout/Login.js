@@ -16,9 +16,10 @@ const Login = () => {
 
     <div className="container-fluid" id="imagenFondoLogin">
       
-      <h1 className="display-2 text-center text-light">Ingrese aquí</h1>
-      <hr className="bg-light"/>
+      <h1 className="display-2 text-center text-light fst-italic">Ingrese aquí</h1>
+      
       <Container>
+      <hr className="bg-light "/>
       <Form onSubmit = {hundleSubmit} className="mx-5 text-light">
         <Form.Group className="mb-3 " controlId="formBasicEmail">
           <Form.Label>Dirección</Form.Label>
