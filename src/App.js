@@ -12,6 +12,7 @@ import {
   Routes,
   Route
 } from "react-router-dom";
+import PaginaPlanes from "./components/views/PaginaPlanes/PaginaPlanes";
 
 
 
@@ -27,6 +28,7 @@ function App() {
       <Route exact path="/" element={<Home/>}/>
       <Route exact path="/contactos" element={<ContactUs />}/>
       <Route exact path="/login" element={<Login/>}/>
+      <Route exact path="/planes" element={<PaginaPlanes/>}/>
       
       <Route exact path="*" element={<Error404/>}/>
       {/*
