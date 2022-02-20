@@ -14,26 +14,26 @@ const PaginaPlanes = () => {
             alt="First slide"
           />
           <Carousel.Caption>
-            <h3 className="display-4 fst-italic text-dark">
-              Elegí el mejor plan para tu mascota
-            </h3>
+            <h4 className="display-5 fst-italic text-dark">
+              Cuidá mejor a tu mascota con nuestros planes
+            </h4>
             <hr />
           </Carousel.Caption>
         </div>
         <Container>
-          <Card className="text-center shadow my-3">
+          <Card className="text-center shadow my-4">
             <Row>
               <Col sm={12} md={5}>
                 <Card.Img
                   variant="top"
-                  src="https://vsn.shindiristudio.com/wp-content/uploads/2019/01/Savet-Pas-4.jpg"
+                  src="https://vsn.shindiristudio.com/wp-content/uploads/2020/01/cat-2.jpg"
                 />
               </Col>
               <Col sm={12} md={7}>
                 <Card.Body>
                   <h3 className="text-danger display-5">Plan Primeros Pasos</h3>
                   <Card.Text>
-                    Servicios para mascotas de más de 10 años.
+                    Servicios para mascotas de 0 a 5 años.
                   </Card.Text>
                   <Button variant="danger" className="color-navbar">
                     Contratar
@@ -43,13 +43,13 @@ const PaginaPlanes = () => {
             </Row>
           </Card>
 
-          <Card className="text-center shadow my-3">
+          <Card className="text-center shadow my-4">
             <Row>
               <Col sm={12} md={7} xs={{ order: 'last' }}  xl={{ order: "first" }} >
                 <Card.Body>
-                  <h3 className="text-danger display-5">Plan Primeros Pasos</h3>
+                  <h3 className="text-danger display-5">Plan Madurando</h3>
                   <Card.Text>
-                    Servicios para mascotas de más de 10 años.
+                    Servicios para mascotas de 5 a 10 años.
                   </Card.Text>
                   <Button variant="danger" className="color-navbar">
                     Contratar
@@ -59,12 +59,12 @@ const PaginaPlanes = () => {
               <Col sm={12} md={5} xs={{ order: "first" }} xl={{ order: "last" }}>
                 <Card.Img
                   variant="top"
-                  src="https://vsn.shindiristudio.com/wp-content/uploads/2019/01/Savet-Pas-4.jpg"
+                  src="https://vsn.shindiristudio.com/wp-content/uploads/2019/01/Savet-Pas-1.jpg"
                 />
               </Col>
             </Row>
           </Card>
-          <Card className="text-center shadow my-3">
+          <Card className="text-center shadow my-4">
             <Row>
               <Col sm={12} md={5}>
                 <Card.Img
