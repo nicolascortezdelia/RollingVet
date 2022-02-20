@@ -33,6 +33,7 @@ function App() {
       <Route exact path="/nosotros" element={Nosotros/>}/>
       <Route exact path="/product/create" element={<ProductCreate/>}/>
       <Route exact path="/product/edit" element={<ProductEdit/>}/>
+      <Route exact path="/turnos" element={<Turnos/>}/>
       */}
       </Routes> 
       

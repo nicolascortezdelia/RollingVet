@@ -5,7 +5,7 @@ const Turnos = () => {
     return (
         <div>
             <div>
-            <h1>Gestión de turnos</h1>
+            <h1>Creación de turnos</h1>
             <Form>
   <Form.Group className="mb-3" controlId="idMascota">
     <Form.Label>Nombre de la mascota</Form.Label>
