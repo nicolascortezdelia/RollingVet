@@ -4,8 +4,7 @@ import {
   Container,
   Row,
   Card,
-  ListGroup,
-  ListGroupItem,
+  
 } from "react-bootstrap";
 
 const Servicios = () => {
@@ -13,7 +12,7 @@ const Servicios = () => {
     <Container className="mb-3">
       <Row>
         <Col sm={12} md={3} className="d-flex justify-content-center mb-4 ">
-          <Card style={{ width: "18rem", height: "25rem" }} className="shadow ">
+          <Card style={{ width: "18rem", height: "25rem" }} className="shadow">
             <Card.Img
               variant="top"
               src="https://vsn.shindiristudio.com/wp-content/uploads/2020/01/Emergency-Vet.jpg"
