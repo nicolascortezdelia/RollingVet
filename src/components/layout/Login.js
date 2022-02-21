@@ -1,5 +1,6 @@
 import React, { useState } from "react";
-import { Form, Button } from "react-bootstrap";
+import { Form, Button, Container } from "react-bootstrap";
+import "./login.css"
 
 const Login = () => {
   const [arregloLogin, setArregloLogin] = useState([]);
@@ -13,11 +14,13 @@ const Login = () => {
   
   return (
 
-    <div className="container mb-3">
+    <div className="container-fluid" id="imagenFondoLogin">
       
-      <h1 className="display-2 text-center">Ingrese aquí</h1>
-      <hr />
-      <Form onSubmit = {hundleSubmit} className=" mx-5">
+      <h1 className="display-2 text-center text-light fst-italic">Ingrese aquí</h1>
+      
+      <Container>
+      <hr className="bg-light "/>
+      <Form onSubmit = {hundleSubmit} className="mx-5 text-light">
         <Form.Group className="mb-3 " controlId="formBasicEmail">
           <Form.Label>Dirección</Form.Label>
           <Form.Control
@@ -46,6 +49,7 @@ const Login = () => {
           Salir
         </Button>
       </Form>
+      </Container>
     </div>
   );
 };

@@ -1,11 +1,12 @@
 import React from 'react';
 import { Container, Row, Col, Card, Button } from "react-bootstrap";
+import { Link } from "react-router-dom";
 
 
 const Planes = () => {
     return (
       
-        <Container>
+        <Container >
       <Row>
         <Col sm={12} md={4}>
           <Card className="text-center shadow">
@@ -18,7 +19,7 @@ const Planes = () => {
               <Card.Text>
                 Servicios para mascotas de 0 a 5 años.
               </Card.Text>
-              <Button variant="danger" className="color-navbar">Contratar</Button>
+              <Link to="/planes"> <Button variant="danger" className="color-navbar">Contratar</Button></Link>
             </Card.Body>
           </Card>
         </Col>
@@ -33,7 +34,7 @@ const Planes = () => {
               <Card.Text>
                 Servicios para mascotas de 5 a 10 años.
               </Card.Text>
-              <Button variant="danger" className="color-navbar">Contratar</Button>
+              <Link to="/planes"> <Button variant="danger" className="color-navbar">Contratar</Button></Link>
             </Card.Body>
           </Card>
         </Col>
@@ -49,7 +50,7 @@ const Planes = () => {
               <Card.Text>
                 Servicios para mascotas de más de 10 años.
               </Card.Text>
-              <Button variant="danger" className="color-navbar">Contratar</Button>
+              <Link to="/planes"> <Button variant="danger" className="color-navbar">Contratar</Button></Link>
             </Card.Body>
           </Card>
         </Col>
