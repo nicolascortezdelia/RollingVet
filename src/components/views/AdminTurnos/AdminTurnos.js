@@ -1,6 +1,7 @@
 import React from "react";
 import { Container, Table } from "react-bootstrap";
 import ListaTurnos from "./ListaTurnos/ListaTurnos";
+import { Link } from "react-router-dom";
 
 
 const AdminTurnos = () => {
@@ -9,7 +10,7 @@ const AdminTurnos = () => {
       <Container className="py-5">
         <div className="d-flex align-items-center justify-content-between">
           <h1>Lista Turnos</h1>
-          <button className="btn btn-primary">Agregar Turno</button>
+          <Link className="btn btn-primary" to="/admin/turnos/create">Agregar Turno</Link>
         </div>
         <hr />
         {/* Table of products */}

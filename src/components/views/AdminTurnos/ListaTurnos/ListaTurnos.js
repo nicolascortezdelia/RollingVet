@@ -1,4 +1,5 @@
     import React from 'react';
+import { Link } from 'react-router-dom';
 
 
 const ListaTurnos = () => {
@@ -15,8 +16,8 @@ const ListaTurnos = () => {
         <td>10:00</td>
         <td className="w-25">
           <div className="d-flex justify-content-center">
-            <button className="btn btn-success mx-1">Modificar</button>
-            <button className="btn btn-danger mx-1">Eliminar</button>
+            <Link className="btn btn-success mx-1"to="/admin/turnos/create">Modificar</Link>
+            <Link className="btn btn-danger mx-1" >Eliminar</Link>
           </div>
         </td>
       </tr>

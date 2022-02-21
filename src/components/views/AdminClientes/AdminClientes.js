@@ -1,6 +1,7 @@
 import React from 'react';
 import { Container, Table } from 'react-bootstrap';
 import ListaClientes from './ListaClientes/ListaClientes';
+import { Link } from 'react-router-dom';
 
 const AdminClientes = () => {
     return (
@@ -8,7 +9,7 @@ const AdminClientes = () => {
         <Container className="py-5">
           <div className="d-flex align-items-center justify-content-between">
             <h1>Lista Clientes</h1>
-            <button className="btn btn-primary">Agreglar Clientes</button>
+            <Link className="btn btn-primary" to="/admin/clientes/create">Agregar Clientes</Link>
           </div>
           <hr />
             <Table bordered hover responsive className="align-middle mt-3">

@@ -1,4 +1,5 @@
 import React from 'react';
+import { Link } from 'react-router-dom';
 
 const ListaClientes = () => {
     return (
@@ -12,8 +13,8 @@ const ListaClientes = () => {
       <td>Raza</td>
       <td className="w-25">
         <div className="d-flex justify-content-center">
-          <button className="btn btn-success mx-1">Editar</button>
-          <button className="btn btn-danger mx-1">Eliminar</button>
+          <Link className="btn btn-success mx-1" to= "/admin/clientes/create">Editar</Link>
+          <Link className="btn btn-danger mx-1">Eliminar</Link>
         </div>
       </td>
     </tr>
