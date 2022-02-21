@@ -18,7 +18,7 @@ const Login = () => {
        
        <Container style={{ width: '25rem', height: "23rem"}} className="border rounded border-white border-1  ">
          <div>
-           <p className=" fs-2 text-light text-center fw-light">Inicie Sesión</p>
+           <p className=" fs-2 text-light text-center fw-light mt-2">Inicie Sesión</p>
            <hr className="text-white"/>
            </div>
          <Form onSubmit={hundleSubmit} className="mx-5 text-light mt-3">
