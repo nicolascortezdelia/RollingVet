@@ -22,11 +22,11 @@ const AdminTurnosCreate = () => {
           </Form.Group>
           <Form.Group className="mb-3" controlId="exampleForm.ControlInput1">
             <Form.Label>Fecha</Form.Label>
-            <Form.Control type="number" placeholder="Escriba la fecha" />
+            <Form.Control type="date" placeholder="Escriba la fecha" />
           </Form.Group>
           <Form.Group className="mb-3" controlId="exampleForm.ControlInput1">
             <Form.Label>Horario</Form.Label>
-            <Form.Control type="number" placeholder="Escriba el horario" />
+            <Form.Control type="time" placeholder="Escriba el horario" />
           </Form.Group>
           <button className="btn btn-success">Guardar</button>
 
