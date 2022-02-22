@@ -1,5 +1,6 @@
 import React, { useState } from "react";
-import { Form, Button, Container, Row, Col, Card } from "react-bootstrap";
+import { Form, Button, Container,} from "react-bootstrap";
+import Fade from "react-reveal/Fade";
 import "./login.css";
 
 const Login = () => {
@@ -14,6 +15,7 @@ const Login = () => {
 
   return (
     <>
+    <Fade bottom>
       <div className="container-fluid d-flex align-items-center" id="imagenFondoLogin">
        
        <Container style={{ width: '25rem', height: "23rem"}} className="border rounded border-white border-1  ">
@@ -42,7 +44,7 @@ const Login = () => {
               setImput(e.target.value);
             }}
           />
-          <Button variant="primary" type="submit" className="mt-2">
+          <Button variant="primary" type="submit" className="mt-2 rounded-pill">
             Ingresar
           </Button>
         </Form.Group>
@@ -50,6 +52,7 @@ const Login = () => {
 
        </Container>
       </div>
+      </Fade>
     </>
   );
 };

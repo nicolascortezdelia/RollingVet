@@ -19,7 +19,7 @@ const Planes = () => {
               <Card.Text>
                 Servicios para mascotas de 0 a 5 años.
               </Card.Text>
-              <Link to="/planes"> <Button variant="danger" className="color-navbar">Contratar</Button></Link>
+              <Link to="/planes"> <Button variant="danger" className="color-navbar rounded-pill">Contratar</Button></Link>
             </Card.Body>
           </Card>
         </Col>
@@ -34,7 +34,7 @@ const Planes = () => {
               <Card.Text>
                 Servicios para mascotas de 5 a 10 años.
               </Card.Text>
-              <Link to="/planes"> <Button variant="danger" className="color-navbar">Contratar</Button></Link>
+              <Link to="/planes"> <Button variant="danger" className="color-navbar rounded-pill">Contratar</Button></Link>
             </Card.Body>
           </Card>
         </Col>
@@ -50,7 +50,7 @@ const Planes = () => {
               <Card.Text>
                 Servicios para mascotas de más de 10 años.
               </Card.Text>
-              <Link to="/planes"> <Button variant="danger" className="color-navbar">Contratar</Button></Link>
+              <Link to="/planes"> <Button variant="danger" className="color-navbar rounded-pill">Contratar</Button></Link>
             </Card.Body>
           </Card>
         </Col>

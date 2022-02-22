@@ -1,6 +1,7 @@
 import React from "react";
-import { Row, Col, TabContainer, Container } from "react-bootstrap";
+import { Row, Col, Container } from "react-bootstrap";
 import "./Footer.css";
+import { Link } from "react-router-dom";
 
 const Footer = () => {
   return (
@@ -10,20 +11,25 @@ const Footer = () => {
           
           <Row>
             <Col sm={12} md={4}>
+              <Link to="/">
+              
             <img
                 src="Rollingvet.png"
                 width="100"
                 className="logo img-responsive"
                 alt="logo de rolling vet"
               />
+              </Link>
             </Col>
 
             <Col sm={12} md={4}>
 
             <h5 className="lead">Seguinos en Nuestras redes:</h5>
-              <i className="fab fa-2x  p-1 fa-instagram"></i>
-              <i className="fab fa-2x  p-1 fa-facebook-square"></i>
-              <i className="fab fa-2x  p-1 fa-twitter-square"></i>
+            <Link to ="*" className="text-decoration-none text-white"> <i className="fab fa-2x  p-1 fa-instagram"></i> </Link>  
+            <Link to ="*" className="text-decoration-none text-white"> <i className="fab fa-2x  p-1 fa-facebook-square"></i> </Link>  
+            <Link to ="*" className="text-decoration-none text-white"> <i className="fab fa-2x  p-1 fa-twitter-square"></i></Link>  
+              
+              
               
             </Col>
 

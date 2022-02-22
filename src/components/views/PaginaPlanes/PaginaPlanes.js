@@ -14,9 +14,9 @@ const PaginaPlanes = () => {
             alt="First slide"
           />
           <Carousel.Caption>
-            <h4 className="display-5 fst-italic text-dark">
+            <h5 className="display-5 fst-italic text-dark">
               Cuidá mejor a tu mascota con nuestros planes
-            </h4>
+            </h5>
             <hr />
           </Carousel.Caption>
         </div>
@@ -35,9 +35,10 @@ const PaginaPlanes = () => {
                   <Card.Text>
                     Servicios para mascotas de 0 a 5 años.
                   </Card.Text>
-                  <Button variant="danger" className="color-navbar">
+                  <Link to ="*">  <Button variant="danger" className="color-navbar rounded-pill"> 
                     Contratar
                   </Button>
+                  </Link>
                 </Card.Body>
               </Col>
             </Row>
@@ -51,9 +52,11 @@ const PaginaPlanes = () => {
                   <Card.Text>
                     Servicios para mascotas de 5 a 10 años.
                   </Card.Text>
-                  <Button variant="danger" className="color-navbar">
+                  <Link to ="*"> 
+                  <Button variant="danger" className="color-navbar rounded-pill">
                     Contratar
                   </Button>
+                  </Link>
                 </Card.Body>
               </Col>
               <Col sm={12} md={5} xs={{ order: "first" }} xl={{ order: "last" }}>
@@ -78,9 +81,11 @@ const PaginaPlanes = () => {
                   <Card.Text>
                     Servicios para mascotas de más de 10 años.
                   </Card.Text>
-                  <Button variant="danger" className="color-navbar">
+                  <Link to ="*"> 
+                  <Button variant="danger" className="color-navbar rounded-pill">
                     Contratar
                   </Button>
+                  </Link>
                 </Card.Body>
               </Col>
             </Row>

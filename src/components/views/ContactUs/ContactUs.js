@@ -1,16 +1,20 @@
 import React from "react";
-import { Col, Container, Form, Row, Carousel } from "react-bootstrap";
+import { Col, Container, Form, Row } from "react-bootstrap";
 import Iframe from "react-iframe";
+import Fade from "react-reveal/Fade";
 import "./ContactUs.css"
 
 const ContactUs = () => {
   return (
     <>
+    <Fade bottom>
     <div className="container-fluid" id="imagenFondoContact">
-      <h2 className="display-2 fst-italic text-center text-light">Contactanos</h2>
-        <Container >
+      <h4 className="display-5 fst-italic text-center text-light">Contactanos</h4>
+
+        <Container  >
+          <hr className="text-light" />
           <Row>
-            <Col sm={12} md={6}>
+            <Col sm={12} md={6} >
               <Form className="my-5 container">
                 <Form.Group
                   className="mb-3"
@@ -41,7 +45,7 @@ const ContactUs = () => {
                   </Form.Label>
                   <Form.Control as="textarea" rows={3} />
                 </Form.Group>
-                <button className="btn btn-primary" type="submit">
+                <button className="btn btn-primary rounded-pill" type="submit">
                   Enviar
                 </button>
               </Form>
@@ -61,6 +65,7 @@ const ContactUs = () => {
           </Row>
         </Container>
         </div>
+        </Fade>
     </>
   );
 };

@@ -1,6 +1,7 @@
 import React from "react";
 import { Col, Container, Row, Button} from "react-bootstrap";
 import "./productos.css"
+import { Link } from "react-router-dom";
 
 const Productos = () => {
   return (
@@ -18,7 +19,12 @@ const Productos = () => {
             <span className="text-center">Cada fórmula se crea para
           brindar una nutrición que se adapte a las necesidades de salud de tu
           perro, independientemente de su tamaño, raza, edad o estilo de vida.</span>
-          <Button variant="link" className="btn btn-white mt-2 text-danger border border-danger rounded-pill text-decoration-none"> Ver Todos los Productos</Button>
+          
+          <div>
+        <Link to ="*">  <Button variant="link" className="btn btn-white mt-2 text-danger border border-danger rounded-pill text-decoration-none"> Ver Todos los Productos</Button> </Link>
+
+          </div>
+          
 
         </Col>
       </Row>

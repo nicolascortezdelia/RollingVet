@@ -11,7 +11,7 @@ const HomeCarousel = () => {
           alt="First slide"
         />
         <Carousel.Caption>
-          <h3 className='display-3 '>RollingVet</h3>
+          <h3 className='display-3'>RollingVet</h3>
           <p className='fst-italic'>Tu mascota, en buenas manos</p>
         </Carousel.Caption>
         </div>
