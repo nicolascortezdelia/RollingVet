@@ -8,8 +8,10 @@ const ContactUs = () => {
   return (
     <>
     <Fade bottom>
-    <div className="container-fluid" id="imagenFondoContact">
-      <h4 className="display-5 fst-italic text-center text-light">Contactanos</h4>
+    <div className="container-fluid p-1" id="imagenFondoContact">
+      <div className="p-2">
+    <p className=" fs-1 text-light text-center fw-light ">Contactanos</p>
+    </div>
 
         <Container  >
           <hr className="text-light" />
