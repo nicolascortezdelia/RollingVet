@@ -8,7 +8,7 @@ const Planes = () => {
       
         <Container >
       <Row>
-        <Col sm={12} md={4}>
+        <Col sm={12} md={4} className="mb-2">
           <Card className="text-center shadow">
             <Card.Body>
             <Card.Img
@@ -23,7 +23,7 @@ const Planes = () => {
             </Card.Body>
           </Card>
         </Col>
-        <Col sm={12} md={4}>
+        <Col sm={12} md={4} className="mb-2">
           <Card className="text-center shadow">
             <Card.Body>
             <Card.Img

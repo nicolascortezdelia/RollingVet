@@ -7,7 +7,7 @@ const Productos = () => {
   return (
 
     
-    <Container>
+    <Container className="mb-4">
       <Row>
         <Col sm={12} md={6} className="d-flex">
           <div className="container">
