@@ -3,7 +3,7 @@ import { Container, Table } from 'react-bootstrap';
 import ListaClientes from './ListaClientes/ListaClientes';
 import { Link } from 'react-router-dom';
 
-const AdminClientes = () => {
+const AdminClientes = ({clientes}) => {
     return (
         <div>
         <Container className="py-5">
@@ -25,12 +25,8 @@ const AdminClientes = () => {
               </tr>
             </thead>
             <tbody>
-              <ListaClientes />
-              <ListaClientes />
-              <ListaClientes />
-              <ListaClientes />
-              <ListaClientes />
-              <ListaClientes />
+             {clientes.map((cliente)=>(<ListaClientes key={cliente.id} cliente={cliente} />))};
+              
             </tbody>
           </Table>
           {/* No products found message */}

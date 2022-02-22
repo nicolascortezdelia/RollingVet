@@ -1,9 +1,14 @@
 {
-  "posts": [
+  "Clientes": [
     {
       "id": 1,
-      "title": "json-server",
-      "author": "typicode"
+      "nombre": "Cristian",
+      "apellido": "Brandino",
+      "eMail" : "cbrandino@gmail.com",
+      "telefono": "0114578999",
+      "nombreMascota": "Olivia",
+      "especie": "gato",
+      "raza": "mestizo"
     }
   ],
   "comments": [
