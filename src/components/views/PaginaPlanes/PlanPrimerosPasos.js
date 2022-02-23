@@ -26,19 +26,19 @@ const PlanPrimerosPasos = () => {
           
         </Col>
         <Col sm={12} md={6} className="mt-3 container"> 
-        <h5 className="text-danger">Mandanos tu consulta</h5>
-        <Form className='container'>
-  <Form.Group className="mb-3" controlId="formBasicEmail">
-    <Form.Label>Email address</Form.Label>
-    <Form.Control type="email" placeholder="Enter email" />
+        <h3 className="text-danger display-5 p-2 ">Consultá por este plan</h3>
+        <Form className='container pt-2 text-start'>
+  <Form.Group className="mb-3 " controlId="formBasicEmail">
+    <Form.Label >Ingresá tu e-mail</Form.Label>
+    <Form.Control type="email" placeholder="Ej: juanperez@gmail.com" />
     <Form.Text className="text-muted">
-      We'll never share your email with anyone else.
+      No compartiremos tu e-mail o tus datos con nadie más
     </Form.Text>
   </Form.Group>
 
   <Form.Group className="mb-3" controlId="formBasicPassword">
-    <Form.Label>Password</Form.Label>
-    <Form.Control type="password" placeholder="Password" />
+    <Form.Label>Clave</Form.Label>
+    <Form.Control type="password" placeholder="Ingresá aquí tu clave" />
   </Form.Group>
   <Form.Group className="mb-3" controlId="formBasicCheckbox">
     
