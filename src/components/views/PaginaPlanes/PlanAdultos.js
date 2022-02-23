@@ -18,7 +18,7 @@ const PlanAdultos = () => {
             />
               <h5 className="text-danger">Plan Adultos</h5>
               <Card.Text>
-                Servicios para mascotas de 5 a 10 años.
+                Servicios para mascotas de más de 10 años.
               </Card.Text>
               
             </Card.Body>

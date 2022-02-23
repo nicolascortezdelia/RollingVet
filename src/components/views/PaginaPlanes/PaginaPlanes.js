@@ -53,7 +53,7 @@ const PaginaPlanes = () => {
                 <Card.Body>
                   <h3 className="text-danger display-5">Plan Primeros Pasos</h3>
                   <Card.Text>Servicios para mascotas de 0 a 5 años.</Card.Text>
-                  <Link to="*">
+                  <Link to="/planes/primerospasos">
                     {" "}
                     <Button
                       variant="danger"
@@ -78,7 +78,7 @@ const PaginaPlanes = () => {
                 <Card.Body>
                   <h3 className="text-danger display-5">Plan Madurando</h3>
                   <Card.Text>Servicios para mascotas de 5 a 10 años.</Card.Text>
-                  <Link to="*">
+                  <Link to="/planes/madurando">
                     <Button
                       variant="danger"
                       className="color-navbar rounded-pill"
@@ -111,11 +111,11 @@ const PaginaPlanes = () => {
               </Col>
               <Col sm={12} md={7}>
                 <Card.Body>
-                  <h3 className="text-danger display-5">Plan Primeros Pasos</h3>
+                  <h3 className="text-danger display-5">Plan Adultos</h3>
                   <Card.Text>
                     Servicios para mascotas de más de 10 años.
                   </Card.Text>
-                  <Link to="*">
+                  <Link to="/planes/adultos">
                     <Button
                       variant="danger"
                       className="color-navbar rounded-pill"
