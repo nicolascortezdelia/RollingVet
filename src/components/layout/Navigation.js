@@ -23,6 +23,9 @@ const Navigation = () => {
             <Navbar.Toggle aria-controls="basic-navbar-nav" />
             <Navbar.Collapse id="basic-navbar-nav">
               <Nav className="me-auto ">
+              <Link className="nav-link" to="/planes">
+                  Planes
+                </Link>
                 <Link className="nav-link" to="/contactos">
                   Contactanos
                 </Link>
