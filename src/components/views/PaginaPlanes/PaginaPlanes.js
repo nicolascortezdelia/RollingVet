@@ -7,19 +7,39 @@ const PaginaPlanes = () => {
   return (
     <div className="mb-5">
       <Fade bottom>
-        <div>
-          <img
-            className="d-block w-100"
-            src="https://www.catcare4life.org/app/uploads/2019/11/CC4L-banner-2.jpg"
-            alt="First slide"
-          />
-          <Carousel.Caption>
-            <h5 className="display-5 fst-italic text-dark">
-              Cuidá mejor a tu mascota con nuestros planes
-            </h5>
+        <Container >
+          <Card className="border-white">
+            <Row >
+              <Col sm={12} md={7}  >
+                <div className="mt-5">
+                <h1 className=" display-2  text-danger fst-bold text-center  ">
+                  Nuestros planes
+                </h1>
+                <Card.Text className="text-center p-4">
+                  Cuidá la salud y la nutrición de tu mascota en todas las etapas de su vida.
+                   Explorá nuestros planes y
+                  la información que aparece a continuación y elegí el que mejor para tu mascota.
+                </Card.Text>
+
+                </div>
+                
+              </Col>
+              <Col sm={12} md={5}>
+                <div className="mb-1">
+                  <img
+                    src="https://cdn.royalcanin-weshare-online.io/AWkwa2QBG95Xk-RBH9Rc/v11/golden-retriever-adult-weight-management-emblematic?w=960&"
+                    alt=""
+                    className="img-fluid"
+                  />
+                </div>
+              </Col>
             <hr />
-          </Carousel.Caption>
-        </div>
+            </Row>
+            
+          </Card>
+         
+        </Container>
+
         <Container>
           <Card className="text-center shadow my-4">
             <Row>
@@ -32,12 +52,15 @@ const PaginaPlanes = () => {
               <Col sm={12} md={7}>
                 <Card.Body>
                   <h3 className="text-danger display-5">Plan Primeros Pasos</h3>
-                  <Card.Text>
-                    Servicios para mascotas de 0 a 5 años.
-                  </Card.Text>
-                  <Link to ="*">  <Button variant="danger" className="color-navbar rounded-pill"> 
-                    Contratar
-                  </Button>
+                  <Card.Text>Servicios para mascotas de 0 a 5 años.</Card.Text>
+                  <Link to="*">
+                    {" "}
+                    <Button
+                      variant="danger"
+                      className="color-navbar rounded-pill"
+                    >
+                      Contratar
+                    </Button>
                   </Link>
                 </Card.Body>
               </Col>
@@ -46,20 +69,31 @@ const PaginaPlanes = () => {
 
           <Card className="text-center shadow my-4">
             <Row>
-              <Col sm={12} md={7} xs={{ order: 'last' }}  xl={{ order: "first" }} >
+              <Col
+                sm={12}
+                md={7}
+                xs={{ order: "last" }}
+                xl={{ order: "first" }}
+              >
                 <Card.Body>
                   <h3 className="text-danger display-5">Plan Madurando</h3>
-                  <Card.Text>
-                    Servicios para mascotas de 5 a 10 años.
-                  </Card.Text>
-                  <Link to ="*"> 
-                  <Button variant="danger" className="color-navbar rounded-pill">
-                    Contratar
-                  </Button>
+                  <Card.Text>Servicios para mascotas de 5 a 10 años.</Card.Text>
+                  <Link to="*">
+                    <Button
+                      variant="danger"
+                      className="color-navbar rounded-pill"
+                    >
+                      Contratar
+                    </Button>
                   </Link>
                 </Card.Body>
               </Col>
-              <Col sm={12} md={5} xs={{ order: "first" }} xl={{ order: "last" }}>
+              <Col
+                sm={12}
+                md={5}
+                xs={{ order: "first" }}
+                xl={{ order: "last" }}
+              >
                 <Card.Img
                   variant="top"
                   src="https://vsn.shindiristudio.com/wp-content/uploads/2019/01/Savet-Pas-1.jpg"
@@ -81,19 +115,19 @@ const PaginaPlanes = () => {
                   <Card.Text>
                     Servicios para mascotas de más de 10 años.
                   </Card.Text>
-                  <Link to ="*"> 
-                  <Button variant="danger" className="color-navbar rounded-pill">
-                    Contratar
-                  </Button>
+                  <Link to="*">
+                    <Button
+                      variant="danger"
+                      className="color-navbar rounded-pill"
+                    >
+                      Contratar
+                    </Button>
                   </Link>
                 </Card.Body>
               </Col>
             </Row>
           </Card>
-
           
-
-         
         </Container>
       </Fade>
     </div>

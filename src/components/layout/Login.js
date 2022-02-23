@@ -16,16 +16,16 @@ const Login = () => {
   return (
     <>
     <Fade bottom>
-      <div className="container-fluid d-flex align-items-center" id="imagenFondoLogin">
+      <div className="container d-flex align-items-center my-3" >
        
-       <Container style={{ width: '25rem', height: "23rem"}} className="border rounded border-white border-1  ">
+       <Container style={{ width: '25rem', height: "23rem"}} className="border rounded border-dark border-1">
          <div>
-           <p className=" fs-2 text-light text-center fw-light mt-2">Inicie Sesión</p>
-           <hr className="text-white"/>
+           <p className=" fs-2 text-danger text-center fw-light mt-2">Inicie Sesión</p>
+           <hr className="text-dark"/>
            </div>
          <Form onSubmit={hundleSubmit} className="mx-5 text-light mt-3">
         <Form.Group className="mb-3 " controlId="formBasicEmail">
-          <Form.Label>Dirección</Form.Label>
+          <Form.Label className="text-dark">Dirección</Form.Label>
           <Form.Control
             type="email"
             placeholder="Inserte su e-mail"
@@ -36,15 +36,15 @@ const Login = () => {
           <Form.Text className="text-muted"></Form.Text>
         </Form.Group>
         <Form.Group className="mb-3" controlId="formBasicPassword">
-          <Form.Label>Password</Form.Label>
+          <Form.Label className="text-dark">Clave</Form.Label>
           <Form.Control
             type="password"
-            placeholder="Password"
+            placeholder="Inserte su clave"
             onChange={(e) => {
               setImput(e.target.value);
             }}
           />
-          <Button variant="primary" type="submit" className="mt-2 rounded-pill">
+          <Button variant="danger" type="submit" className="mt-2 rounded-pill">
             Ingresar
           </Button>
         </Form.Group>
