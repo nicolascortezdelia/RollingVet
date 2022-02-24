@@ -22,6 +22,8 @@ const AdminClientes = ({clientes}) => {
                 <th>Nombre Mascota</th>
                 <th>Especie</th>
                 <th>Raza</th>
+                <Link to="/edit/clientes" className="btn btn-success mx-1">Editar</Link>
+                <button className= "btn btn-danger mx-1">Borrar</button>
               </tr>
             </thead>
             <tbody>

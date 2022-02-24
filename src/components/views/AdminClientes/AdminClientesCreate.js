@@ -10,13 +10,16 @@ const AdminClientesCreate = () => {
   const [especie, setEspecie] = useState("");
   const [raza, setRaza] = useState("");
 
+  //funcion para crear un objeto
+  const hundleSubmit = (e)=>{e.preventDefault()};
+
     return (
         <div>
             <Container className="py-5">
         <h1>Administrar Clientes</h1>
         <hr />
         {/* Form Product */}
-        <Form className="my-5">
+        <Form className="my-5" onSubmit={hundleSubmit}>
           <Form.Group className="mb-3" controlId="formBasicEmail">
             <Form.Label>Nombre</Form.Label>
             <Form.Control type="text" placeholder="Escriba su Nombre" onChange={(e)=>setNombre(e.target.value)} />
@@ -49,6 +52,7 @@ const AdminClientesCreate = () => {
           </Form.Group>
           <div className="text-end">
             <button className="btn btn-success">Guardar</button>
+            <button className="btn btn-success">Eliminar</button>
           </div>
         </Form>
       </Container>

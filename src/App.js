@@ -15,6 +15,7 @@ import ListaTurnos from "./components/views/AdminTurnos/ListaTurnos/ListaTurnos"
 import ListaClientes from "./components/views/AdminClientes/ListaClientes/ListaClientes";
 import AdminClientes from "./components/views/AdminClientes/AdminClientes";
 import { useEffect, useState } from "react";
+import EditClientes from "./components/views/AdminClientes/ListaClientes/EditClientes";
 
 function App() {
   const [clientes, setClientes] = useState([]);
@@ -43,6 +44,7 @@ function App() {
           <Route exact path="/planes" element={<PaginaPlanes />} />
           <Route exact path="/lista/clientes" element={<ListaClientes />} />
           <Route exact path="/admin/clientes" element={<AdminClientes clientes={clientes} />} />
+          <Route exact path="/edit/clientes" element={<EditClientes/>}/>
           <Route
             exact
             path="/admin/clientes/create"

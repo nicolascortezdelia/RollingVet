@@ -29,6 +29,7 @@ const Navigation = () => {
                 <Link className="nav-link" to="/contactos">Contactanos</Link>
                 <Link className="nav-link" to="*">Sobre Nosotros</Link>
                 <Link className=" nav-link outline-dark border border-dark rounded" to="/login">LOGIN</Link>
+                <Link className="nav-link" to="/admin/clientes">Administracion Clientes</Link>
               </Nav>
             </Navbar.Collapse>
           </div>
