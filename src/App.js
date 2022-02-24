@@ -6,14 +6,15 @@ import Footer from "./components/layout/Footer";
 import ContactUs from "./components/views/ContactUs/ContactUs";
 import Login from "./components/layout/Login";
 import Error404 from "./components/views/Error404/Error404";
-import { BrowserRouter, Routes, Route } from "react-router-dom";
 import PaginaPlanes from "./components/views/PaginaPlanes/PaginaPlanes";
 import AdminClientesCreate from "./components/views/AdminClientes/AdminClientesCreate";
-import AdminTurnos from "./components/views/AdminTurnos/AdminTurnos";
-import AdminTurnosCreate from "./components/views/AdminTurnos/AdminTurnosCreate";
-import ListaTurnos from "./components/views/AdminTurnos/ListaTurnos/ListaTurnos";
 import ListaClientes from "./components/views/AdminClientes/ListaClientes/ListaClientes";
 import AdminClientes from "./components/views/AdminClientes/AdminClientes";
+import TurnosCreate from "./components/views/TurnosCreate/TurnosCreate";
+import TurnosEdit from "./components/views/TurnosEdit/TurnosEdit";
+import TurnosTabla from "./components/views/TurnosTabla/TurnosTabla";
+import { BrowserRouter, Routes, Route } from "react-router-dom";
+
 
 function App() {
   return (
@@ -33,14 +34,10 @@ function App() {
             path="/admin/clientes/create"
             element={<AdminClientesCreate />}
           />
-          <Route exact path="/lista/turnos" element={<ListaTurnos />} />
-          <Route exact path="/admin/turnos" element={<AdminTurnos />} />
-          <Route
-            exact
-            path="/admin/turnos/create"
-            element={<AdminTurnosCreate />}
-          />
-          <Route exact path="*" element={<Error404 />} />
+          <Route exact path="/Turnos/Create" element={ <TurnosCreate /> } />
+          <Route exact path="/Turnos/Edit" element={ <TurnosEdit /> } />
+          <Route exact path="/turnos/tabla" element={ <TurnosTabla /> } />
+          <Route exact path="*" elment={ <Error404 />} />
         </Routes>
       </main>
       <Footer />
