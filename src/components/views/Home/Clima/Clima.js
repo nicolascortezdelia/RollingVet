@@ -32,14 +32,32 @@ const Clima = () => {
 
   return (
       <div className="bg-danger text-white">
-         <p className="text-center fw-bold"> Temperatura actual: </p> 
+         
 
       <Row className="m-0" >
      <Col className="text-center"   >
-     <p >{clima.name}</p>
+     <p className="text-white fw-bold mb-5 "> Ciudad: </p>
+     
+     <p className="mt-4" >{clima.name}</p>
      </Col> 
-     <Col className="text-center"  >{temperatura}ºC</Col>
-        <Col className="text-center " >{icono.main}</Col>
+     <Col className="text-center"  >
+         <p className="text-white fw-bold mb-5"> Temperatura: </p>
+     
+        <p className="mt-4" > {temperatura}ºC </p> 
+         </Col>
+        <Col className="text-center">
+            
+       <p className="text-white fw-bold"> {icono.main}</p> 
+        <img
+            src={`http://openweathermap.org/img/wn/${icono.icon}@2x.png`}
+            alt="Clima"
+            className="img-responsive"
+          />
+    
+ 
+            
+            </Col>
+            
       
 
       </Row>
