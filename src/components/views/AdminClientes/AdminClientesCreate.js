@@ -37,7 +37,7 @@ const AdminClientesCreate = () => {
             <Form.Control type="number" placeholder="+549XXXXXXXXXX" onChange={(e)=>setTelefono(e.target.value)} />
           </Form.Group>
           <hr />
-          <h4>Informacion de la Mascotta</h4>
+          <h4>Informacion de la Mascota</h4>
           <Form.Group className="mb-3" controlId="formBasicPassword">
             <Form.Label>Nombre de la Mascota</Form.Label>
             <Form.Control type="text" placeholder="Escriba el nombre de su mascota" onChange={(e)=>setNombreMascota(e.target.value)} />
@@ -52,7 +52,6 @@ const AdminClientesCreate = () => {
           </Form.Group>
           <div className="text-end">
             <button className="btn btn-success">Guardar</button>
-            <button className="btn btn-success">Eliminar</button>
           </div>
         </Form>
       </Container>

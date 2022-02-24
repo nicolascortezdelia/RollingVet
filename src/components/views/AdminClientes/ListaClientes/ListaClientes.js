@@ -15,7 +15,7 @@ const ListaClientes = ({cliente}) => {
       <td className="w-25">
         <div className="d-flex justify-content-center">
           <Link className="btn btn-success mx-1" to= "/admin/clientes/create">Editar</Link>
-          <Link className="btn btn-danger mx-1">Eliminar</Link>
+           <button className="btn btn-danger mx-1">Eliminar</button>
         </div>
       </td>
     </tr>

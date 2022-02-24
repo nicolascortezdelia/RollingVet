@@ -9,7 +9,7 @@ const AdminClientes = ({clientes}) => {
         <Container className="py-5">
           <div className="d-flex align-items-center justify-content-between">
             <h1>Lista Clientes</h1>
-            <Link className="btn btn-primary" to="/admin/clientes/create">Agregar Clientes</Link>
+            <Link to="/admin/clientes/create" className="btn btn-primary">Agregar Clientes</Link>
           </div>
           <hr />
             <Table bordered hover responsive className="align-middle mt-3">
@@ -22,8 +22,7 @@ const AdminClientes = ({clientes}) => {
                 <th>Nombre Mascota</th>
                 <th>Especie</th>
                 <th>Raza</th>
-                <Link to="/edit/clientes" className="btn btn-success mx-1">Editar</Link>
-                <button className= "btn btn-danger mx-1">Borrar</button>
+                
               </tr>
             </thead>
             <tbody>
