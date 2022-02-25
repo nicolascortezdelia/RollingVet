@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 import { Container, Form } from 'react-bootstrap';
-import {validateName, validateTel, validateEmail} from "../../helpers/Validaciones";
+import {validateNames, validateTel, validateEmail} from "../../helpers/Validaciones";
 import {Swal} from "sweetalert2";
 
 const AdminClientesCreate = ({URL}) => {
@@ -16,7 +16,7 @@ const AdminClientesCreate = ({URL}) => {
   const hundleSubmit = (e)=>{e.preventDefault()
 
   //validacion de los campos
-  if(!validateName(nombre) || !validateName(apellido) || !validateEmail(eMail) || !validateTel(telefono) || !validateName(nombreMascota) || !validateName(especie) || !validateName(raza)){
+  if(!validateNames(nombre) || !validateNames(apellido) || !validateEmail(eMail) || !validateTel(telefono) || !validateNames(nombreMascota) || !validateNames(especie) || !validateNames(raza)){
     alert('Validacion erronea')
     return
   }
