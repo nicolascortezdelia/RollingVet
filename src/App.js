@@ -48,7 +48,7 @@ function App() {
           <Route
             exact
             path="/admin/clientes/create"
-            element={<AdminClientesCreate />}
+            element={<AdminClientesCreate URL = {URL} />}
           />
           <Route exact path="/lista/turnos" element={<ListaTurnos />} />
           <Route exact path="/admin/turnos" element={<AdminTurnos />} />

@@ -15,6 +15,7 @@ const AdminClientes = ({clientes}) => {
             <Table bordered hover responsive className="align-middle mt-3">
             <thead>
               <tr>
+                <th>N.</th>
                 <th>Nomnbre</th>
                 <th>Apellido</th>
                 <th>E-mail</th>

@@ -1,18 +1,50 @@
 import React, { useState } from 'react';
 import { Container, Form } from 'react-bootstrap';
+import {validateName, validateTel, validateEmail} from "../../helpers/Validaciones";
+import {Swal} from "sweetalert2";
 
-const AdminClientesCreate = () => {
+const AdminClientesCreate = ({URL}) => {
   const [nombre, setNombre] = useState("");
   const [apellido, setApellido] = useState("");
-  const [email, setEmail] = useState("");
+  const [eMail, setEmail] = useState("");
   const [telefono, setTelefono] = useState(0);
   const [nombreMascota, setNombreMascota] = useState("");
   const [especie, setEspecie] = useState("");
   const [raza, setRaza] = useState("");
 
   //funcion para crear un objeto
-  const hundleSubmit = (e)=>{e.preventDefault()};
+  const hundleSubmit = (e)=>{e.preventDefault()
 
+  //validacion de los campos
+  if(!validateName(nombre) || !validateName(apellido) || !validateEmail(eMail) || !validateTel(telefono) || !validateName(nombreMascota) || !validateName(especie) || !validateName(raza)){
+    alert('Validacion erronea')
+    return
+  }
+  //envio de los datos para guardarlos
+  const newPaciente = {nombre, apellido, eMail, telefono, nombreMascota, especie, raza}
+  Swal.fire({
+    title: 'Estás seguro?',
+    text: "Quieres guardar los datos",
+    icon: 'warning',
+    showCancelButton: true,
+    confirmButtonText: 'Yes, delete it!'
+  }).then(async(result) => {
+    if (result.isConfirmed) {
+      try {
+        const res = await fetch(URL, {method: "POST", headers:{"Content-Type": "application-json"}, body:JSON.stringyfy(newPaciente)});
+        console.log(res);
+      } catch (error) {
+        console.log(error);
+      }
+      Swal.fire(
+        'Deleted!',
+        'Your file has been deleted.',
+        'success'
+      )
+    }
+  })
+
+  }
     return (
         <div>
             <Container className="py-5">
@@ -30,7 +62,7 @@ const AdminClientesCreate = () => {
           </Form.Group>
           <Form.Group className="mb-3" controlId="formBasicPassword">
             <Form.Label>Correo Electronico</Form.Label>
-            <Form.Control type="email" placeholder="Ejemplo@correo.com" onChange={(e)=>setEmail(e.value.target)} />
+            <Form.Control type="email" placeholder="Ejemplo@correo.com" onChange={(e)=>setEmail(e.target.value)} />
           </Form.Group>
           <Form.Group className="mb-3" controlId="formBasicPassword">
             <Form.Label>Numero De telefono</Form.Label>

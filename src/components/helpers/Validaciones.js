@@ -2,8 +2,8 @@ const regExNombre = /^[A-Za-z\s?]+$/;
 const regExEmail = /^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,3,4})+$/;
 const regExTel = /^([0-9]{5})+((-{1})*)+([0-9]{6})$/;
 
-const validateName = (campo)=>{
-   if(regExNombre.test(campo) && campo.trim() !== ""){
+const validateName = (field)=>{
+   if(regExNombre.test(field) && field.trim() !== ""){
        return true;
    }else{
        return false;
