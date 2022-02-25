@@ -16,19 +16,22 @@ import TurnosTabla from "./components/views/TurnosTabla/TurnosTabla";
 import { BrowserRouter, Routes, Route } from "react-router-dom";
 import { useEffect, useState } from "react";
 
+
 function App() {
   const [turnos, setTurnos] = useState([]);
   const URL = process.env.REACT_APP_AP_TURNOS;
 
-  useEffect(() => {
+  useEffect( () => {
     getAp();
   }, []);
+
+  
 
   const getAp = async () => {
     try {
       const res = await fetch(URL);
       const turnosAp = await res.json();
-      setTurnos(turnosAp)
+      setTurnos(turnosAp);
     } catch (error) {
       console.log(error);
     }
@@ -51,9 +54,17 @@ function App() {
             path="/admin/clientes/create"
             element={<AdminClientesCreate />}
           />
-          <Route exact path="/Turnos/Create" element={<TurnosCreate />} />
+          <Route
+            exact
+            path="/Turnos/Create"
+            element={<TurnosCreate URL={URL} getAp={getAp} />}
+          />
           <Route exact path="/Turnos/Edit" element={<TurnosEdit />} />
-          <Route exact path="/Turnos/Tabla" element={<TurnosTabla turnos={turnos} />} />
+          <Route
+            exact
+            path="/Turnos/Tabla"
+            element={<TurnosTabla turnos={turnos} />}
+          />
           <Route exact path="*" elment={<Error404 />} />
         </Routes>
       </main>
@@ -63,3 +74,5 @@ function App() {
 }
 
 export default App;
+
+// 02:00:00

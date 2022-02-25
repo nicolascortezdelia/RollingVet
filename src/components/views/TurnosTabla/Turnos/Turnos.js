@@ -5,9 +5,9 @@ const Turnos = ({ turno }) => {
   return (
     <tr>
       <td>{turno.id}</td>
-      <td>{turno.turnoPetName}</td>
-      <td>{turno.turnoDoctor}</td>
-      <td>{turno.turnoDetalle}</td>
+      <td>{turno.TurnoPetName}</td>
+      <td>{turno.TurnoDoctor}</td>
+      <td>{turno.TurnoDetalle}</td>
       <td>{turno.TurnoFecha}</td>
       <td>{turno.TurnoHora}</td>
       <td className="w-25">
@@ -24,4 +24,4 @@ const Turnos = ({ turno }) => {
 
 export default Turnos;
 
-// 01:29:00
+
