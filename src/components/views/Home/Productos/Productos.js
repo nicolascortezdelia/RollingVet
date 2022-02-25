@@ -11,7 +11,7 @@ const Productos = () => {
       <Row>
         <Col sm={12} md={6} className="d-flex">
           <div className="container">
-          <img className="img-fluid" src="https://cdn.royalcanin-weshare-online.io/wefNEnsBaPOZra8qk7jH/v3/ar-l-productos-perro-nutricion-especifica?w=640&" alt="" />
+          <img className="img-fluid" src="https://cdn.royalcanin-weshare-online.io/wefNEnsBaPOZra8qk7jH/v3/ar-l-productos-perro-nutricion-especifica?w=640&" alt="bolsa de comida para perro Royal Canin" />
           </div>
         </Col>
         <Col sm={12} md={6}>

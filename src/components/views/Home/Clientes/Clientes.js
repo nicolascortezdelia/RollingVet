@@ -19,7 +19,7 @@ const Clientes = () => {
         <Col sm={12} md={4}>
           <div className="text-center">
             {" "}
-            <img src={Romina} alt="" className="img-redonda" />{" "}
+            <img src={Romina} alt="foto de Romina" className="img-redonda" />{" "}
           </div>
 
           <Card.Body>
@@ -36,7 +36,7 @@ const Clientes = () => {
         <Col sm={12} md={4}>
           <div className="text-center">
             {" "}
-            <img src={Bautista} alt="" className="img-redonda" />{" "}
+            <img src={Bautista} alt="foto de Bautista" className="img-redonda" />{" "}
           </div>
 
           <Card.Body>
@@ -52,7 +52,7 @@ const Clientes = () => {
         <Col sm={12} md={4}>
           <div className="text-center">
             {" "}
-            <img src={Lorena} alt="" className="img-redonda" />{" "}
+            <img src={Lorena} alt="foto de lorena" className="img-redonda" />{" "}
           </div>
 
           <Card.Body>

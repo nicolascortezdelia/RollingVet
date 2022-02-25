@@ -14,7 +14,7 @@ const Navigation = () => {
 <Link to="/" className="text-decoration-none p-0">
 
             <img
-              alt=""
+              alt="logo RollingVet"
               src="/RollingVet.png"
               width="100"
               height="100"

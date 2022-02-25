@@ -28,7 +28,7 @@ const PaginaPlanes = () => {
                 <div className="mb-1">
                   <img
                     src="https://cdn.royalcanin-weshare-online.io/AWkwa2QBG95Xk-RBH9Rc/v11/golden-retriever-adult-weight-management-emblematic?w=960&"
-                    alt=""
+                    alt="perro en blanco y negro jugando con pelota roja"
                     className="img-fluid"
                   />
                 </div>
@@ -47,6 +47,7 @@ const PaginaPlanes = () => {
                 <Card.Img
                   variant="top"
                   src="https://vsn.shindiristudio.com/wp-content/uploads/2020/01/cat-2.jpg"
+                  alt="gatito siendo abrazado"
                 />
               </Col>
               <Col sm={12} md={7}>
@@ -97,6 +98,7 @@ const PaginaPlanes = () => {
                 <Card.Img
                   variant="top"
                   src="https://vsn.shindiristudio.com/wp-content/uploads/2019/01/Savet-Pas-1.jpg"
+                  alt="perro mirando al frente"
                 />
               </Col>
             </Row>
@@ -107,6 +109,7 @@ const PaginaPlanes = () => {
                 <Card.Img
                   variant="top"
                   src="https://vsn.shindiristudio.com/wp-content/uploads/2019/01/Savet-Pas-4.jpg"
+                  alt="perro acostado"
                 />
               </Col>
               <Col sm={12} md={7}>

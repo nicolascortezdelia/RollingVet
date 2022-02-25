@@ -1,5 +1,5 @@
 import React, { useRef } from "react";
-import { Container, Row, Col, Card, Button, Form } from "react-bootstrap";
+import { Container, Row, Col, Card, Form } from "react-bootstrap";
 import Swal from "sweetalert2";
 
 import { useState } from "react";
@@ -59,25 +59,27 @@ const PlanPrimerosPasos = () => {
     <div>
       <Container>
         <Card className="text-center shadow m-4 ">
-          <Row>
-            <Col sm={12} md={6} className="mb-2">
-              <Card.Body>
-                <Card.Img
-                  variant="top"
-                  src="https://vsn.shindiristudio.com/wp-content/uploads/2020/01/cat-2.jpg"
-                />
-                <h5 className="text-danger">Plan Primeros Pasos</h5>
-                <Card.Text>Servicios para mascotas de 0 a 5 años.</Card.Text>
-              </Card.Body>
-            </Col>
-            <Col sm={12} md={6} className="mt-3 container">
-              <h3 className="text-danger">Consultá por este Plan</h3>
-
-              <Form
-                className="my-4 container text-start "
-                onSubmit={handleSubmit}
-                ref={form}
-              >
+        <Row>
+        <Col sm={12} md={6} className="mb-2">
+          
+            <Card.Body>
+            <Card.Img
+              variant="top"
+              src="https://vsn.shindiristudio.com/wp-content/uploads/2020/01/cat-2.jpg"
+              alt='gatito siendo abrazod del Plan Primeros Pasos'
+            />
+              <h5 className="text-danger">Plan Primeros Pasos</h5>
+              <Card.Text>
+                Servicios para mascotas de 0 a 5 años.
+              </Card.Text>
+              
+            </Card.Body>
+          
+        </Col>
+        <Col sm={12} md={6} className="mt-3 container"> 
+        <h3 className="text-danger">Envianos tu consulta</h3>
+        
+        <Form className="my-4 container text-start " onSubmit={handleSubmit} ref={form} >
                 <Form.Group
                   className="mb-3"
                   controlId="exampleForm.ControlInput1"

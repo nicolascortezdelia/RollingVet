@@ -16,6 +16,7 @@ const Servicios = () => {
             <Card.Img
               variant="top"
               src="https://vsn.shindiristudio.com/wp-content/uploads/2020/01/Emergency-Vet.jpg"
+              alt="celular"
             />
             <Card.Body>
               <Card.Title>Emergencias</Card.Title>
@@ -31,6 +32,7 @@ const Servicios = () => {
             <Card.Img
               variant="top"
               src="https://vsn.shindiristudio.com/wp-content/uploads/2020/01/About-Us.jpg"
+              alt="pastor aleman con una veterinaria"
             />
             <Card.Body>
               <Card.Title>Diagnóstico</Card.Title>
@@ -47,6 +49,7 @@ const Servicios = () => {
             <Card.Img
               variant="top"
               src="https://vsn.shindiristudio.com/wp-content/uploads/2020/01/Diagnostics-Surgery.jpg"
+              alt="perro con un veterinario"
             />
             <Card.Body>
               <Card.Title>Cirugía</Card.Title>
@@ -63,6 +66,7 @@ const Servicios = () => {
             <Card.Img
               variant="top"
               src="https://vsn.shindiristudio.com/wp-content/uploads/2018/07/03-Lecenje.jpg"
+              alt="gatito acostado tapado"
             />
             <Card.Body>
               <Card.Title>Tratamiento Ambulatorio</Card.Title>

@@ -14,6 +14,7 @@ const Planes = () => {
             <Card.Img
               variant="top"
               src="https://vsn.shindiristudio.com/wp-content/uploads/2020/01/cat-2.jpg"
+              alt='gatito tierno de Primeros pasos'
             />
               <Card.Title className='mt-2'>Plan Primeros Pasos</Card.Title>
               <Card.Text>
@@ -29,6 +30,7 @@ const Planes = () => {
             <Card.Img
               variant="top"
               src="https://vsn.shindiristudio.com/wp-content/uploads/2019/01/Savet-Pas-1.jpg"
+              alt='perro mirando al frente del Plan Madurando'
             />
               <Card.Title className='mt-2'>Plan Madurando</Card.Title>
               <Card.Text>
@@ -45,6 +47,7 @@ const Planes = () => {
             <Card.Img
               variant="top"
               src="https://vsn.shindiristudio.com/wp-content/uploads/2019/01/Savet-Pas-4.jpg"
+              alt='perro acostado del Plan Adultos  '
             />
               <Card.Title className='mt-2'>Plan Adultos</Card.Title>
               <Card.Text>

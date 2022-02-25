@@ -16,6 +16,7 @@ const PlanAdultos = () => {
             <Card.Img
               variant="top"
               src="https://vsn.shindiristudio.com/wp-content/uploads/2019/01/Savet-Pas-4.jpg"
+              alt='perro acostado del Plan Adultos'
             />
               <h4 className="text-danger">Plan Adultos</h4>
               <Card.Text>
