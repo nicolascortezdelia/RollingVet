@@ -12,7 +12,7 @@ const Turnos = ({ turno }) => {
       <td>{turno.TurnoHora}</td>
       <td className="w-25">
         <div className="d-flex justify-content-center">
-          <Link to="/Turnos/Edit" className="btn btn-success mx-1">
+          <Link to={`/Turnos/Edit/${turno.id}`} className="btn btn-success mx-1">
             Editar
           </Link>
           <button className="btn btn-danger mx-1">Borrar</button>

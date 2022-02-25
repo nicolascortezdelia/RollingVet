@@ -13,7 +13,7 @@ const Error404 = () => {
         <Link to="/" className="link my-3 text-center fw-bold fs-3 text-dark">Volver a Rolling Code</Link>
       </span>
     </>
-  );
+  ); 
 };
 
 export default Error404;

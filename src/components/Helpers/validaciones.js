@@ -1,7 +1,6 @@
 const regExpNombreApellido = /^[A-Za-z\s?]+$/;
 const regExpNombre = /^[A-Za-z\s?]+$/;
-const regExpFecha =
-  /^(?:3[01]|[12][0-9]|0?[1-9])([\-/.])(0?[1-9]|1[1-2])\1\d{4}$/;
+const regExpFecha = /^\d{4}([\-/.])(0?[1-9]|1[1-2])\1(3[01]|[12][0-9]|0?[1-9])$/;
 const regExpHora = /T(?:0[917]|10)/;
 const regExpTxtArea = /^[a-zA-Z0-9?$@#()'!,+\-=_:.&€£*%\s]+$/;
 

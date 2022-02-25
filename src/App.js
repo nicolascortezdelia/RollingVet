@@ -59,7 +59,7 @@ function App() {
             path="/Turnos/Create"
             element={<TurnosCreate URL={URL} getAp={getAp} />}
           />
-          <Route exact path="/Turnos/Edit" element={<TurnosEdit />} />
+          <Route exact path="/Turnos/Edit/:id" element={<TurnosEdit URL={URL} />} />
           <Route
             exact
             path="/Turnos/Tabla"
@@ -75,4 +75,4 @@ function App() {
 
 export default App;
 
-// 02:00:00
+// 02:44:00
