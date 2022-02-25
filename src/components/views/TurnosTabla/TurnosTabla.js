@@ -3,7 +3,7 @@ import { Container, Table } from "react-bootstrap";
 import { Link } from "react-router-dom";
 import Turnos from "./Turnos/Turnos";
 
-const TurnosTabla = () => {
+const TurnosTabla = ({ turnos }) => {
   return (
     <div>
       <Container className="py-5">
@@ -17,6 +17,7 @@ const TurnosTabla = () => {
         <Table bordered hover responsive className="align-middle mt-3">
           <thead>
             <tr>
+              <th>N°</th>
               <th>Nombre Mascota</th>
               <th>Veterinario</th>
               <th>Detalle de la cita</th>
@@ -25,11 +26,9 @@ const TurnosTabla = () => {
             </tr>
           </thead>
           <tbody>
-            <Turnos />
-            <Turnos />
-            <Turnos />
-            <Turnos />
-            <Turnos />
+            {turnos.map((turno) => (
+              <Turnos turno={turno} />
+            ))}
           </tbody>
         </Table>
       </Container>

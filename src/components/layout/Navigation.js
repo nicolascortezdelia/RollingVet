@@ -29,7 +29,7 @@ const Navigation = () => {
                 <Link className="nav-link" to="*">
                   Sobre Nosotros
                 </Link>
-                <Link className="nav-link" to="/turnos/tabla">
+                <Link className="nav-link" to="/Turnos/Tabla">
                   Administrar Turnos
                 </Link>
                 <Link

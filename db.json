@@ -1,19 +1,21 @@
 {
-  "posts": [
+  "turnos": [
     {
       "id": 1,
-      "title": "json-server",
-      "author": "typicode"
-    }
-  ],
-  "comments": [
+      "turnoPetName": "Roco",
+      "turnoDoctor": "Dr Rivera",
+      "turnoDetalle": "Lavado de estomago",
+      "TurnoFecha": "29/3/22",
+      "TurnoHora": "13:00"
+    },
+
     {
-      "id": 1,
-      "body": "some comment",
-      "postId": 1
+      "id": 2,
+      "turnoPetName": "Bella",
+      "turnoDoctor": "Dra Ofelia",
+      "turnoDetalle": "Primeras Vacunas",
+      "TurnoFecha": "13/3/22",
+      "TurnoHora": "11:00"
     }
-  ],
-  "profile": {
-    "name": "typicode"
-  }
+  ]
 }
