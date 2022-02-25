@@ -1,8 +1,51 @@
-import React from 'react';
+import React, { useRef } from "react";
 import { Container, Row, Col, Card, Button, Form } from "react-bootstrap";
 import { Link } from "react-router-dom";
+import {useState} from 'react'
+import emailjs from '@emailjs/browser';
+import{ init } from '@emailjs/browser';
+import { validateEmail, validateNames, validateMesage } from "../../helpers/Validations";
+init("user_qzhExCW0FgIpI81KTZIIe");
+
 
 const PlanPrimerosPasos = () => {
+
+ 
+    // States
+  
+    const [name, setName] = useState('');
+    const [email, setEmail]=useState('');
+    const [mesage, setMesage]=useState('');
+    
+  
+  
+    // EmailJs
+  const form = useRef()
+     
+      const handleSubmit = (e) => {
+        e.preventDefault();
+  
+        // validamos datos
+        if(validateNames(name)&&validateEmail(email)&& validateMesage(mesage)){
+          console.log('paso la validacion')
+          
+        }else{console.log('no paso la validacion')
+      return}
+
+      // Email js
+      emailjs.sendForm('service_dihrpp7', 'template_qe3arwq', form.current)
+      .then((result) => {
+          console.log(result.text);
+      }, (error) => {
+          console.log(error.text);
+      });
+
+
+    }
+    
+
+
+
     return (
         <div>
              <Container >
@@ -27,27 +70,54 @@ const PlanPrimerosPasos = () => {
           
         </Col>
         <Col sm={12} md={6} className="mt-3 container"> 
-        <h3 className="text-danger display-5 p-2 ">Consultá por este plan</h3>
-        <Form className='container pt-2 text-start'>
-  <Form.Group className="mb-3 " controlId="formBasicEmail">
-    <Form.Label >Ingresá tu e-mail</Form.Label>
-    <Form.Control type="email" placeholder="Ej: juanperez@gmail.com" />
-    <Form.Text className="text-muted">
+        <h3 className="text-danger">Envianos tu consulta</h3>
+        
+        <Form className="my-4 container text-start " onSubmit={handleSubmit} ref={form} >
+                <Form.Group
+                  className="mb-3"
+                  controlId="exampleForm.ControlInput1"
+                >
+                  <Form.Label className="fw-bold text-dark">Nombre y Apellido</Form.Label>
+                  <input
+            name='user_name'
+              className="form-control"
+              type="text"
+              placeholder="Ej: Andrea Pérez"
+              onChange={(e)=>setName(e.target.value)}
+            />
+                </Form.Group>
+                <Form.Group
+                  className="mb-3"
+                  controlId="exampleForm.ControlInput1"
+                >
+                  <Form.Label className="fw-bold text-dark">
+                    Correo Electronico
+                  </Form.Label>
+                  <input
+              className="form-control"
+              type="text"
+              placeholder="ejemplo@gmail.com"
+              name='user_email'
+              onChange={(e)=>setEmail(e.target.value)}
+            />
+                   <Form.Text className="text-muted">
       No compartiremos tu e-mail o tus datos con nadie más
     </Form.Text>
-  </Form.Group>
+                </Form.Group>
 
-  <Form.Group className="mb-3" controlId="formBasicPassword">
-    <Form.Label>Clave</Form.Label>
-    <Form.Control type="password" placeholder="Ingresá aquí tu clave" />
-  </Form.Group>
-  <Form.Group className="mb-3" controlId="formBasicCheckbox">
-    
-  </Form.Group>
-  <Button variant="danger" type="submit"  className="color-navbar rounded-pill">
-    Enviar
-  </Button>
-</Form>
+
+                <Form.Group
+                  className="mb-3"
+                  controlId="exampleForm.ControlTextarea1"
+                >
+                  
+                  <Form.Control as="textarea" rows={3} placeholder="Ingrese su consulta"
+              onChange={(e)=>setMesage(e.target.value)} />
+                </Form.Group>
+                <button className="btn btn-danger rounded-pill" type="submit">
+                  Enviar
+                </button>
+              </Form>
         </Col>
         </Row>
         </Card>

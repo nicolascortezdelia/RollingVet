@@ -2,10 +2,12 @@ import React from 'react';
 import HomeCarousel from "./HomeCarousel/HomeCarousel";
 import Planes from "./Planes/Planes";
 import Staff from './Staff/Staff';
+import Clima from "./Clima/Clima";
 import Servicios from './Servicios/Servicios';
 import Clientes from './Clientes/Clientes';
 import Publicidad from './Publicidad/Publicidad';
 import Productos from './Productos/Productos';
+
 import Fade from "react-reveal/Fade";
 import { Container } from "react-bootstrap";
 
@@ -49,6 +51,7 @@ expertos </h3>
       </Container>
       
       <Clientes></Clientes>
+      <Clima></Clima>
       </Fade>
 
         </div>

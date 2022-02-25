@@ -37,9 +37,12 @@ const ContactUs = () => {
                   </Form.Label>
                   <Form.Control
                     type="email"
-                    placeholder="email@ejemplo.com"
+                    placeholder="ejemplo@gmail.com"
                     required
                   />
+                   <Form.Text className="text-muted">
+      No compartiremos tu e-mail o tus datos con nadie más
+    </Form.Text>
                 </Form.Group>
                 <Form.Group
                   className="mb-3"
