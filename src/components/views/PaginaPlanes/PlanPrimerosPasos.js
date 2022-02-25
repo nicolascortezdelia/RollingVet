@@ -16,6 +16,7 @@ const PlanPrimerosPasos = () => {
             <Card.Img
               variant="top"
               src="https://vsn.shindiristudio.com/wp-content/uploads/2020/01/cat-2.jpg"
+              alt='gatito siendo abrazod del Plan Primeros Pasos'
             />
               <h5 className="text-danger">Plan Primeros Pasos</h5>
               <Card.Text>

@@ -19,6 +19,7 @@ const Staff = () => {
             <Card.Img
               variant="top"
               src="https://images.pexels.com/photos/6234609/pexels-photo-6234609.jpeg?auto=compress&cs=tinysrgb&dpr=1&w=500"
+              alt="perrito siendo acariciado por una mujer"
             />
             <Card.Body>
               <Card.Title className="text-center text-danger fw-bold">Dra Liza Morgan </Card.Title>
@@ -41,6 +42,7 @@ const Staff = () => {
             <Card.Img
               variant="top"
               src="https://images.pexels.com/photos/6234616/pexels-photo-6234616.jpeg?auto=compress&cs=tinysrgb&dpr=1&w=500"
+              alt="perro siendo acariciado por veterinario"
             />
             <Card.Body>
               <Card.Title className="text-center text-danger fw-bold">Dr Adrián Muñoz</Card.Title>
@@ -59,6 +61,7 @@ const Staff = () => {
             <Card.Img
               variant="top"
               src="https://images.pexels.com/photos/6235666/pexels-photo-6235666.jpeg?auto=compress&cs=tinysrgb&dpr=1&w=500"
+              alt="perrito alzado por un veterinario"
             />
             <Card.Body>
               <Card.Title className="text-center text-danger fw-bold">Dr Rolando Schiavi </Card.Title>
