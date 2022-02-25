@@ -18,6 +18,7 @@ import PlanPrimerosPasos from "./components/views/PaginaPlanes/PlanPrimerosPasos
 
 import PlanAdultos from "./components/views/PaginaPlanes/PlanAdultos";
 import PlanMadurando from "./components/views/PaginaPlanes/PlanMadurando";
+import Nosotros from "./components/Nosotros/Nosotros";
 
 function App() {
   return (
@@ -25,7 +26,7 @@ function App() {
       <Navigation />
 
       <main>
-        <Routes>
+        {/* <Routes>
           <Route exact path="/" element={<Home />} />
           <Route exact path="/contactos" element={<ContactUs />} />
           <Route exact path="/login" element={<Login />} />
@@ -48,7 +49,8 @@ function App() {
             element={<AdminTurnosCreate />}
           />
           <Route exact path="*" element={<Error404 />} />
-        </Routes>
+        </Routes> */}
+        <Nosotros />
       </main>
       <Footer />
     </BrowserRouter>
