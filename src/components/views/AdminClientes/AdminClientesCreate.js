@@ -2,8 +2,9 @@ import React, { useState } from 'react';
 import { Container, Form } from 'react-bootstrap';
 import {validateNames, validateTel, validateEmail} from "../../helpers/Validaciones";
 import Swal from "sweetalert2";
+import { useNavigate } from 'react-router-dom';
 
-const AdminClientesCreate = ({URL}) => {
+const AdminClientesCreate = ({URL, getApi}) => {
   const [nombre, setNombre] = useState("");
   const [apellido, setApellido] = useState("");
   const [eMail, setEmail] = useState("");
@@ -11,14 +12,16 @@ const AdminClientesCreate = ({URL}) => {
   const [nombreMascota, setNombreMascota] = useState("");
   const [especie, setEspecie] = useState("");
   const [raza, setRaza] = useState("");
-
+// funion para navegar entre rutas
+ const navegacion = useNavigate();
   //funcion para crear un objeto
   const hundleSubmit = async(e)=>{e.preventDefault()
 
   //validacion de los campos
   if(!validateNames(nombre) || !validateNames(apellido) || !validateEmail(eMail) || !validateTel(telefono) || !validateNames(nombreMascota) || !validateNames(especie) || !validateNames(raza)){
     alert('Validacion erronea')
-    
+    Swal.fire("Ops!", "Some data are invalid.", "error");
+      return;
   }
   //envio de los datos para guardarlos
   const newPaciente = {nombre, apellido, eMail, telefono, nombreMascota, especie, raza}
@@ -27,20 +30,25 @@ const AdminClientesCreate = ({URL}) => {
     text: "Quieres guardar los datos",
     icon: 'warning',
     showCancelButton: true,
-    confirmButtonText: 'Yes, delete it!'
+    confirmButtonText: 'Objeto guardado!'
   }).then(async(result) => {
     if (result.isConfirmed) {
       try {
         const res = await fetch(URL, {method: "POST", headers:{"Content-Type": "application-json"}, body:JSON.stringify(newPaciente)});
-        console.log(res);
+       // console.log(res);
+       if(res.status === 201){
+        Swal.fire(
+          'Deleted!',
+          'Your file has been deleted.',
+          'success'
+        );
+        getApi();
+        navegacion("/admin/clientes");
+       }
       } catch (error) {
         console.log(error);
       } 
-      Swal.fire(
-        'Deleted!',
-        'Your file has been deleted.',
-        'success'
-      )
+      
     }
   }) 
 

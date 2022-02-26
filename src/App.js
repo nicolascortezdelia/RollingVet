@@ -18,7 +18,7 @@ import { useEffect, useState } from "react";
 import EditClientes from "./components/views/AdminClientes/ListaClientes/EditClientes";
 
 function App() {
-  const [clientes, setClientes] = useState([]);
+  const [cliente, setClientes] = useState([]);
   const URL = process.env.REACT_APP_CLIENTES;
 
   useEffect(()=>{getApi()}, []);
@@ -43,12 +43,12 @@ function App() {
           <Route exact path="/login" element={<Login />} />
           <Route exact path="/planes" element={<PaginaPlanes />} />
           <Route exact path="/lista/clientes" element={<ListaClientes />} />
-          <Route exact path="/admin/clientes" element={<AdminClientes clientes={clientes} />} />
-          <Route exact path="/edit/clientes" element={<EditClientes/>}/>
+          <Route exact path="/admin/clientes" element={<AdminClientes clientes={cliente} />} />
+          <Route exact path="/edit/clientes/:id" element={<EditClientes URL={URL}/>}/>
           <Route
             exact
             path="/admin/clientes/create"
-            element={<AdminClientesCreate URL = {URL} />}
+            element={<AdminClientesCreate URL = {URL} getApi = {getApi} />}
           />
           <Route exact path="/lista/turnos" element={<ListaTurnos />} />
           <Route exact path="/admin/turnos" element={<AdminTurnos />} />
