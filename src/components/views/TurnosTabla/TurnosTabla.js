@@ -3,12 +3,12 @@ import { Container, Table } from "react-bootstrap";
 import { Link } from "react-router-dom";
 import Turnos from "./Turnos/Turnos";
 
-const TurnosTabla = ({ turnos }) => {
+const TurnosTabla = ({ turnos, URL , getAp}) => {
   return (
     <div>
       <Container className="py-5">
         <div className="d-flex align-items-center justify-content-between">
-          <h1>Lista Turnos</h1>
+          <h1 className="text-danger fw-bold">Lista Turnos</h1>
           <Link className="btn btn-primary" to="/Turnos/Create">
             Agregar Turno
           </Link>
@@ -27,7 +27,7 @@ const TurnosTabla = ({ turnos }) => {
           </thead>
           <tbody>
             {turnos.map((turno) => (
-              <Turnos key={turno.id} turno={turno} />
+              <Turnos key={turno.id} turno={turno} URL={URL} getAp={getAp} />
             ))}
           </tbody>
         </Table>

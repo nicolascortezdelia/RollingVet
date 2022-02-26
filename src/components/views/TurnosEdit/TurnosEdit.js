@@ -1,6 +1,6 @@
 import React, { useEffect, useRef, useState } from "react";
 import { Container, Form } from "react-bootstrap";
-import { useParams } from "react-router-dom";
+import { useNavigate, useParams } from "react-router-dom";
 import Swal from "sweetalert2";
 import {
   validateFecha,
@@ -10,7 +10,7 @@ import {
   validatetextarea,
 } from "../../Helpers/validaciones";
 
-const TurnosEdit = ({ URL }) => {
+const TurnosEdit = ({ URL,getAp }) => {
   const [TurnoEd, setTurnoEd] = useState({});
   const { id } = useParams();
   const TurnoPetNameRef = useRef("");
@@ -18,6 +18,8 @@ const TurnosEdit = ({ URL }) => {
   const TurnoDetalleRef = useRef("");
   const TurnoFechaRef = useRef("");
   const TurnoHoraRef = useRef("");
+
+  const navigate = useNavigate()
 
   useEffect(async () => {
     try {
@@ -43,23 +45,52 @@ const TurnosEdit = ({ URL }) => {
       Swal.fire("Ops!", "Llene correctamente los casilleros.", "error");
       return;
     }
-  //   const turnosEditado = {
+    const turnosEditado = {
+      TurnoPetName: TurnoPetNameRef.current.value,
+      TurnoDoctor: TurnoDoctorRef.current.value,
+      TurnoDetalle: TurnoDetalleRef.current.value,
+      TurnoFecha: TurnoFechaRef.current.value,
+      TurnoHora: TurnoFechaRef.current.value,
+    };
 
-  //     TurnoPetName: TurnoPetNameRef.current.value,
-  //     TurnoDoctor: TurnoDoctorRef.current.value,
-  //     TurnoDetalle: TurnoDetalleRef.current.value,
-  //     TurnoFecha: TurnoFechaRef.current.value,
-  //     TurnoHora: TurnoFechaRef.current.value
+    Swal.fire({
+      title: "Esta Seguro?",
+      text: "No podra revertir el cambio",
+      icon: "warning",
+      confirmButtonColor: '#3085d6',
+      cancelButtonColor: '#d33',
+      showCancelButton: true,
+      confirmButtonText: "Editar!",
+    }).then(async (result) => {
+      if (result.isConfirmed) {
+        try {
+          const res = await fetch(`${URL}/${id}`, {
+            method: "PUT",
+            headers: {
+              "Content-Type": "application/json",
+            },
+            body: JSON.stringify(turnosEditado),
+          });
+          if (res.status === 200) {
+            Swal.fire("Actualizado!", "Turno Editado.", "success");
+            getAp();
+            navigate("/Turnos/Tabla");
+
+          }
+        } catch (error) {
+          console.log(error);
+        }
+      }
+    });
   };
-
   return (
     <div>
       <Container className="my-5 container">
-        <h1 className="text-center fw-bold ">Editar Turnos</h1>
+        <h1 className="text-center fw-bold text-danger">Editar Turnos</h1>
         <hr />
         <Form className="my-3" onSubmit={handleSubmit}>
           <Form.Group className="mb-3" controlId="exampleForm.ControlInput1">
-            <Form.Label>Nombre de la Mascota</Form.Label>
+            <Form.Label className="fw-bold">Nombre de la Mascota</Form.Label>
             <Form.Control
               type="text"
               placeholder="Nombre de la Mascota"
@@ -68,7 +99,7 @@ const TurnosEdit = ({ URL }) => {
             />
           </Form.Group>
           <Form.Group className="mb-3" controlId="exampleForm.ControlInput1">
-            <Form.Label>Nombre Del Profesional</Form.Label>
+            <Form.Label className="fw-bold">Nombre Del Profesional</Form.Label>
             <Form.Control
               type="text"
               placeholder="Nombre del Profesional"
@@ -77,7 +108,7 @@ const TurnosEdit = ({ URL }) => {
             />
           </Form.Group>
           <Form.Group className="mb-3" controlId="exampleForm.ControlTextarea1">
-            <Form.Label>Detalle De la Cita</Form.Label>
+            <Form.Label className="fw-bold">Detalle De la Cita</Form.Label>
             <Form.Control
               as="textarea"
               rows={3}
@@ -86,7 +117,7 @@ const TurnosEdit = ({ URL }) => {
             />
           </Form.Group>
           <Form.Group className="mb-3" controlId="exampleForm.ControlInput1">
-            <Form.Label>Fecha</Form.Label>
+            <Form.Label className="fw-bold">Fecha</Form.Label>
             <Form.Control
               type="date"
               placeholder="Escriba la fecha"
@@ -95,7 +126,7 @@ const TurnosEdit = ({ URL }) => {
             />
           </Form.Group>
           <Form.Group className="mb-3" controlId="exampleForm.ControlInput1">
-            <Form.Label>Horario</Form.Label>
+            <Form.Label className="fw-bold">Horario</Form.Label>
             <Form.Control
               type="time"
               placeholder="Escriba el horario"

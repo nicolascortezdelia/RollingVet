@@ -24,7 +24,7 @@ function App() {
   useEffect( () => {
     getAp();
   }, []);
-
+  
   
 
   const getAp = async () => {
@@ -59,11 +59,11 @@ function App() {
             path="/Turnos/Create"
             element={<TurnosCreate URL={URL} getAp={getAp} />}
           />
-          <Route exact path="/Turnos/Edit/:id" element={<TurnosEdit URL={URL} />} />
+          <Route exact path="/Turnos/Edit/:id" element={<TurnosEdit URL={URL} getAp={getAp} />} />
           <Route
             exact
             path="/Turnos/Tabla"
-            element={<TurnosTabla turnos={turnos} />}
+            element={<TurnosTabla turnos={turnos} URL={URL} getAp={getAp}/>}
           />
           <Route exact path="*" elment={<Error404 />} />
         </Routes>

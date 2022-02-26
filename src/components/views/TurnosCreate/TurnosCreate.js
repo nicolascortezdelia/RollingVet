@@ -43,6 +43,8 @@ const TurnosCreate = ({ URL, getAp }) => {
       title: "Esta seguro?",
       text: "No podra revertir este paso!",
       icon: "warning",
+      confirmButtonColor: '#3085d6',
+      cancelButtonColor: '#d33',
       showCancelButton: true,
       confirmButtonText: "Guardar!",
     }).then(async (result) => {
@@ -74,11 +76,11 @@ const TurnosCreate = ({ URL, getAp }) => {
   return (
     <div>
       <Container className="my-5 container">
-        <h1 className="text-center fw-bold ">Agendar Turnos</h1>
+        <h1 className="text-center fw-bold text-danger">Agendar Turnos</h1>
         <hr />
         <Form className="my-3" onSubmit={handleSubmit}>
           <Form.Group className="mb-3" controlId="exampleForm.ControlInput1">
-            <Form.Label>Nombre de la Mascota</Form.Label>
+            <Form.Label className="fw-bold">Nombre de la Mascota</Form.Label>
             <Form.Control
               type="text"
               placeholder="Nombre de la Mascota"
@@ -86,7 +88,7 @@ const TurnosCreate = ({ URL, getAp }) => {
             />
           </Form.Group>
           <Form.Group className="mb-3" controlId="exampleForm.ControlInput1">
-            <Form.Label>Nombre Del Profesional</Form.Label>
+            <Form.Label className="fw-bold" >Nombre Del Profesional</Form.Label>
             <Form.Control
               type="text"
               placeholder="Nombre del Profesional"
@@ -94,7 +96,7 @@ const TurnosCreate = ({ URL, getAp }) => {
             />
           </Form.Group>
           <Form.Group className="mb-3" controlId="exampleForm.ControlTextarea1">
-            <Form.Label>Detalle De la Cita</Form.Label>
+            <Form.Label className="fw-bold" >Detalle De la Cita</Form.Label>
             <Form.Control
               as="textarea"
               rows={3}
@@ -102,7 +104,7 @@ const TurnosCreate = ({ URL, getAp }) => {
             />
           </Form.Group>
           <Form.Group className="mb-3" controlId="exampleForm.ControlInput1">
-            <Form.Label>Fecha</Form.Label>
+            <Form.Label className="fw-bold">Fecha</Form.Label>
             <Form.Control
               type="date"
               placeholder="Escriba la fecha"
@@ -110,7 +112,7 @@ const TurnosCreate = ({ URL, getAp }) => {
             />
           </Form.Group>
           <Form.Group className="mb-3" controlId="exampleForm.ControlInput1">
-            <Form.Label>Horario</Form.Label>
+            <Form.Label className="fw-bold">Horario</Form.Label>
             <Form.Control
               type="time"
               placeholder="Escriba el horario"
