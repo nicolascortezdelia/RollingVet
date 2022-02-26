@@ -27,13 +27,9 @@ const TurnosCreate = ({ URL, getAp }) => {
       !validatetextarea(TurnoDetalle) ||
       !validateFecha(TurnoFecha) ||
       !validateHora(TurnoHora)
-    ) {   
-      Swal.fire(
-        "Ops!",
-        "Llene correctamente los casilleros.",
-        "error");
-        return;
-        
+    ) {
+      Swal.fire("Ops!", "Llene correctamente los casilleros.", "error");
+      return;
     }
     const nuevoTurno = {
       TurnoPetName,
