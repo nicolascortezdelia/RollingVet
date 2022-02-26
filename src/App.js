@@ -18,8 +18,24 @@ import PlanPrimerosPasos from "./components/views/PaginaPlanes/PlanPrimerosPasos
 
 import PlanAdultos from "./components/views/PaginaPlanes/PlanAdultos";
 import PlanMadurando from "./components/views/PaginaPlanes/PlanMadurando";
+import { useEffect, useState } from "react";
+import EditClientes from "./components/views/AdminClientes/ListaClientes/EditClientes";
 
 function App() {
+  const [clientes, setClientes] = useState([]);
+  const URL = process.env.REACT_APP_CLIENTES;
+
+  useEffect(()=>{getApi()}, []);
+
+  const getApi = async ()=> {
+    try {
+      const res = await fetch(URL);
+      const clienteApi = await res.json();
+      setClientes(clienteApi);
+    } catch (error) {
+      console.log(error);
+    }
+  }
   return (
     <BrowserRouter>
       <Navigation />
@@ -34,11 +50,12 @@ function App() {
           <Route exact path="/planes/madurando" element={<PlanMadurando/>} />
           <Route exact path="/planes/adultos" element={<PlanAdultos />} />
           <Route exact path="/lista/clientes" element={<ListaClientes />} />
-          <Route exact path="/admin/clientes" element={<AdminClientes />} />
+          <Route exact path="/admin/clientes" element={<AdminClientes clientes={clientes} />} />
+          <Route exact path="/edit/clientes" element={<EditClientes/>}/>
           <Route
             exact
             path="/admin/clientes/create"
-            element={<AdminClientesCreate />}
+            element={<AdminClientesCreate URL = {URL} />}
           />
           <Route exact path="/lista/turnos" element={<ListaTurnos />} />
           <Route exact path="/admin/turnos" element={<AdminTurnos />} />

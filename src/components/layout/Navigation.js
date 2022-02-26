@@ -40,6 +40,7 @@ const Navigation = () => {
               >
                 LOGIN
               </Link>
+              <Link className="nav-link" to="/admin/clientes">Administracion Clientes</Link>
             </Nav>
           </Navbar.Collapse>
         </Container>

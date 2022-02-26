@@ -3,18 +3,19 @@ import { Container, Table } from 'react-bootstrap';
 import ListaClientes from './ListaClientes/ListaClientes';
 import { Link } from 'react-router-dom';
 
-const AdminClientes = () => {
+const AdminClientes = ({clientes}) => {
     return (
         <div>
         <Container className="py-5">
           <div className="d-flex align-items-center justify-content-between">
             <h1>Lista Clientes</h1>
-            <Link className="btn btn-primary" to="/admin/clientes/create">Agregar Clientes</Link>
+            <Link to="/admin/clientes/create" className="btn btn-primary">Agregar Clientes</Link>
           </div>
           <hr />
             <Table bordered hover responsive className="align-middle mt-3">
             <thead>
               <tr>
+                <th>N.</th>
                 <th>Nomnbre</th>
                 <th>Apellido</th>
                 <th>E-mail</th>
@@ -22,15 +23,12 @@ const AdminClientes = () => {
                 <th>Nombre Mascota</th>
                 <th>Especie</th>
                 <th>Raza</th>
+                
               </tr>
             </thead>
             <tbody>
-              <ListaClientes />
-              <ListaClientes />
-              <ListaClientes />
-              <ListaClientes />
-              <ListaClientes />
-              <ListaClientes />
+             {clientes.map((cliente)=>(<ListaClientes key={cliente.id} cliente={cliente} />))};
+              
             </tbody>
           </Table>
           {/* No products found message */}
