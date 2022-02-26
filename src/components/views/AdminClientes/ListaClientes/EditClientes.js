@@ -48,4 +48,4 @@ const EditClientes = () => {
     );
 };
 
-export default EditClientes.js;
+export default EditClientes;

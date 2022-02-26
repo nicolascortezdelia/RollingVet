@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
 import { Container, Form } from 'react-bootstrap';
 import {validateNames, validateTel, validateEmail} from "../../helpers/Validaciones";
-import {Swal} from "sweetalert2";
+import Swal from "sweetalert2";
 
 const AdminClientesCreate = ({URL}) => {
   const [nombre, setNombre] = useState("");
@@ -13,12 +13,12 @@ const AdminClientesCreate = ({URL}) => {
   const [raza, setRaza] = useState("");
 
   //funcion para crear un objeto
-  const hundleSubmit = (e)=>{e.preventDefault()
+  const hundleSubmit = async(e)=>{e.preventDefault()
 
   //validacion de los campos
   if(!validateNames(nombre) || !validateNames(apellido) || !validateEmail(eMail) || !validateTel(telefono) || !validateNames(nombreMascota) || !validateNames(especie) || !validateNames(raza)){
     alert('Validacion erronea')
-    return
+    
   }
   //envio de los datos para guardarlos
   const newPaciente = {nombre, apellido, eMail, telefono, nombreMascota, especie, raza}
@@ -31,18 +31,18 @@ const AdminClientesCreate = ({URL}) => {
   }).then(async(result) => {
     if (result.isConfirmed) {
       try {
-        const res = await fetch(URL, {method: "POST", headers:{"Content-Type": "application-json"}, body:JSON.stringyfy(newPaciente)});
+        const res = await fetch(URL, {method: "POST", headers:{"Content-Type": "application-json"}, body:JSON.stringify(newPaciente)});
         console.log(res);
       } catch (error) {
         console.log(error);
-      }
+      } 
       Swal.fire(
         'Deleted!',
         'Your file has been deleted.',
         'success'
       )
     }
-  })
+  }) 
 
   }
     return (
