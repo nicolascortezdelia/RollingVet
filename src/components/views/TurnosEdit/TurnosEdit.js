@@ -43,7 +43,13 @@ const TurnosEdit = ({ URL }) => {
       Swal.fire("Ops!", "Llene correctamente los casilleros.", "error");
       return;
     }
-    console.log('Datos bien cargados')
+  //   const turnosEditado = {
+
+  //     TurnoPetName: TurnoPetNameRef.current.value,
+  //     TurnoDoctor: TurnoDoctorRef.current.value,
+  //     TurnoDetalle: TurnoDetalleRef.current.value,
+  //     TurnoFecha: TurnoFechaRef.current.value,
+  //     TurnoHora: TurnoFechaRef.current.value
   };
 
   return (

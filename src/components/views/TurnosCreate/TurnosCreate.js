@@ -14,8 +14,8 @@ const TurnosCreate = ({ URL, getAp }) => {
   const [TurnoPetName, setTurnoPetName] = useState("");
   const [TurnoDoctor, setTurnoDoctor] = useState("");
   const [TurnoDetalle, setTurnoDetalle] = useState("");
-  const [TurnoFecha, setTurnoFecha] = useState(0);
-  const [TurnoHora, setTurnoHora] = useState(0);
+  const [TurnoFecha, setTurnoFecha] = useState("");
+  const [TurnoHora, setTurnoHora] = useState("");
   const navigate = useNavigate();
 
   const handleSubmit = (e) => {
