@@ -18,7 +18,7 @@ const Login = () => {
     <Fade bottom>
       <div className="container d-flex align-items-center my-3" >
        
-       <Container style={{ width: '25rem', height: "23rem"}} className="border rounded border-dark border-1">
+       <Container style={{ width: '25rem', height: "23rem"}} className="border rounded border-dark border-1  bg-light">
          <div>
            <p className=" fs-2 text-danger text-center fw-light mt-2">Inicie Sesión</p>
            <hr className="text-dark"/>
