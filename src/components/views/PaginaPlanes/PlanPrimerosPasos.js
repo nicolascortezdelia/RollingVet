@@ -77,7 +77,7 @@ const PlanPrimerosPasos = () => {
           
         </Col>
         <Col sm={12} md={6} className="mt-3 container"> 
-        <h3 className="text-danger">Envianos tu consulta</h3>
+        <h3 className="text-danger">Consultá por este Plan</h3>
         
         <Form className="my-4 container text-start " onSubmit={handleSubmit} ref={form} >
                 <Form.Group

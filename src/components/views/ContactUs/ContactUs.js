@@ -3,8 +3,65 @@ import { Col, Container, Form, Row, Card } from "react-bootstrap";
 import Iframe from "react-iframe";
 import Fade from "react-reveal/Fade";
 import "./ContactUs.css"
+import Swal from "sweetalert2";
+
+import { useState, useRef } from "react";
+import emailjs from "@emailjs/browser";
+import { init } from "@emailjs/browser";
+import {
+  validateEmail,
+  validateNames,
+  validateMesage,
+} from "../../helpers/Validations";
+init("user_qzhExCW0FgIpI81KTZIIe");
 
 const ContactUs = () => {
+
+ // States
+
+ const [name, setName] = useState("");
+ const [email, setEmail] = useState("");
+ const [mesage, setMesage] = useState("");
+
+ // EmailJs
+ const form = useRef();
+
+ const handleSubmit = (e) => {
+   e.preventDefault();
+
+   // validamos datos
+   if (!validateNames(name) || !validateEmail(email) || !validateMesage(mesage)) {
+     Swal.fire({
+       icon: "error",
+       title: "Ay!",
+       text: "Ingresaste algun dato incorrecto, por favor revisá el formulario",
+     });
+   } else {
+     // Email js
+     emailjs.sendForm("service_dihrpp7", "template_qe3arwq", form.current)
+       .then(
+         (result) => {
+           console.log(result.text);
+         },
+         (error) => {
+           console.log(error.text);
+         }
+       );
+     setName("");
+     setEmail("");
+     setMesage("");
+
+     Swal.fire({
+       icon: "succes",
+       title: "Listo!",
+       text: "Gracias por tu consulta, pronto nos pondremos en contacto con vos",
+     });
+   }
+ };
+
+
+
+
   return (
     <>
     <Fade bottom>
@@ -20,13 +77,22 @@ const ContactUs = () => {
           <Card className="mb-3">
           <Row>
             <Col sm={12} md={6} className="border-end border-danger" >
-              <Form className="my-4 container ">
+            <Form className="my-4 container text-start " onSubmit={handleSubmit} ref={form} >
                 <Form.Group
                   className="mb-3"
                   controlId="exampleForm.ControlInput1"
                 >
-                  <Form.Label className="fw-bold text-dark">Nombre y Apellido</Form.Label>
-                  <Form.Control type="text" placeholder="Nombre y Apellido" />
+                  <Form.Label className="fw-bold text-dark">
+                    Nombre y Apellido
+                  </Form.Label>
+                  <input
+                    value={name}
+                    name="user_name"
+                    className="form-control"
+                    type="text"
+                    placeholder="Ej: Andrea Pérez"
+                    onChange={(e) => setName(e.target.value)}
+                  />
                 </Form.Group>
                 <Form.Group
                   className="mb-3"
@@ -35,23 +101,34 @@ const ContactUs = () => {
                   <Form.Label className="fw-bold text-dark">
                     Correo Electronico
                   </Form.Label>
-                  <Form.Control
-                    type="email"
+                  <input
+                    value={email}
+                    className="form-control"
+                    type="text"
                     placeholder="ejemplo@gmail.com"
-                    required
+                    name="user_email"
+                    onChange={(e) => setEmail(e.target.value)}
                   />
-                   <Form.Text className="text-muted">
-      No compartiremos tu e-mail o tus datos con nadie más
-    </Form.Text>
+                  <Form.Text className="text-muted">
+                    No compartiremos tu e-mail o tus datos con nadie más
+                  </Form.Text>
                 </Form.Group>
+
+
                 <Form.Group
                   className="mb-3"
                   controlId="exampleForm.ControlTextarea1"
                 >
-                  <Form.Label className="fw-bold text-dark">
+                                    <Form.Label className="fw-bold text-dark">
                     Dejanos tu Consulta
                   </Form.Label>
-                  <Form.Control as="textarea" rows={3} />
+                  <Form.Control
+                    value={mesage}
+                    as="textarea"
+                    rows={3}
+                    placeholder="Ingrese su consulta"
+                    onChange={(e) => setMesage(e.target.value)}
+                  />
                 </Form.Group>
                 <button className="btn btn-danger rounded-pill" type="submit">
                   Enviar
