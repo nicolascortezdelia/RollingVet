@@ -50,7 +50,7 @@ const PlanAdultos = () => {
        setMesage("");
  
        Swal.fire({
-         icon: "succes",
+         icon: "success",
          title: "Listo!",
          text: "Gracias por tu consulta, pronto nos pondremos en contacto con vos",
        });
