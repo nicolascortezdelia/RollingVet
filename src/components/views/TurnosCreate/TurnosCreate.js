@@ -8,7 +8,7 @@ import {
   validateNombre,
   validateNombreApellido,
   validatetextarea,
-} from "../../Helpers/validaciones";
+} from "../../helpers/validaciones";
 
 const TurnosCreate = ({ URL, getAp }) => {
   const [TurnoPetName, setTurnoPetName] = useState("");
