@@ -38,8 +38,8 @@ const AdminClientesCreate = ({URL, getApi}) => {
        // console.log(res);
        if(res.status === 201){
         Swal.fire(
-          'Deleted!',
-          'Your file has been deleted.',
+          'Creado!',
+          'Objeto creado.',
           'success'
         );
         getApi();

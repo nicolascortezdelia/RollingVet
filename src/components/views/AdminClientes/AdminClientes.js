@@ -3,7 +3,7 @@ import { Container, Table } from 'react-bootstrap';
 import ListaClientes from './ListaClientes/ListaClientes';
 import { Link } from 'react-router-dom';
 
-const AdminClientes = ({clientes}) => {
+const AdminClientes = ({cliente, URL}) => {
     return (
         <div>
         <Container className="py-5">
@@ -27,7 +27,7 @@ const AdminClientes = ({clientes}) => {
               </tr>
             </thead>
             <tbody>
-             {clientes.map((cliente)=>(<ListaClientes key={cliente.id} cliente={cliente} />))};
+             {cliente.map((cliente)=>(<ListaClientes key={cliente.id} cliente={cliente} URL={URL}/>))};
               
             </tbody>
           </Table>

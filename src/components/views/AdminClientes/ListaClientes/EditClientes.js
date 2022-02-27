@@ -7,9 +7,10 @@ import {
 } from "../../../helpers/Validaciones";
 import Swal from "sweetalert2";
 import { useParams } from "react-router-dom";
+import { useNavigate } from "react-router-dom";
 import ListaClientes from "./ListaClientes";
 
-const EditClientes = ({ URL }) => {
+const EditClientes = ({ URL, getApi}) => {
   const [producto, setProducto] = useState({});
   //parametro
   const { id } = useParams();
@@ -21,6 +22,9 @@ const EditClientes = ({ URL }) => {
   const nombreMascotaRef = useRef("");
   const especieRef = useRef("");
   const razaRef = useRef("");
+
+  // funion para navegar entre rutas
+  const navegacion = useNavigate();
 
   useEffect(async () => {
     try {
@@ -61,6 +65,36 @@ const EditClientes = ({ URL }) => {
       raza: razaRef.current.value
     }
      console.log(productoEditado);
+     Swal.fire({
+      title: 'Are you sure?',
+      text: "You won't be able to revert this!",
+      icon: 'warning',
+      showCancelButton: true,
+      confirmButtonText: 'Yes, create it!'
+    }).then(async (result) => {
+      if (result.isConfirmed) {
+        try {
+          const res = await fetch(`${URL}/${id}`, {method: "PUT", headers:{"Content-Type": "application.json"}, body: JSON.stringify(productoEditado)})
+          console.log(res);
+          if(res.status === 200){
+            Swal.fire(
+              'Modificado!',
+              'Tu archivo ha sido modificado.',
+              'success'
+            );
+            getApi();
+            navegacion("/admin/clientes");
+          }
+        } catch (error) {
+          console.log(error);
+        }
+        Swal.fire(
+          'Modificado!',
+          'Datos modificados.',
+          'success'
+        )
+      }
+    })
   };
   return (
     <div>

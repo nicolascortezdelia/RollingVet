@@ -43,8 +43,8 @@ function App() {
           <Route exact path="/login" element={<Login />} />
           <Route exact path="/planes" element={<PaginaPlanes />} />
           <Route exact path="/lista/clientes" element={<ListaClientes />} />
-          <Route exact path="/admin/clientes" element={<AdminClientes clientes={cliente} />} />
-          <Route exact path="/edit/clientes/:id" element={<EditClientes URL={URL}/>}/>
+          <Route exact path="/admin/clientes" element={<AdminClientes cliente={cliente} URL={URL} getApi={getApi}/>} />
+          <Route exact path="/edit/clientes/:id" element={<EditClientes URL={URL} getApi={getApi}/>}/>
           <Route
             exact
             path="/admin/clientes/create"

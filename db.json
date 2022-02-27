@@ -1,23 +1,10 @@
 {
   "Clientes": [
     {
-      "id": 1,
-      "nombre": "Cristian",
-      "apellido": "Brandino",
-      "eMail": "cbrandino@gmail.com",
-      "telefono": "0114578999",
-      "nombreMascota": "Olivia",
-      "especie": "gato",
-      "raza": "mestizo"
-    },
-    {
       "id": 2
     },
     {
       "id": 3
-    },
-    {
-      "id": 4
     },
     {
       "id": 5
@@ -30,12 +17,6 @@
     },
     {
       "id": 8
-    },
-    {
-      "id": 9
-    },
-    {
-      "id": 10
     }
   ],
   "comments": [
