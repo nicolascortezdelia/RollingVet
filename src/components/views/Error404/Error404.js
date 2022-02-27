@@ -1,7 +1,7 @@
 import React from "react";
 import { Image } from "react-bootstrap";
 import { Link } from "react-router-dom";
-import "./error404.css";
+import "./Error404.css";
 
 const Error404 = () => {
   return (
@@ -13,7 +13,7 @@ const Error404 = () => {
         <Link to="/" className="link my-3 text-center fw-bold fs-3 text-danger">Volver a RollingVet</Link>
       </span>
     </>
-  );
+  ); 
 };
 
 export default Error404;

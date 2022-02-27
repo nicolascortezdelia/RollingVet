@@ -1,19 +1,44 @@
 {
-  "posts": [
+  "turnos": [
     {
-      "id": 1,
-      "title": "json-server",
-      "author": "typicode"
-    }
-  ],
-  "comments": [
+      "TurnoPetName": "Rocoxxxxx",
+      "TurnoDoctor": "Dr Rivera",
+      "TurnoDetalle": "Lavado de estomago",
+      "TurnoFecha": "2022-03-02",
+      "TurnoHora": "2022-03-02",
+      "id": 1
+    },
     {
-      "id": 1,
-      "body": "some comment",
-      "postId": 1
+      "TurnoPetName": "Ludoo",
+      "TurnoDoctor": "Dr Rivero",
+      "TurnoDetalle": "Chequeo Anual",
+      "TurnoFecha": "2022-02-28",
+      "TurnoHora": "2022-02-28",
+      "id": 11
+    },
+    {
+      "TurnoPetName": "Fluffy",
+      "TurnoDoctor": "Dr Olivera",
+      "TurnoDetalle": "Chequeo anual y peluqueria",
+      "TurnoFecha": "2022-03-04",
+      "TurnoHora": "14:30",
+      "id": 12
+    },
+    {
+      "TurnoPetName": "Grandote",
+      "TurnoDoctor": "Dr Rivera",
+      "TurnoDetalle": "Peluqueria",
+      "TurnoFecha": "2022-03-11",
+      "TurnoHora": "13:00",
+      "id": 13
+    },
+    {
+      "TurnoPetName": "vbjhvgjjhg",
+      "TurnoDoctor": "ljkhgjkhhjhkj",
+      "TurnoDetalle": "khghjkgj",
+      "TurnoFecha": "2022-03-03",
+      "TurnoHora": "15:00",
+      "id": 14
     }
-  ],
-  "profile": {
-    "name": "typicode"
-  }
+  ]
 }

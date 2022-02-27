@@ -18,9 +18,29 @@ import TurnosCreate from "./components/views/TurnosCreate/TurnosCreate";
 import TurnosEdit from "./components/views/TurnosEdit/TurnosEdit";
 import TurnosTabla from "./components/views/TurnosTabla/TurnosTabla";
 import { BrowserRouter, Routes, Route } from "react-router-dom";
+import { useEffect, useState } from "react";
 
 
 function App() {
+  const [turnos, setTurnos] = useState([]);
+  const URL = process.env.REACT_APP_AP_TURNOS;
+
+  useEffect( () => {
+    getAp();
+  }, []);
+  
+  
+
+  const getAp = async () => {
+    try {
+      const res = await fetch(URL);
+      const turnosAp = await res.json();
+      setTurnos(turnosAp);
+    } catch (error) {
+      console.log(error);
+    }
+  };
+
   return (
     <BrowserRouter>
       <Navigation />
@@ -41,10 +61,18 @@ function App() {
             path="/admin/clientes/create"
             element={<AdminClientesCreate />}
           />
-          <Route exact path="/Turnos/Create" element={ <TurnosCreate /> } />
-          <Route exact path="/Turnos/Edit" element={ <TurnosEdit /> } />
-          <Route exact path="/turnos/tabla" element={ <TurnosTabla /> } />
-          <Route exact path="*" elment={ <Error404 />} />
+          <Route
+            exact
+            path="/Turnos/Create"
+            element={<TurnosCreate URL={URL} getAp={getAp} />}
+          />
+          <Route exact path="/Turnos/Edit/:id" element={<TurnosEdit URL={URL} getAp={getAp} />} />
+          <Route
+            exact
+            path="/Turnos/Tabla"
+            element={<TurnosTabla turnos={turnos} URL={URL} getAp={getAp}/>}
+          />
+          <Route exact path="*" elment={<Error404 />} />
         </Routes>
       </main>
       <Footer />
@@ -53,3 +81,5 @@ function App() {
 }
 
 export default App;
+
+// 03:05:00
