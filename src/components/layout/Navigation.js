@@ -9,30 +9,29 @@ const Navigation = () => {
     <>
       <Navbar bg=" fw-bolder" expand="lg" className="d-flex Container">
         <Container>
-          <Navbar.Brand href="#/">
-          <Link className="nav-link text-dark" to="/" >
+          <Navbar.Brand>
+          <Link to = "/" className="text-decoration-none p-0" to="/" >
             <img
-              alt=""
+              alt="logo RollingVet"
               src="/RollingVet.png"
-              width="80"
-              // height="100"
+              width="100"
+              height="100"
               className="logo d-inline-block align-center img-responsive"
-            />{" "}
+            />
             
-            RollingVet
             </Link>
           </Navbar.Brand>
-          <div className="flex-row-reverse Container">
             <Navbar.Toggle aria-controls="basic-navbar-nav" />
-            <Navbar.Collapse id="basic-navbar-nav">
-              <Nav className="me-auto">
+            <Navbar.Collapse id="basic-navbar-nav" className="justify-content-end">
+              <Nav>
+                <Link className="nav-link" to="/planes">Planes</Link>
                 <Link className="nav-link" to="/contactos">Contactanos</Link>
-                <Link className="nav-link" to="*">Sobre Nosotros</Link>
-                <Link className=" nav-link outline-dark border border-dark rounded" to="/login">LOGIN</Link>
+                <Link className="nav-link" to="*">Sobre nosotros</Link>
+                <Link className=" nav-link outline-dark"
+                to="/login">LOGIN</Link>
                 <Link className="nav-link" to="/admin/clientes">Administracion Clientes</Link>
               </Nav>
             </Navbar.Collapse>
-          </div>
         </Container>
       </Navbar>
     </>

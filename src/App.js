@@ -18,7 +18,7 @@ import { useEffect, useState } from "react";
 import EditClientes from "./components/views/AdminClientes/ListaClientes/EditClientes";
 
 function App() {
-  const [cliente, setClientes] = useState([]);
+  const [cliente, setCliente] = useState([]);
   const URL = process.env.REACT_APP_CLIENTES;
 
   useEffect(()=>{getApi()}, []);
@@ -26,8 +26,10 @@ function App() {
   const getApi = async ()=> {
     try {
       const res = await fetch(URL);
+      //console.log(res)
       const clienteApi = await res.json();
-      setClientes(clienteApi);
+      //console.log(clienteApi);
+      setCliente(clienteApi);
     } catch (error) {
       console.log(error);
     }

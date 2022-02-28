@@ -1,22 +1,27 @@
 {
   "Clientes": [
     {
-      "id": 2
+      "id": 1,
+      "nombre": "Cristian",
+      "apellido": "Brandino",
+      "eMail": "cbrandino@gmail.com",
+      "telefono": "+54911253589",
+      "nombreMascota": "Olivia",
+      "especie": "gato",
+      "raza": "mestizo"
+    },
+    {
+      "id": 2,
+      "nombre": "Cristian",
+      "apellido": "Brandino",
+      "eMail": "cbrandino@gmail.com",
+      "telefono": "+54911253589",
+      "nombreMascota": "Renata",
+      "especie": "gato",
+      "raza": "mestizo"
     },
     {
       "id": 3
-    },
-    {
-      "id": 5
-    },
-    {
-      "id": 6
-    },
-    {
-      "id": 7
-    },
-    {
-      "id": 8
     }
   ],
   "comments": [
