@@ -65,6 +65,7 @@ function App() {
 
       <main>
         <Routes>
+        <Route exact path="*" element={<Error404 />} />
           <Route exact path="/" element={<Home />} />
           <Route exact path="/contactos" element={<ContactUs />} />
           <Route exact path="/login" element={<Login />} />
@@ -91,7 +92,7 @@ function App() {
             path="/Turnos/Tabla"
             element={<TurnosTabla turnos={turnos} URL2={URL2} getAp={getAp}/>}
           />
-          <Route exact path="*" elment={<Error404 />} />
+          
         </Routes>
       </main>
       <Footer />
@@ -101,4 +102,4 @@ function App() {
 
 export default App;
 
-// 03:05:00
+

@@ -1,5 +1,5 @@
-import React, { useEffect, useState } from "react";
-import { Row, Col, Container } from "react-bootstrap";
+import React, {  useState } from "react";
+import { Row, Col } from "react-bootstrap";
 
 const Clima = () => {
   const [clima, setClima] = useState([]);
