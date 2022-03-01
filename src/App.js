@@ -23,7 +23,7 @@ import { useEffect, useState } from "react";
 
 function App() {
   const [turnos, setTurnos] = useState([]);
-  const URL = process.env.REACT_APP_AP_TURNOS;
+  const URL2 = process.env.REACT_APP_AP_TURNOS;
 
   useEffect( () => {
     getAp();
@@ -33,7 +33,7 @@ function App() {
 
   const getAp = async () => {
     try {
-      const res = await fetch(URL);
+      const res = await fetch(URL2);
       const turnosAp = await res.json();
       setTurnos(turnosAp);
     } catch (error) {
@@ -64,13 +64,13 @@ function App() {
           <Route
             exact
             path="/Turnos/Create"
-            element={<TurnosCreate URL={URL} getAp={getAp} />}
+            element={<TurnosCreate URL2={URL2} getAp={getAp} />}
           />
-          <Route exact path="/Turnos/Edit/:id" element={<TurnosEdit URL={URL} getAp={getAp} />} />
+          <Route exact path="/Turnos/Edit/:id" element={<TurnosEdit URL2={URL2} getAp={getAp} />} />
           <Route
             exact
             path="/Turnos/Tabla"
-            element={<TurnosTabla turnos={turnos} URL={URL} getAp={getAp}/>}
+            element={<TurnosTabla turnos={turnos} URL2={URL2} getAp={getAp}/>}
           />
           <Route exact path="*" elment={<Error404 />} />
         </Routes>

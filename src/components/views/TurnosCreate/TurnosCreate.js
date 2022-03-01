@@ -10,7 +10,7 @@ import {
   validatetextarea,
 } from "../../helpers/validaciones";
 
-const TurnosCreate = ({ URL, getAp }) => {
+const TurnosCreate = ({ URL2, getAp }) => {
   const [TurnoPetName, setTurnoPetName] = useState("");
   const [TurnoDoctor, setTurnoDoctor] = useState("");
   const [TurnoDetalle, setTurnoDetalle] = useState("");
@@ -50,7 +50,7 @@ const TurnosCreate = ({ URL, getAp }) => {
     }).then(async (result) => {
       if (result.isConfirmed) {
         try {
-          const res = await fetch(URL, {
+          const res = await fetch(URL2, {
             method: "POST",
             headers: {
               "Content-Type": "application/json",

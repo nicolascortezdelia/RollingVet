@@ -10,7 +10,7 @@ import {
   validatetextarea,
 } from "../../helpers/validaciones"
 
-const TurnosEdit = ({ URL,getAp }) => {
+const TurnosEdit = ({ URL2,getAp }) => {
   const [TurnoEd, setTurnoEd] = useState({});
   const { id } = useParams();
   const TurnoPetNameRef = useRef("");
@@ -23,7 +23,7 @@ const TurnosEdit = ({ URL,getAp }) => {
 
   useEffect(async () => {
     try {
-      const res = await fetch(`${URL}/${id}`);
+      const res = await fetch(`${URL2}/${id}`);
       const turnoApi = await res.json();
       setTurnoEd(turnoApi);
     } catch (error) {
@@ -64,7 +64,7 @@ const TurnosEdit = ({ URL,getAp }) => {
     }).then(async (result) => {
       if (result.isConfirmed) {
         try {
-          const res = await fetch(`${URL}/${id}`, {
+          const res = await fetch(`${URL2}/${id}`, {
             method: "PUT",
             headers: {
               "Content-Type": "application/json",

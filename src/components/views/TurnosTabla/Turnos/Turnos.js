@@ -2,7 +2,7 @@ import React from "react";
 import { Link } from "react-router-dom";
 import Swal from "sweetalert2";
 
-const Turnos = ({ turno, URL, getAp }) => {
+const Turnos = ({ turno, URL2, getAp }) => {
   const handleDelete = (id) => {
     Swal.fire({
       title: "Esta Seguro?",
@@ -11,11 +11,11 @@ const Turnos = ({ turno, URL, getAp }) => {
       confirmButtonColor: "#3085d6",
       cancelButtonColor: "#d33",
       showCancelButton: true,
-      confirmButtonText: "Delete",
+      confirmButtonText: "Eliminar",
     }).then(async (result) => {
       if (result.isConfirmed) {
         try {
-          const res = await fetch(`${URL}/${id}`, {
+          const res = await fetch(`${URL2}/${id}`, {
             method: "DELETE",
             headers: {
               "Content-Type": "application/json",

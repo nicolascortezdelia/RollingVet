@@ -1,14 +1,6 @@
 {
   "turnos": [
     {
-      "TurnoPetName": "Rocoxxxxx",
-      "TurnoDoctor": "Dr Rivera",
-      "TurnoDetalle": "Lavado de estomago",
-      "TurnoFecha": "2022-03-02",
-      "TurnoHora": "2022-03-02",
-      "id": 1
-    },
-    {
       "TurnoPetName": "Ludoo",
       "TurnoDoctor": "Dr Rivero",
       "TurnoDetalle": "Chequeo Anual",
@@ -33,11 +25,11 @@
       "id": 13
     },
     {
-      "TurnoPetName": "vbjhvgjjhg",
-      "TurnoDoctor": "ljkhgjkhhjhkj",
-      "TurnoDetalle": "khghjkgj",
+      "TurnoPetName": "Pepe",
+      "TurnoDoctor": "Dr Hongo",
+      "TurnoDetalle": "lalalal",
       "TurnoFecha": "2022-03-03",
-      "TurnoHora": "15:00",
+      "TurnoHora": "15:45",
       "id": 14
     }
   ]
