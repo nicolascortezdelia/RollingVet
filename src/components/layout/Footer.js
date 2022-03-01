@@ -10,7 +10,7 @@ const Footer = () => {
         <Container className="py-3 px-0">
           
           <Row>
-            <Col sm={12} md={4} className="p-2">
+            <Col sm={12} md={4} className="py-2 px-0">
               <Link to="/">
               
             <img
@@ -22,7 +22,7 @@ const Footer = () => {
               </Link>
             </Col>
 
-            <Col sm={12} md={4} className="p-3 ">
+            <Col sm={12} md={4} className="py-2 px-0">
 
             <h5 className="lead">Seguinos en Nuestras redes:</h5>
             <Link to ="*" className="text-decoration-none text-white"> <i className="fab fa-2x  p-1 fa-instagram"></i> </Link>  
@@ -33,7 +33,7 @@ const Footer = () => {
               
             </Col>
 
-            <Col sm={12} md={4} className="p-3">
+            <Col sm={12} md={4} className="py-2 px-0">
               <p>
                 Encontranos en : Gral. Paz 576, T4000 San Miguel de Tucumán,
                 Tucumán
