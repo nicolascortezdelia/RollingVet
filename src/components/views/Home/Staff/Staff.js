@@ -79,10 +79,6 @@ const Staff = () => {
           
         </Col>
       
-        {/*<Col sm={12} md={6} className="bg-light">
-          <h2>expertos profesionales</h2>
-         <h4>Apostamos por la formación continua, comprometidos por mejorar cada día la atención veterinaria y el cuidado en cada detalle de la salud de las mascotas.</h4>
-        </Col>*/}
         
        
       </Row>
