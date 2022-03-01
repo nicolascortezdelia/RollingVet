@@ -4,7 +4,7 @@ import {
   validateNames,
   validateTel,
   validateEmail,
-} from "../../../helpers/Validaciones";
+} from "../../../helpers/validacionesPacientes";
 import Swal from "sweetalert2";
 import { useParams } from "react-router-dom";
 import { useNavigate } from "react-router-dom";
