@@ -38,6 +38,7 @@ function App() {
   const getAp = async () => {
     try {
       const res = await fetch(URL2);
+
       const turnosAp = await res.json();
       setTurnos(turnosAp);
     } catch (error) {
@@ -49,9 +50,10 @@ function App() {
   const getApi = async () => {
     try {
       const res = await fetch(URL);
-      //console.log(res)
+      
       const clienteApi = await res.json();
-      //console.log(clienteApi);
+
+      
       setCliente(clienteApi);
     } catch (error) {
       console.log(error);
