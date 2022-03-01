@@ -44,7 +44,7 @@ const AdminClientesCreate = ({URL, getApi}) => {
           'success'
         );
         getApi();
-        navegacion("/admin/lista/clientes");
+        navegacion("/admin/clientes");
        }
       } catch (error) {
         console.log(error);

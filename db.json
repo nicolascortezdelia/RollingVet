@@ -37,6 +37,26 @@
       "especie": "perro",
       "raza": "callejero",
       "id": 6
+    },
+    {
+      "nombre": "Juan",
+      "apellido": "Perez",
+      "eMail": "nicocdelia@gmail.com",
+      "telefono": "54911455959",
+      "nombreMascota": "fuff",
+      "especie": "perro",
+      "raza": "caschi",
+      "id": 7
+    },
+    {
+      "nombre": "jUAN",
+      "apellido": "TORRES",
+      "eMail": "nicocdelia@gmail.com",
+      "telefono": "54911545454",
+      "nombreMascota": "juan",
+      "especie": "perro",
+      "raza": "bulldog",
+      "id": 8
     }
   ],
   "comments": [
