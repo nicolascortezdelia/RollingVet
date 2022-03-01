@@ -13,7 +13,7 @@ const Nosotros = () => {
             <h1 className=" display-4  text-danger  text-center"> Sobre Nosotros</h1>
             <hr />
             
-            <h5 className='text-center p-4 fst-italic'>"Si pasas tiempo con los animales, corres el riesgo de volverte una mejor persona"</h5>
+            <h5 className='text-center p-4 fst-italic'>"Unidos como una manada, tiramos todos para el mismo lado"</h5>
             </Container>
            <br />
           <Container className='container-fluid mb-5'>
