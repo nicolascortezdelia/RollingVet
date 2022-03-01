@@ -1,20 +1,12 @@
 {
   "turnos": [
     {
-      "TurnoPetName": "Ludoo",
+      "TurnoPetName": "Pepe",
       "TurnoDoctor": "Dr Muniz",
       "TurnoDetalle": "Chequeo Anual",
       "TurnoFecha": "2022-02-28",
       "TurnoHora": "2022-02-28",
       "id": 11
-    },
-    {
-      "TurnoPetName": "Grandote",
-      "TurnoDoctor": "Dr Rivera",
-      "TurnoDetalle": "Peluqueria",
-      "TurnoFecha": "2022-03-11",
-      "TurnoHora": "13:00",
-      "id": 13
     },
     {
       "TurnoPetName": "Fuffy",

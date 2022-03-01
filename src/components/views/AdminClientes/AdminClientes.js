@@ -8,8 +8,8 @@ const AdminClientes = ({cliente, URL, getApi}) => {
         <div>
         <Container className="py-5">
           <div className="d-flex align-items-center justify-content-between">
-            <h1>Lista Clientes</h1>
-            <Link to="/admin/clientes/create" className="btn btn-primary">Agregar Clientes</Link>
+          <h3 className="text-center text-danger display-4">Lista de Pacientes</h3>
+            <Link to="/admin/clientes/create" className="btn btn-primary">Agregar Pacientes</Link>
           </div>
           <hr />
             <Table bordered hover responsive className="align-middle mt-3">

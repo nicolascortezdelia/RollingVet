@@ -34,7 +34,7 @@ const AdminClientesCreate = ({URL, getApi}) => {
   }).then(async(result) => {
     if (result.isConfirmed) {
       try {
-        const res = await fetch(URL, {method: "POST", headers:{"Content-Type": "application/json"}, body:JSON.stringify(newPaciente)});
+        const res = await fetch(URL, {method: "POST", headers:{"Content-Type": "application/json"}, body: JSON.stringify(newPaciente)});
        // console.log(res);
        if(res.status === 201){
         Swal.fire(
@@ -43,7 +43,7 @@ const AdminClientesCreate = ({URL, getApi}) => {
           'success'
         );
         getApi();
-        navegacion("/admin/clientes");
+        navegacion("/admin/lista/clientes");
        }
       } catch (error) {
         console.log(error);
@@ -56,10 +56,11 @@ const AdminClientesCreate = ({URL, getApi}) => {
     return (
         <div>
             <Container className="py-5">
-        <h1>Administrar Clientes</h1>
+            <h3 className="text-center text-danger display-4">Agendar Pacientes</h3>
         <hr />
         {/* Form Product */}
         <Form className="my-5" onSubmit={hundleSubmit}>
+        <h4>Informacion del Cliente</h4>
           <Form.Group className="mb-3" controlId="formBasicEmail">
             <Form.Label>Nombre</Form.Label>
             <Form.Control type="text" placeholder="Escriba su Nombre" onChange={(e)=>setNombre(e.target.value)} />
