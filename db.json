@@ -1,7 +1,7 @@
 {
   "turnos": [
     {
-      "TurnoPetName": "Fuffy",
+      "TurnoPetName": "Toe",
       "TurnoDoctor": "Dra Cuco",
       "TurnoDetalle": "Lavado de estomago",
       "TurnoFecha": "2021-02-14",
@@ -20,23 +20,13 @@
   "Clientes": [
     {
       "nombre": "Mario",
-      "apellido": "Marionelli",
+      "apellido": "Martorellini",
       "eMail": "mariomarchi@gmail.com",
       "telefono": "54911235674",
       "nombreMascota": "Fufy",
       "especie": "perro",
       "raza": "callejero",
       "id": 6
-    },
-    {
-      "nombre": "Juan",
-      "apellido": "Perez",
-      "eMail": "nicocdelia@gmail.com",
-      "telefono": "54911455959",
-      "nombreMascota": "fuff",
-      "especie": "perro",
-      "raza": "caschi",
-      "id": 7
     },
     {
       "nombre": "jUAN",

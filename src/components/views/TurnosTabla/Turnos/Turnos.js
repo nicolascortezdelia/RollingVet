@@ -34,7 +34,7 @@ const Turnos = ({ turno, URL2, getAp }) => {
 
   return (
     <tr>
-      <td>{turno.id}</td>
+      <td>{turno._id}</td>
       <td>{turno.TurnoPetName}</td>
       <td>{turno.TurnoDoctor}</td>
       <td>{turno.TurnoDetalle}</td>
@@ -43,14 +43,14 @@ const Turnos = ({ turno, URL2, getAp }) => {
       <td className="w-25">
         <div className="d-flex justify-content-center ">
           <Link
-            to={`/Turnos/Edit/${turno.id}`}
+            to={`/Turnos/Edit/${turno._id}`}
             className="btn btn-success mx-1 rounded-pill"
           >
             Editar
           </Link>
           <button
             className="btn btn-danger mx-1 rounded-pill"
-            onClick={() => handleDelete(turno.id)}
+            onClick={() => handleDelete(turno._id)}
           >
             Borrar
           </button>

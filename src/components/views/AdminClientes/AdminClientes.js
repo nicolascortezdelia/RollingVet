@@ -27,7 +27,7 @@ const AdminClientes = ({cliente, URL, getApi}) => {
               </tr>
             </thead>
             <tbody>
-             {cliente.map((clientes)=>(<ListaClientes key={clientes.id} clientes={clientes} URL={URL} getApi={getApi}/>))};
+             {cliente.map((clientes)=>(<ListaClientes key={clientes._id} clientes={clientes} URL={URL} getApi={getApi}/>))};
               
             </tbody>
           </Table>

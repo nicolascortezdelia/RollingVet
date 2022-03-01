@@ -27,7 +27,7 @@ const TurnosTabla = ({ turnos, URL2 , getAp}) => {
           </thead>
           <tbody>
             {turnos.map((turno) => (
-              <Turnos key={turno.id} turno={turno} URL2={URL2} getAp={getAp} />
+              <Turnos key={turno._id} turno={turno} URL2={URL2} getAp={getAp} />
             ))}
           </tbody>
         </Table>

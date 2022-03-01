@@ -33,7 +33,7 @@ const ListaClientes = ({clientes, URL, getApi}) => {
   };
     return (
         <tr>
-      <td>{clientes.id}</td>
+      <td>{clientes._id}</td>
       <td>{clientes.nombre}</td>
       <td>{clientes.apellido}</td>
       <td>{clientes.eMail}</td>
@@ -43,8 +43,8 @@ const ListaClientes = ({clientes, URL, getApi}) => {
       <td>{clientes.raza}</td>
       <td className="w-25">
         <div className="d-flex justify-content-center">
-          <Link className="btn btn-success mx-1 rounded-pill" to= {`/edit/clientes/${clientes.id}`}>Editar</Link>
-           <button className="btn btn-danger mx-1 rounded-pill"onClick={()=>hundleDelete(clientes.id)}>Eliminar</button>
+          <Link className="btn btn-success mx-1 rounded-pill" to= {`/edit/clientes/${clientes._id}`}>Editar</Link>
+           <button className="btn btn-danger mx-1 rounded-pill"onClick={()=>hundleDelete(clientes._id)}>Eliminar</button>
         </div>
       </td>
     </tr>
