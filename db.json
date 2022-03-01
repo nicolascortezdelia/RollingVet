@@ -19,18 +19,8 @@
   ],
   "Clientes": [
     {
-      "id": 3,
-      "nombre": "Cristian",
-      "apellido": "Brandino",
-      "eMail": "cbrandino@gmail.com",
-      "telefono": "+54911253578",
-      "nombreMascota": "Michi",
-      "especie": "perro",
-      "raza": "callejero"
-    },
-    {
       "nombre": "Mario",
-      "apellido": "Marchi",
+      "apellido": "Marionelli",
       "eMail": "mariomarchi@gmail.com",
       "telefono": "54911235674",
       "nombreMascota": "Fufy",

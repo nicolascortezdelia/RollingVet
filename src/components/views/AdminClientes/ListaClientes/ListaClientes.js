@@ -43,8 +43,8 @@ const ListaClientes = ({clientes, URL, getApi}) => {
       <td>{clientes.raza}</td>
       <td className="w-25">
         <div className="d-flex justify-content-center">
-          <Link className="btn btn-success mx-1" to= {`/edit/clientes/${clientes.id}`}>Editar</Link>
-           <button className="btn btn-danger mx-1"onClick={()=>hundleDelete(clientes.id)}>Eliminar</button>
+          <Link className="btn btn-success mx-1 rounded-pill" to= {`/edit/clientes/${clientes.id}`}>Editar</Link>
+           <button className="btn btn-danger mx-1 rounded-pill"onClick={()=>hundleDelete(clientes.id)}>Eliminar</button>
         </div>
       </td>
     </tr>

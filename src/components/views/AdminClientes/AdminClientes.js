@@ -9,7 +9,7 @@ const AdminClientes = ({cliente, URL, getApi}) => {
         <Container className="py-5">
           <div className="d-flex align-items-center justify-content-between">
           <h3 className="text-center text-danger display-4">Lista de Pacientes</h3>
-            <Link to="/admin/clientes/create" className="btn btn-primary">Agregar Pacientes</Link>
+            <Link to="/admin/clientes/create" className="btn btn-primary rounded-pill">Agregar Pacientes</Link>
           </div>
           <hr />
             <Table bordered hover responsive className="align-middle mt-3">
@@ -31,10 +31,7 @@ const AdminClientes = ({cliente, URL, getApi}) => {
               
             </tbody>
           </Table>
-          {/* No products found message */}
-          {/* <div className="no-products-found d-flex align-items-center justify-content-center">
-            <h1>🥐 No products found ☕</h1>
-          </div> */}
+          
         </Container>
       </div>
     );

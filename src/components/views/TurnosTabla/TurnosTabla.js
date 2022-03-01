@@ -9,7 +9,7 @@ const TurnosTabla = ({ turnos, URL2 , getAp}) => {
       <Container className="py-5">
         <div className="d-flex align-items-center justify-content-between">
           <h1 className=" text-danger display-4">Lista de Turnos</h1>
-          <Link className="btn btn-primary" to="/Turnos/Create">
+          <Link className="btn btn-primary rounded-pill" to="/Turnos/Create">
             Agregar Turno
           </Link>
         </div>
