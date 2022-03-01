@@ -37,7 +37,7 @@ const Navigation = () => {
               <Link className="nav-link" to="/contactos">
                 Contactanos
               </Link>
-              <Link className="nav-link" to="*">
+              <Link className="nav-link" to="/nosotros">
                 Sobre nosotros
               </Link>
               <Link

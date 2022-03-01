@@ -21,6 +21,7 @@ import EditClientes from "./components/views/AdminClientes/ListaClientes/EditCli
 import { BrowserRouter, Routes, Route } from "react-router-dom";
 import { useEffect, useState } from "react";
 
+import Nosotros from "./components/Nosotros/Nosotros";
 
 function App() {
   const [turnos, setTurnos] = useState([]);
@@ -29,11 +30,9 @@ function App() {
   const [cliente, setCliente] = useState([]);
   const URL = process.env.REACT_APP_CLIENTES;
 
-  useEffect( () => {
+  useEffect(() => {
     getAp();
   }, []);
-  
-  
 
   const getAp = async () => {
     try {
@@ -45,9 +44,11 @@ function App() {
     }
   };
 
-  useEffect(()=>{getApi()}, []);
+  useEffect(() => {
+    getApi();
+  }, []);
 
-  const getApi = async ()=> {
+  const getApi = async () => {
     try {
       const res = await fetch(URL);
       //console.log(res)
@@ -57,7 +58,7 @@ function App() {
     } catch (error) {
       console.log(error);
     }
-  }
+  };
 
   return (
     <BrowserRouter>
@@ -65,34 +66,53 @@ function App() {
 
       <main>
         <Routes>
-        <Route exact path="*" element={<Error404 />} />
+          
           <Route exact path="/" element={<Home />} />
           <Route exact path="/contactos" element={<ContactUs />} />
+          <Route exact path="/nosotros" element={<Nosotros/>} />
+          <Route exact path="*" element={<Error404 />} />
           <Route exact path="/login" element={<Login />} />
           <Route exact path="/planes" element={<PaginaPlanes />} />
-          <Route exact path="/planes/primerospasos" element={<PlanPrimerosPasos />} />
-          <Route exact path="/planes/madurando" element={<PlanMadurando/>} />
+          <Route
+            exact
+            path="/planes/primerospasos"
+            element={<PlanPrimerosPasos />}
+          />
+          <Route exact path="/planes/madurando" element={<PlanMadurando />} />
           <Route exact path="/planes/adultos" element={<PlanAdultos />} />
           <Route exact path="/lista/clientes" element={<ListaClientes />} />
-          <Route exact path="/admin/clientes" element={<AdminClientes cliente={cliente} URL={URL} getApi={getApi}/>} />
-          <Route exact path="/edit/clientes/:id" element={<EditClientes URL={URL} getApi={getApi}/>}/>
+          <Route
+            exact
+            path="/admin/clientes"
+            element={
+              <AdminClientes cliente={cliente} URL={URL} getApi={getApi} />
+            }
+          />
+          <Route
+            exact
+            path="/edit/clientes/:id"
+            element={<EditClientes URL={URL} getApi={getApi} />}
+          />
           <Route
             exact
             path="/admin/clientes/create"
-            element={<AdminClientesCreate URL = {URL} getApi = {getApi} />}
+            element={<AdminClientesCreate URL={URL} getApi={getApi} />}
           />
           <Route
             exact
             path="/Turnos/Create"
             element={<TurnosCreate URL2={URL2} getAp={getAp} />}
           />
-          <Route exact path="/Turnos/Edit/:id" element={<TurnosEdit URL2={URL2} getAp={getAp} />} />
+          <Route
+            exact
+            path="/Turnos/Edit/:id"
+            element={<TurnosEdit URL2={URL2} getAp={getAp} />}
+          />
           <Route
             exact
             path="/Turnos/Tabla"
-            element={<TurnosTabla turnos={turnos} URL2={URL2} getAp={getAp}/>}
+            element={<TurnosTabla turnos={turnos} URL2={URL2} getAp={getAp} />}
           />
-          
         </Routes>
       </main>
       <Footer />
@@ -101,5 +121,3 @@ function App() {
 }
 
 export default App;
-
-
