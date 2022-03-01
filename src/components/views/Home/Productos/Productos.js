@@ -14,7 +14,7 @@ const Productos = () => {
           <img className="img-fluid" src="https://cdn.royalcanin-weshare-online.io/wefNEnsBaPOZra8qk7jH/v3/ar-l-productos-perro-nutricion-especifica?w=640&" alt="bolsa de comida para perro Royal Canin" />
           </div>
         </Col>
-        <Col sm={12} md={6}>
+        <Col sm={12} md={6} className="p-3">
             <h3 className="text-danger display-5" >Buscá el alimento adecuado para tu perro </h3>
             <span className="text-center">Cada fórmula se crea para
           brindar una nutrición que se adapte a las necesidades de salud de tu
