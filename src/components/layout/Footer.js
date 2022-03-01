@@ -7,7 +7,7 @@ const Footer = () => {
   return (
     <>
       <div className="container-fluid bg-dark text-light text-center">
-        <Container>
+        <Container className="py-3 px-0">
           
           <Row>
             <Col sm={12} md={4} className="p-2">
