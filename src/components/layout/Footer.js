@@ -1,13 +1,13 @@
 import React from "react";
-import { Row, Col} from "react-bootstrap";
+import { Row, Col, Container} from "react-bootstrap";
 import "./Footer.css";
 import { Link } from "react-router-dom";
 
 const Footer = () => {
   return (
     <>
-      <div className=" container-fluid bg-dark text-light text-center pt-3 pb-4">
-        
+      <div className="container-fluid bg-dark text-light text-center">
+        <Container>
           
           <Row>
             <Col sm={12} md={4} className="p-2">
@@ -40,8 +40,9 @@ const Footer = () => {
               </p>
               <p>Teléfono: 0381 578-3X3X</p>
             </Col>
-            <p className="my-2"><b>&copy; Todos los derechos reservados</b></p>
+            <p className="my-2 p-0"><b>&copy; Todos los derechos reservados</b></p>
           </Row>
+          </Container>
           
         
       </div>
