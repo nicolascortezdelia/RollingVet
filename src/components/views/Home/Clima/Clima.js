@@ -15,7 +15,7 @@ const Clima = () => {
         long = position.coords.longitude;
         lat = position.coords.latitude;
 
-        const api = `http://api.openweathermap.org/data/2.5/weather?lat=${lat}&lon=${long}&appid=d500a2c7d60e12d182ae94e55b3fcf60`;
+        const api = `https://api.openweathermap.org/data/2.5/weather?lat=${lat}&lon=${long}&appid=d500a2c7d60e12d182ae94e55b3fcf60`;
 
         fetch(api)
           .then((response) => {
