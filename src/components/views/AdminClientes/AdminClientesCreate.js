@@ -70,11 +70,11 @@ const AdminClientesCreate = ({URL, getApi}) => {
           </Form.Group>
           <Form.Group className="mb-3" controlId="formBasicPassword">
             <Form.Label>Correo Electronico</Form.Label>
-            <Form.Control type="email" placeholder="Ejemplo@correo.com" onChange={(e)=>setEmail(e.target.value)} />
+            <Form.Control type="email" placeholder="ejemplo@gmail.com" onChange={(e)=>setEmail(e.target.value)} />
           </Form.Group>
           <Form.Group className="mb-3" controlId="formBasicPassword">
             <Form.Label>Numero De telefono</Form.Label>
-            <Form.Control type="number" placeholder="+549XXXXXXXXXX" onChange={(e)=>setTelefono(e.target.value)} />
+            <Form.Control type="number" placeholder="ej: +549 11 459977" onChange={(e)=>setTelefono(e.target.value)} />
           </Form.Group>
           <hr />
           <h4>Informacion de la Mascota</h4>
