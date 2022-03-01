@@ -32,6 +32,7 @@ function App() {
 
   useEffect(() => {
     getAp();
+    getApi();
   }, []);
 
   const getAp = async () => {
@@ -44,10 +45,7 @@ function App() {
     }
   };
 
-  useEffect(() => {
-    getApi();
-  }, []);
-
+ 
   const getApi = async () => {
     try {
       const res = await fetch(URL);
