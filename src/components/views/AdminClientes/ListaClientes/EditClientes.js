@@ -49,8 +49,7 @@ const EditClientes = ({ URL, getApi}) => {
       !validateNames(especieRef.current.value) ||
       !validateNames(razaRef.current.value)
     ) {
-      alert("Validacion erronea");
-      Swal.fire("Ops!", "Some data are invalid.", "error");
+      Swal.fire("Perfecto!", "Validación correcta.", "success");
      // return 
     }
     console.log("datos correctos");
@@ -74,7 +73,7 @@ const EditClientes = ({ URL, getApi}) => {
     }).then(async (result) => {
       if (result.isConfirmed) {
         try {
-          const res = await fetch(`${URL}/${id}`, {method: "PUT", headers:{"Content-Type": "application.json"}, body: JSON.stringify(productoEditado)})
+          const res = await fetch(`${URL}/${id}`, {method: "PUT", headers:{"Content-Type": "application/json"}, body: JSON.stringify(productoEditado)})
           console.log(res);
           if(res.status === 200){
             Swal.fire(

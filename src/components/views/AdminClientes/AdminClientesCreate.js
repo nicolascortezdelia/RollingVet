@@ -12,7 +12,7 @@ const AdminClientesCreate = ({URL, getApi}) => {
   const [nombreMascota, setNombreMascota] = useState("");
   const [especie, setEspecie] = useState("");
   const [raza, setRaza] = useState("");
-  
+
 // funion para navegar entre rutas
  const navegacion = useNavigate();
   //funcion para crear un objeto
@@ -34,7 +34,7 @@ const AdminClientesCreate = ({URL, getApi}) => {
   }).then(async(result) => {
     if (result.isConfirmed) {
       try {
-        const res = await fetch(URL, {method: "POST", headers:{"Content-Type": "application-json"}, body:JSON.stringify(newPaciente)});
+        const res = await fetch(URL, {method: "POST", headers:{"Content-Type": "application/json"}, body:JSON.stringify(newPaciente)});
        // console.log(res);
        if(res.status === 201){
         Swal.fire(
