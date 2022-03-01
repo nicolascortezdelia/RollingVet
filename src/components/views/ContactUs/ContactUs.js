@@ -12,7 +12,7 @@ import {
   validateEmail,
   validateNames,
   validateMesage,
-} from "../../Helpers/Validations";
+} from "../../Helpers/validacionesPacientes";
 init("user_qzhExCW0FgIpI81KTZIIe");
 
 const ContactUs = () => {
@@ -52,7 +52,7 @@ const ContactUs = () => {
      setMesage("");
 
      Swal.fire({
-       icon: "succes",
+       icon: "success",
        title: "Listo!",
        text: "Gracias por tu consulta, pronto nos pondremos en contacto con vos",
      });

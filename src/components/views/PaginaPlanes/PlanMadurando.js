@@ -9,7 +9,7 @@ import {
   validateEmail,
   validateNames,
   validateMesage,
-} from "../../Helpers/Validations";
+} from "../../Helpers/validacionesPacientes";
 init("user_qzhExCW0FgIpI81KTZIIe");
 
 const PlanMadurando = () => {
