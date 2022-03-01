@@ -2,7 +2,7 @@
 
 ## Proyecto de Veterinaria con ReactJS 💻
 
-_Proyecto realizado para una veterinaria ficticia,
+Proyecto realizado para una veterinaria ficticia,
 se utiliza ReactJS para realizar el maquetado, como también para CRUD, 
 es decir, dar de alta y baja los turnos y pacientes desde una página de adminsitración que luego se muestran en una tabla 
 y se guardan en una base de datos en la nube llamada Mongo Atlas_
