@@ -9,7 +9,7 @@ import {
   validateEmail,
   validateNames,
   validateMesage,
-} from "../../helpers/Validations";
+} from "../../Helpers/Validations";
 init("user_qzhExCW0FgIpI81KTZIIe");
 
 const PlanAdultos = () => {

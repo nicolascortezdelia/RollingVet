@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 import { Container, Form } from 'react-bootstrap';
-import {validateNames, validateTel, validateEmail} from "../../helpers/validacionesPacientes";
+import {validateNames, validateTel, validateEmail} from "../../Helpers/validacionesPacientes";
 import Swal from "sweetalert2";
 import { useNavigate } from 'react-router-dom';
 
