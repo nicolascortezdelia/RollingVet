@@ -23,7 +23,52 @@
       "TurnoFecha": "2022-03-11",
       "TurnoHora": "13:00",
       "id": 13
+    }],
+
+  
+  "Clientes": [
+    {
+      "id": 1,
+      "nombre": "Cristian",
+      "apellido": "Brandino",
+      "eMail": "cbrandino@gmail.com",
+      "telefono": "+54911253589",
+      "nombreMascota": "Olivia",
+      "especie": "gato",
+      "raza": "mestizo"
     },
+    {
+      "id": 2,
+      "nombre": "Cristian",
+      "apellido": "Brandino",
+      "eMail": "cbrandino@gmail.com",
+      "telefono": "+54911253589",
+      "nombreMascota": "Renata",
+      "especie": "gato",
+      "raza": "mestizo"
+    },
+    {
+      "id": 3,
+      "nombre": "Cristian",
+      "apellido": "Brandino",
+      "eMail": "cbrandino@gmail.com",
+      "telefono": "+54911253578",
+      "nombreMascota": "Michi",
+      "especie": "perro",
+      "raza": "callejero"
+    },
+    {
+      "nombre": "Mario",
+      "apellido": "Marchi",
+      "eMail": "mariomarchi@gmail.com",
+      "telefono": "54911235674",
+      "nombreMascota": "Fufy",
+      "especie": "perro",
+      "raza": "callejero",
+      "id": 6
+    }
+  ],
+  "comments": [
     {
       "TurnoPetName": "Pepe",
       "TurnoDoctor": "Dr Hongo",

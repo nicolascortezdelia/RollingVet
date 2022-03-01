@@ -17,6 +17,7 @@ import PlanMadurando from "./components/views/PaginaPlanes/PlanMadurando";
 import TurnosCreate from "./components/views/TurnosCreate/TurnosCreate";
 import TurnosEdit from "./components/views/TurnosEdit/TurnosEdit";
 import TurnosTabla from "./components/views/TurnosTabla/TurnosTabla";
+import EditClientes from "./components/views/AdminClientes/ListaClientes/EditClientes";
 import { BrowserRouter, Routes, Route } from "react-router-dom";
 import { useEffect, useState } from "react";
 
@@ -24,6 +25,9 @@ import { useEffect, useState } from "react";
 function App() {
   const [turnos, setTurnos] = useState([]);
   const URL2 = process.env.REACT_APP_AP_TURNOS;
+
+  const [cliente, setCliente] = useState([]);
+  const URL = process.env.REACT_APP_CLIENTES;
 
   useEffect( () => {
     getAp();
@@ -41,6 +45,20 @@ function App() {
     }
   };
 
+  useEffect(()=>{getApi()}, []);
+
+  const getApi = async ()=> {
+    try {
+      const res = await fetch(URL);
+      //console.log(res)
+      const clienteApi = await res.json();
+      //console.log(clienteApi);
+      setCliente(clienteApi);
+    } catch (error) {
+      console.log(error);
+    }
+  }
+
   return (
     <BrowserRouter>
       <Navigation />
@@ -55,11 +73,12 @@ function App() {
           <Route exact path="/planes/madurando" element={<PlanMadurando/>} />
           <Route exact path="/planes/adultos" element={<PlanAdultos />} />
           <Route exact path="/lista/clientes" element={<ListaClientes />} />
-          <Route exact path="/admin/clientes" element={<AdminClientes />} />
+          <Route exact path="/admin/clientes" element={<AdminClientes cliente={cliente} URL={URL} getApi={getApi}/>} />
+          <Route exact path="/edit/clientes/:id" element={<EditClientes URL={URL} getApi={getApi}/>}/>
           <Route
             exact
             path="/admin/clientes/create"
-            element={<AdminClientesCreate />}
+            element={<AdminClientesCreate URL = {URL} getApi = {getApi} />}
           />
           <Route
             exact
