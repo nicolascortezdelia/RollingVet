@@ -1,6 +1,6 @@
 import React from 'react';
 import "./Nosotros.css";
-import { Container, Row, Col,} from 'react-bootstrap';
+import { Container, Row, Col, Card} from 'react-bootstrap';
 import Cristian from "../images/Cristian.jpeg";
 import Nicolas from "../images/Nicolas.jpeg";
 import Juan from "../images/Juan.jpeg";
@@ -10,11 +10,12 @@ const Nosotros = () => {
     return (
         <div>
             <Container>
-            <h1 className="text-danger display-5 text-center"> Sobre Nosotros</h1>
+            <h1 className=" display-5  text-danger fst-bold text-center"> Sobre Nosotros</h1>
             <br />
-            <h4 className='text-danger text-center'>
-                "Somos lo que cuidamos"
+            <h4 className='text-danger text-center p-4 fst-italic'>
+                "Somos lo que cuidamos". 
             </h4>
+            <h5 className='text-center p-4 fst-italic'>siempre quisimos ser veterinarios pero nos reprobaron, al menos pudimos hacer esta página"</h5>
             </Container>
            <br />
           <Container>
