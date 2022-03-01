@@ -76,7 +76,7 @@ const TurnosCreate = ({ URL2, getAp }) => {
   return (
     <div>
       <Container className="my-5 container">
-        <h1 className="text-center fw-bold text-danger">Agendar Turnos</h1>
+        <h3 className="text-center text-danger display-4">Agendar Turnos</h3>
         <hr />
         <Form className="my-3" onSubmit={handleSubmit}>
           <Form.Group className="mb-3" controlId="exampleForm.ControlInput1">

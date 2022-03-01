@@ -86,7 +86,7 @@ const TurnosEdit = ({ URL2,getAp }) => {
   return (
     <div>
       <Container className="my-5 container">
-        <h1 className="text-center fw-bold text-danger">Editar Turnos</h1>
+        <h1 className="text-danger display-4">Editar Turnos</h1>
         <hr />
         <Form className="my-3" onSubmit={handleSubmit}>
           <Form.Group className="mb-3" controlId="exampleForm.ControlInput1">

@@ -67,7 +67,7 @@ const ContactUs = () => {
     <Fade bottom>
     <div className="container-fluid p-1" >
       <div className="p-2 text-center">
-      <h3 className="text-danger display-5 ">Contactanos</h3>
+      <h3 className="text-danger display-4  ">Contactanos</h3>
       <hr className="text-dark" />
 
     </div>
