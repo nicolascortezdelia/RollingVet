@@ -12,6 +12,7 @@ const AdminClientesCreate = ({URL, getApi}) => {
   const [nombreMascota, setNombreMascota] = useState("");
   const [especie, setEspecie] = useState("");
   const [raza, setRaza] = useState("");
+
 // funion para navegar entre rutas
  const navegacion = useNavigate();
   //funcion para crear un objeto
@@ -19,9 +20,8 @@ const AdminClientesCreate = ({URL, getApi}) => {
 
   //validacion de los campos
   if(!validateNames(nombre) || !validateNames(apellido) || !validateEmail(eMail) || !validateTel(telefono) || !validateNames(nombreMascota) || !validateNames(especie) || !validateNames(raza)){
-    alert('Validacion erronea')
-    Swal.fire("Ops!", "Some data are invalid.", "error");
-      return;
+    Swal.fire("Ops!", "Algunos datos ingresados no son validos", "error")
+      // return
   }
   //envio de los datos para guardarlos
   const newPaciente = {nombre, apellido, eMail, telefono, nombreMascota, especie, raza}
@@ -34,12 +34,12 @@ const AdminClientesCreate = ({URL, getApi}) => {
   }).then(async(result) => {
     if (result.isConfirmed) {
       try {
-        const res = await fetch(URL, {method: "POST", headers:{"Content-Type": "application-json"}, body:JSON.stringify(newPaciente)});
+        const res = await fetch(URL, {method: "POST", headers:{"Content-Type": "application/json"}, body:JSON.stringify(newPaciente)});
        // console.log(res);
        if(res.status === 201){
         Swal.fire(
-          'Deleted!',
-          'Your file has been deleted.',
+          'Creado!',
+          'Objeto creado.',
           'success'
         );
         getApi();

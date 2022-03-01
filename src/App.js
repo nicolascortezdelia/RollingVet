@@ -22,7 +22,7 @@ import { useEffect, useState } from "react";
 import EditClientes from "./components/views/AdminClientes/ListaClientes/EditClientes";
 
 function App() {
-  const [cliente, setClientes] = useState([]);
+  const [cliente, setCliente] = useState([]);
   const URL = process.env.REACT_APP_CLIENTES;
 
   useEffect(()=>{getApi()}, []);
@@ -30,8 +30,10 @@ function App() {
   const getApi = async ()=> {
     try {
       const res = await fetch(URL);
+      //console.log(res)
       const clienteApi = await res.json();
-      setClientes(clienteApi);
+      //console.log(clienteApi);
+      setCliente(clienteApi);
     } catch (error) {
       console.log(error);
     }
@@ -50,8 +52,8 @@ function App() {
           <Route exact path="/planes/madurando" element={<PlanMadurando/>} />
           <Route exact path="/planes/adultos" element={<PlanAdultos />} />
           <Route exact path="/lista/clientes" element={<ListaClientes />} />
-          <Route exact path="/admin/clientes" element={<AdminClientes clientes={cliente} />} />
-          <Route exact path="/edit/clientes/:id" element={<EditClientes URL={URL}/>}/>
+          <Route exact path="/admin/clientes" element={<AdminClientes cliente={cliente} URL={URL} getApi={getApi}/>} />
+          <Route exact path="/edit/clientes/:id" element={<EditClientes URL={URL} getApi={getApi}/>}/>
           <Route
             exact
             path="/admin/clientes/create"
