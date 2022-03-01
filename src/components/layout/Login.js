@@ -18,12 +18,12 @@ const Login = () => {
     <Fade bottom>
       <div className="container d-flex align-items-center my-3" >
        
-       <Container style={{ width: '25rem', height: "23rem"}} className="border rounded border-dark border-1  bg-light">
+       <Container style={{ width: '27rem', height: "27rem"}} className="border rounded border-dark border-1  bg-light">
          <div>
            <p className=" fs-2 text-danger text-center fw-light mt-2">Inicie Sesión</p>
            <hr className="text-dark"/>
            </div>
-         <Form onSubmit={hundleSubmit} className="mx-5 text-light mt-3">
+         <Form onSubmit={hundleSubmit} className="mx-3 text-light mt-3 ">
         <Form.Group className="mb-3 " controlId="formBasicEmail">
           <Form.Label className="text-dark">Dirección</Form.Label>
           <Form.Control
@@ -44,9 +44,11 @@ const Login = () => {
               setImput(e.target.value);
             }}
           />
+          <div className="d-grid gap-2 col-6 mx-auto gap-2 mt-2 ">
           <Button variant="danger" type="submit" className="mt-2 rounded-pill">
             Ingresar
           </Button>
+          </div>
         </Form.Group>
       </Form>
 
