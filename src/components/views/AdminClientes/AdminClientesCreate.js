@@ -16,7 +16,8 @@ const AdminClientesCreate = ({URL, getApi}) => {
 // funion para navegar entre rutas
  const navegacion = useNavigate();
   //funcion para crear un objeto
-  const hundleSubmit = async(e)=>{e.preventDefault()
+  const hundleSubmit = async(e)=>{
+    e.preventDefault()
 
   //validacion de los campos
   if(!validateNames(nombre) || !validateNames(apellido) || !validateEmail(eMail) || !validateTel(telefono) || !validateNames(nombreMascota) || !validateNames(especie) || !validateNames(raza)){
@@ -69,7 +70,7 @@ const AdminClientesCreate = ({URL, getApi}) => {
             <Form.Label>Apellido</Form.Label>
             <Form.Control type="text" placeholder="Escriba su Apellido" onChange={(e)=>setApellido(e.target.value)} />
           </Form.Group>
-          <Form.Group className="mb-3" controlId="formBasicPassword">
+           <Form.Group className="mb-3" controlId="formBasicPassword">
             <Form.Label>Correo Electronico</Form.Label>
             <Form.Control type="email" placeholder="ejemplo@gmail.com" onChange={(e)=>setEmail(e.target.value)} />
           </Form.Group>

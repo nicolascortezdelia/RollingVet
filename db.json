@@ -1,43 +1,23 @@
 {
   "turnos": [
     {
-      "TurnoPetName": "Pepe",
-      "TurnoDoctor": "Dr Muniz",
-      "TurnoDetalle": "Chequeo Anual",
-      "TurnoFecha": "2022-02-28",
-      "TurnoHora": "2022-02-28",
-      "id": 11
-    },
-    {
       "TurnoPetName": "Fuffy",
-      "TurnoDoctor": "Dra Morgan",
+      "TurnoDoctor": "Dra Cuco",
       "TurnoDetalle": "Lavado de estomago",
       "TurnoFecha": "2021-02-14",
-      "TurnoHora": "12:00",
+      "TurnoHora": "2021-02-14",
       "id": 14
+    },
+    {
+      "TurnoPetName": "pepito",
+      "TurnoDoctor": "Dr Rivera",
+      "TurnoDetalle": "Se trago una cuerda",
+      "TurnoFecha": "2022-03-04",
+      "TurnoHora": "16:00",
+      "id": 15
     }
   ],
   "Clientes": [
-    {
-      "id": 1,
-      "nombre": "Cristian",
-      "apellido": "Brandino",
-      "eMail": "cbrandino@gmail.com",
-      "telefono": "+54911253589",
-      "nombreMascota": "Olivia",
-      "especie": "gato",
-      "raza": "mestizo"
-    },
-    {
-      "id": 2,
-      "nombre": "Cristian",
-      "apellido": "Brandino",
-      "eMail": "cbrandino@gmail.com",
-      "telefono": "+54911253589",
-      "nombreMascota": "Renata",
-      "especie": "gato",
-      "raza": "mestizo"
-    },
     {
       "id": 3,
       "nombre": "Cristian",
