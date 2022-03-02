@@ -45,7 +45,7 @@ const Staff = () => {
               alt="perro siendo acariciado por veterinario"
             />
             <Card.Body>
-              <Card.Title className="text-center text-danger fw-bold">Dr Adrián Muñoz</Card.Title>
+              <Card.Title className="text-center text-danger fw-bold">Dr Adrián Munir</Card.Title>
               <Card.Text className="text-center">
               6 años de experiencia en cirugía canina. 
               </Card.Text>
