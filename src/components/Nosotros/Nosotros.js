@@ -2,9 +2,9 @@ import React from 'react';
 
 import { Container, Row, Col, Card} from 'react-bootstrap';
 import Cristian from "../images/Cristian.jpeg";
-import Nicolas from "../images/Nicolas.jpeg";
+import Nicolas from "../images/Nicolas.png";
 import Juan from "../images/Juan.jpeg";
-import Luciano from "../images/Luciano.jpg";
+import Luciano from "../images/Luciano.png";
 
 const Nosotros = () => {
     return (
@@ -13,7 +13,7 @@ const Nosotros = () => {
             <h1 className=" display-4  text-danger  text-center"> Sobre Nosotros</h1>
             <hr />
             
-            <h5 className='text-center p-4 fst-italic'>"Unidos como una manada, tiramos todos para el mismo lado"</h5>
+            <h5 className='text-center p-4 fst-italic '>"Unidos como una manada, tiramos todos para el mismo lado"</h5>
             </Container>
            <br />
           <Container className='container-fluid mb-5'>
