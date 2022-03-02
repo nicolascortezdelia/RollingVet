@@ -112,7 +112,7 @@ const PlanAdultos = () => {
                   <input
                     value={email}
                     className="form-control"
-                    type="text"
+                    type="email"
                     placeholder="ejemplo@gmail.com"
                     name="user_email"
                     onChange={(e) => setEmail(e.target.value)}
