@@ -6,11 +6,11 @@ const ListaClientes = ({clientes, URL, getApi}) => {
   const hundleDelete = (id)=>{
     //console.log(id)
     Swal.fire({
-      title: 'Are you sure?',
-      text: "You won't be able to revert this!",
+      title: 'Estas Seguro?',
+      text: "No podrás revertir esto!",
       icon: 'warning',
       showCancelButton: true,
-      confirmButtonText: 'Yes, delete it!'
+      confirmButtonText: 'sí, borralo!'
     }).then(async(result) => {
       if (result.isConfirmed) {
         try {
@@ -18,8 +18,8 @@ const ListaClientes = ({clientes, URL, getApi}) => {
          // console.log(res);
          if (res.status === 200){
           Swal.fire(
-            'Deleted!',
-            'Your file has been deleted.',
+            'Borrado!',
+            'Su turno ha sido eliminado.',
             'success'
           );
           getApi()

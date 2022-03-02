@@ -65,11 +65,11 @@ const EditClientes = ({ URL, getApi}) => {
     }
      console.log(productoEditado);
      Swal.fire({
-      title: 'Are you sure?',
-      text: "You won't be able to revert this!",
+      title: 'Estas seguro?',
+      text: "No podrás revertir esto!",
       icon: 'warning',
       showCancelButton: true,
-      confirmButtonText: 'Yes, create it!'
+      confirmButtonText: 'sí, crealo!'
     }).then(async (result) => {
       if (result.isConfirmed) {
         try {

@@ -31,7 +31,7 @@ const AdminClientesCreate = ({URL, getApi}) => {
     text: "Quieres guardar los datos",
     icon: 'warning',
     showCancelButton: true,
-    confirmButtonText: 'Objeto guardado!'
+    confirmButtonText: 'Turno guardado!'
   }).then(async(result) => {
     if (result.isConfirmed) {
       try {
@@ -40,7 +40,7 @@ const AdminClientesCreate = ({URL, getApi}) => {
        if(res.status === 201){
         Swal.fire(
           'Creado!',
-          'Objeto creado.',
+          'Turno creado.',
           'success'
         );
         getApi();
