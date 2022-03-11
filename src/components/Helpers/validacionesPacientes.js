@@ -1,3 +1,6 @@
+import { Form } from "react-bootstrap";
+import Feedback from "react-bootstrap/esm/Feedback";
+
 const regExEmail =
   /^[a-z0-9!#$%&'+/=?^_`{|}~-]+(?:\.[a-z0-9!#$%&'+/=?^_`{|}~-]+)@(?:[a-z0-9](?:[a-z0-9-][a-z0-9])?\.)+[a-z0-9](?:[a-z0-9-]*[a-z0-9])?$/;
 const regExTel = /^([0-9]{5})+((-{1})*)+([0-9]{6})$/;
@@ -16,16 +19,20 @@ export const validateNames = (campo) => {
     campo !== ""
   ) {
     return true;
+    campo.className = `Form.Control.Feedback Looks good!`
+
   } else {
     return false;
+    campo.className = `Form.Control.Feedback Looks good!`
+
   }
 };
 
 export const validateTel = (campo) => {
   if (regExTel.test(campo)) {
-    alert("correcto");
+    
   } else {
-    alert("Ingrese un teléfono correcto");
+    
   }
 };
 
@@ -35,25 +42,25 @@ export const validateTel = (campo) => {
 
 export const validateEmail = (campo)=>{
   if(regExp4Email.test(campo)){
-    return true
+    return true;
   }else{
-    return false
+    return false;
   }
 }
 
 export const validateMesage = (campo)=>{
   if (campo.length < 300 && campo.length > 0){
-    return true
+    return true;
   } else {
-    return false
+    return false;
   }
 }
 
 export const validateNumber= (campo)=>{
   if(regExp4Number.test(campo)&& campo.length<13){
-    return true
+    return true;
   }else{
-    return false
+    return false;
   }
 }
 

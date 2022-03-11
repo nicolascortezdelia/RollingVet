@@ -87,14 +87,15 @@ const TurnosCreate = ({ URL2, getAp }) => {
               onChange={({ target }) => setTurnoPetName(target.value)}
             />
           </Form.Group>
-          <Form.Group className="mb-3" controlId="exampleForm.ControlInput1">
-            <Form.Label className="fw-bold" >Nombre Del Profesional</Form.Label>
-            <Form.Control
-              type="text"
-              placeholder="Nombre del Profesional"
-              onChange={({ target }) => setTurnoDoctor(target.value)}
-            />
-          </Form.Group>
+          <Form.Group className="mb-3" controlId="formBasicCheckbox">
+                <Form.Label className="fw-bolder">Profesionales*</Form.Label>
+                <Form.Select>
+                  <option value="">Seleccione al profesional</option>
+                  <option value="bebida-caliente">Dra Liza Morgan</option>
+                  <option value="bebida-fria">Dr Adrián Munir</option>
+                  
+                </Form.Select>
+              </Form.Group>
           <Form.Group className="mb-3" controlId="exampleForm.ControlTextarea1">
             <Form.Label className="fw-bold" >Detalle De la Cita</Form.Label>
             <Form.Control
