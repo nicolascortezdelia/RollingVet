@@ -74,20 +74,31 @@ const AdminClientesCreate = ({ URL, getApi }) => {
   };
   return (
     <div>
-      <Row>
-        <Col sm={12} md={3}></Col>
-          <div><p>sadsd</p></div>
-        <Col sm={12} md={6}>
-          <Container className="py-5">
-            <h3 className="text-center text-danger display-4">
-              Agendar Pacientes
-            </h3>
-            <hr />
-
+      <Container className="py-5">
+        <h3 className="text-center text-danger display-4">Agendar Pacientes</h3>
+        <hr />
+        <Row>
+          <Col sm={12} md={6}>
+            <div>
+              <img
+                src="https://cdn.royalcanin-weshare-online.io/AGnN0GYBG95Xk-RB3t6O/v1/german-shepherd-adult-maine-coon-emblematic"
+                alt="perro en blanco y negro con su amigo el gato"
+                className="img-fluid mt-5"
+              />
+            </div>
+            <div>
+              <img
+                src="https://dojiw2m9tvv09.cloudfront.net/11787/product/royalcaninlatasvetdietrecoveryfeline-canine145gr25347.png"
+                alt="perro en blanco y negro con su amigo el gato"
+                className="img-fluid mt-5"
+              />
+            </div>
+          </Col>
+          <Col sm={12} md={6} className="my-4">
             <Form className="my-5" onSubmit={hundleSubmit}>
-              <h4>Informacion del Cliente</h4>
+              <h4 className="text-danger">Informacion del Cliente</h4>
               <Form.Group className="mb-3" controlId="formBasicEmail">
-                <Form.Label>Nombre</Form.Label>
+                <Form.Label className="fw-bolder">Nombre</Form.Label>
                 <Form.Control
                   type="text"
                   placeholder="Escriba su Nombre"
@@ -95,7 +106,7 @@ const AdminClientesCreate = ({ URL, getApi }) => {
                 />
               </Form.Group>
               <Form.Group className="mb-3" controlId="formBasicPassword">
-                <Form.Label>Apellido</Form.Label>
+                <Form.Label className="fw-bolder">Apellido</Form.Label>
                 <Form.Control
                   type="text"
                   placeholder="Escriba su Apellido"
@@ -103,7 +114,9 @@ const AdminClientesCreate = ({ URL, getApi }) => {
                 />
               </Form.Group>
               <Form.Group className="mb-3" controlId="formBasicPassword">
-                <Form.Label>Correo Electronico</Form.Label>
+                <Form.Label className="fw-bolder">
+                  Correo Electronico
+                </Form.Label>
                 <Form.Control
                   type="email"
                   placeholder="ejemplo@gmail.com"
@@ -111,7 +124,9 @@ const AdminClientesCreate = ({ URL, getApi }) => {
                 />
               </Form.Group>
               <Form.Group className="mb-3" controlId="formBasicPassword">
-                <Form.Label>Numero De telefono</Form.Label>
+                <Form.Label className="fw-bolder">
+                  Numero De telefono
+                </Form.Label>
                 <Form.Control
                   type="number"
                   placeholder="ej: +549 11 459977"
@@ -119,25 +134,28 @@ const AdminClientesCreate = ({ URL, getApi }) => {
                 />
               </Form.Group>
               <hr />
-              <h4>Informacion de la Mascota</h4>
+              <h4 className="text-danger">Informacion de la Mascota</h4>
               <Form.Group className="mb-3" controlId="formBasicPassword">
-                <Form.Label>Nombre de la Mascota</Form.Label>
+                <Form.Label className="fw-bolder">
+                  Nombre de la Mascota
+                </Form.Label>
                 <Form.Control
                   type="text"
                   placeholder="Escriba el nombre de su mascota"
                   onChange={(e) => setNombreMascota(e.target.value)}
                 />
               </Form.Group>
-              <Form.Group className="mb-3" controlId="formBasicPassword">
-                <Form.Label>Especie</Form.Label>
-                <Form.Control
-                  type="text"
-                  placeholder="Indique la especie de su mascota"
-                  onChange={(e) => setEspecie(e.target.value)}
-                />
+              <Form.Group className="mb-3" controlId="formBasicCheckbox">
+                <Form.Label className="fw-bolder">Especie*</Form.Label>
+                <Form.Select  onChange={({ target }) => setEspecie(target.value)}>
+                  <option value="">Seleccione una opcion</option>
+                  <option value="bebida-caliente">Perro</option>
+                  <option value="bebida-fria">Gato</option>
+                  <option value="bebida-fria">Otro</option>
+                </Form.Select>
               </Form.Group>
               <Form.Group className="mb-3" controlId="formBasicPassword">
-                <Form.Label>Raza</Form.Label>
+                <Form.Label className="fw-bolder">Raza</Form.Label>
                 <Form.Control
                   type="text"
                   placeholder="Indique la raza de su mascota"
@@ -148,13 +166,9 @@ const AdminClientesCreate = ({ URL, getApi }) => {
                 <button className="btn btn-success">Guardar</button>
               </div>
             </Form>
-          </Container>
-        </Col>
-
-        <Col sm={12} md={3}>
-        <div><p>sadsd</p></div>
-        </Col>
-      </Row>
+          </Col>
+        </Row>
+      </Container>
     </div>
   );
 };
