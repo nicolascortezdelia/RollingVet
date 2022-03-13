@@ -89,10 +89,10 @@ const TurnosCreate = ({ URL2, getAp }) => {
           </Form.Group>
           <Form.Group className="mb-3" controlId="formBasicCheckbox">
                 <Form.Label className="fw-bolder">Profesionales*</Form.Label>
-                <Form.Select>
+                <Form.Select onChange={({ target }) => setTurnoDoctor(target.value)}>
                   <option value="">Seleccione al profesional</option>
-                  <option value="bebida-caliente">Dra Liza Morgan</option>
-                  <option value="bebida-fria">Dr Adrián Munir</option>
+                  <option value="Dra Liza Morgan">Dra Liza Morgan</option>
+                  <option value="Dr Adrian Munir">Dr Adrian Munir</option> 
                   
                 </Form.Select>
               </Form.Group>

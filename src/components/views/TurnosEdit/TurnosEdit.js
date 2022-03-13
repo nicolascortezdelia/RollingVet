@@ -8,9 +8,9 @@ import {
   validateNombre,
   validateNombreApellido,
   validatetextarea,
-} from "../../Helpers/validacionesTurnos"
+} from "../../Helpers/validacionesTurnos";
 
-const TurnosEdit = ({ URL2,getAp }) => {
+const TurnosEdit = ({ URL2, getAp }) => {
   const [TurnoEd, setTurnoEd] = useState({});
   const { id } = useParams();
   const TurnoPetNameRef = useRef("");
@@ -19,7 +19,7 @@ const TurnosEdit = ({ URL2,getAp }) => {
   const TurnoFechaRef = useRef("");
   const TurnoHoraRef = useRef("");
 
-  const navigate = useNavigate()
+  const navigate = useNavigate();
 
   useEffect(async () => {
     try {
@@ -57,8 +57,8 @@ const TurnosEdit = ({ URL2,getAp }) => {
       title: "Esta Seguro?",
       text: "No podra revertir el cambio",
       icon: "warning",
-      confirmButtonColor: '#3085d6',
-      cancelButtonColor: '#d33',
+      confirmButtonColor: "#3085d6",
+      cancelButtonColor: "#d33",
       showCancelButton: true,
       confirmButtonText: "Editar!",
     }).then(async (result) => {
@@ -75,7 +75,6 @@ const TurnosEdit = ({ URL2,getAp }) => {
             Swal.fire("Actualizado!", "Turno Editado.", "success");
             getAp();
             navigate("/Turnos/Tabla");
-
           }
         } catch (error) {
           console.log(error);
@@ -98,14 +97,13 @@ const TurnosEdit = ({ URL2,getAp }) => {
               ref={TurnoPetNameRef}
             />
           </Form.Group>
-          <Form.Group className="mb-3" controlId="exampleForm.ControlInput1">
-            <Form.Label className="fw-bold">Nombre Del Profesional</Form.Label>
-            <Form.Control
-              type="text"
-              placeholder="Nombre del Profesional"
-              defaultValue={TurnoEd.TurnoDoctor}
-              ref={TurnoDoctorRef}
-            />
+          <Form.Group className="mb-3" controlId="formBasicCheckbox">
+            <Form.Label className="fw-bolder">Profesionales*</Form.Label>
+            <Form.Select  value={TurnoEd.TurnoDoctor} onChange={({target})=> setTurnoEd({...TurnoEd, TurnoDoctor: target.value})} ref={TurnoDoctorRef}>
+              <option value="">Seleccione al profesional</option>
+              <option value="Dra Liza Morgan">Dra Liza Morgan</option>
+              <option value="Dr Adrian Munir">Dr Adrián Munir</option>
+            </Form.Select>
           </Form.Group>
           <Form.Group className="mb-3" controlId="exampleForm.ControlTextarea1">
             <Form.Label className="fw-bold">Detalle De la Cita</Form.Label>
@@ -134,7 +132,7 @@ const TurnosEdit = ({ URL2,getAp }) => {
               ref={TurnoHoraRef}
             />
           </Form.Group>
-          <button className="btn btn-success">Editar</button>
+          <button className="btn btn-success">Guardar</button>
         </Form>
       </Container>
     </div>
