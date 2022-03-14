@@ -95,6 +95,8 @@ const EditClientes = ({ URL, getApi}) => {
       }
     })
   };
+
+  
   return (
     <div>
       <Container className="py-5">
@@ -149,15 +151,15 @@ const EditClientes = ({ URL, getApi}) => {
               ref={nombreMascotaRef}
             />
           </Form.Group>
-          <Form.Group className="mb-3" controlId="formBasicPassword">
-            <Form.Label>Especie</Form.Label>
-            <Form.Control
-              type="text"
-              placeholder="Indique la especie de su mascota"
-              defaultValue={producto.especie}
-              ref={especieRef}
-            />
-          </Form.Group>
+          <Form.Group className="mb-3" controlId="formBasicCheckbox">
+                <Form.Label className="fw-bolder">Especie*</Form.Label>
+                <Form.Select  >
+                  <option value="">Seleccione una opcion</option>
+                  <option value="Perro">Perro</option>
+                  <option value="Gato">Gato</option>
+                  <option value="Otro">Otro</option>
+                </Form.Select>
+              </Form.Group>
           <Form.Group className="mb-3" controlId="formBasicPassword">
             <Form.Label>Raza</Form.Label>
             <Form.Control

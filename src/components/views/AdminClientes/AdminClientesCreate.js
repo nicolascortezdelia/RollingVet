@@ -149,9 +149,9 @@ const AdminClientesCreate = ({ URL, getApi }) => {
                 <Form.Label className="fw-bolder">Especie*</Form.Label>
                 <Form.Select  onChange={({ target }) => setEspecie(target.value)}>
                   <option value="">Seleccione una opcion</option>
-                  <option value="bebida-caliente">Perro</option>
-                  <option value="bebida-fria">Gato</option>
-                  <option value="bebida-fria">Otro</option>
+                  <option value="Perro">Perro</option>
+                  <option value="Gato">Gato</option>
+                  <option value="Otro">Otro</option>
                 </Form.Select>
               </Form.Group>
               <Form.Group className="mb-3" controlId="formBasicPassword">
