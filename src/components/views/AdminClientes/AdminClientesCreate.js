@@ -51,7 +51,7 @@ const AdminClientesCreate = ({ URL, getApi }) => {
       text: "Quieres guardar los datos",
       icon: "warning",
       showCancelButton: true,
-      confirmButtonText: "Turno guardado!",
+      confirmButtonText: "Guardar Datos",
     }).then(async (result) => {
       if (result.isConfirmed) {
         try {
