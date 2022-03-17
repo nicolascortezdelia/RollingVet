@@ -90,7 +90,7 @@ const PlanPrimerosPasos = () => {
                   <input
                     value={name}
                     name="user_name"
-                    className="form-control"
+                    className="form-control rounded-pill"
                     type="text"
                     placeholder="Ej: Andrea Pérez"
                     onChange={(e) => setName(e.target.value)}
@@ -105,7 +105,7 @@ const PlanPrimerosPasos = () => {
                   </Form.Label>
                   <input
                     value={email}
-                    className="form-control"
+                    className="form-control rounded-pill"
                     type="email"
                     placeholder="ejemplo@gmail.com"
                     name="user_email"
@@ -122,6 +122,7 @@ const PlanPrimerosPasos = () => {
                 >
                   <Form.Control
                     value={mesage}
+                    className="rounded"
                     as="textarea"
                     rows={3}
                     placeholder="Ingrese su consulta"
