@@ -1,5 +1,5 @@
 import React, { useEffect, useRef, useState } from "react";
-import { Form, Container } from "react-bootstrap";
+import { Form, Container, Col, Row } from "react-bootstrap";
 import {
   validateNames,
   validateTel,
@@ -69,7 +69,7 @@ const EditClientes = ({ URL, getApi}) => {
       text: "No podrás revertir esto!",
       icon: 'warning',
       showCancelButton: true,
-      confirmButtonText: 'sí, crealo!'
+      confirmButtonText: 'Editar!'
     }).then(async (result) => {
       if (result.isConfirmed) {
         try {
@@ -95,15 +95,34 @@ const EditClientes = ({ URL, getApi}) => {
       }
     })
   };
+
+  
   return (
     <div>
       <Container className="py-5">
-        <h1>Administrar Clientes</h1>
+        <h3 className="text-center text-danger display-4">Administrar Clientes</h3>
         <hr />
-        {/* Form Product */}
+        <Row>
+          <Col sm={12} md={6}>
+            <div>
+              <img
+                src="https://cdn.royalcanin-weshare-online.io/AGnN0GYBG95Xk-RB3t6O/v1/german-shepherd-adult-maine-coon-emblematic"
+                alt="perro en blanco y negro con su amigo el gato"
+                className="img-fluid mt-5"
+              />
+            </div>
+            <div>
+              <img
+                src="https://dojiw2m9tvv09.cloudfront.net/11787/product/royalcaninlatasvetdietrecoveryfeline-canine145gr25347.png"
+                alt="perro en blanco y negro con su amigo el gato"
+                className="img-fluid mt-5"
+              />
+            </div>
+          </Col>
+          <Col sm={12} md={6} className="my-4">
         <Form className="my-5" onSubmit={hundleSubmit}>
           <Form.Group className="mb-3" controlId="formBasicEmail">
-            <Form.Label>Nombre</Form.Label>
+            <Form.Label className="fw-bolder">Nombre</Form.Label>
             <Form.Control
               type="text"
               placeholder="Escriba su Nombre"
@@ -112,7 +131,7 @@ const EditClientes = ({ URL, getApi}) => {
             />
           </Form.Group>
           <Form.Group className="mb-3" controlId="formBasicPassword">
-            <Form.Label>Apellido</Form.Label>
+            <Form.Label className="fw-bolder">Apellido</Form.Label>
             <Form.Control
               type="text"
               placeholder="Escriba su Apellido"
@@ -121,7 +140,7 @@ const EditClientes = ({ URL, getApi}) => {
             />
           </Form.Group>
           <Form.Group className="mb-3" controlId="formBasicPassword">
-            <Form.Label>Correo Electronico</Form.Label>
+            <Form.Label className="fw-bolder">Correo Electronico</Form.Label>
             <Form.Control
               type="email"
               placeholder="Ejemplo@correo.com"
@@ -130,7 +149,7 @@ const EditClientes = ({ URL, getApi}) => {
             />
           </Form.Group>
           <Form.Group className="mb-3" controlId="formBasicPassword">
-            <Form.Label>Numero De telefono</Form.Label>
+            <Form.Label className="fw-bolder">Numero De telefono</Form.Label>
             <Form.Control
               type="number"
               placeholder="+549XXXXXXXXXX"
@@ -139,9 +158,9 @@ const EditClientes = ({ URL, getApi}) => {
             />
           </Form.Group>
           <hr />
-          <h4>Informacion de la Mascotta</h4>
+          <h4 className="text-danger">Informacion de la Mascotta</h4>
           <Form.Group className="mb-3" controlId="formBasicPassword">
-            <Form.Label>Nombre de la Mascota</Form.Label>
+            <Form.Label className="fw-bolder">Nombre de la Mascota</Form.Label>
             <Form.Control
               type="text"
               placeholder="Escriba el nombre de su mascota"
@@ -149,17 +168,17 @@ const EditClientes = ({ URL, getApi}) => {
               ref={nombreMascotaRef}
             />
           </Form.Group>
+          <Form.Group className="mb-3" controlId="formBasicCheckbox">
+                <Form.Label className="fw-bolder">Especie*</Form.Label>
+                <Form.Select value={producto.especie} onChange={({target})=> setProducto({...producto, especie : target.value})} ref={especieRef}>
+                  <option value="">Seleccione una opcion</option>
+                  <option value="Perro">Perro</option>
+                  <option value="Gato">Gato</option>
+                  <option value="Otro">Otro</option>
+                </Form.Select>
+              </Form.Group>
           <Form.Group className="mb-3" controlId="formBasicPassword">
-            <Form.Label>Especie</Form.Label>
-            <Form.Control
-              type="text"
-              placeholder="Indique la especie de su mascota"
-              defaultValue={producto.especie}
-              ref={especieRef}
-            />
-          </Form.Group>
-          <Form.Group className="mb-3" controlId="formBasicPassword">
-            <Form.Label>Raza</Form.Label>
+            <Form.Label className="fw-bolder">Raza</Form.Label>
             <Form.Control
               type="text"
               placeholder="Indique la raza de su mascota"
@@ -168,9 +187,11 @@ const EditClientes = ({ URL, getApi}) => {
             />
           </Form.Group>
           <div className="text-end">
-            <button className="btn btn-success">Editar</button>
+            <button className="btn btn-success">Guardar</button>
           </div>
         </Form>
+        </Col>
+        </Row>
       </Container>
     </div>
   );

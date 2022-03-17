@@ -1,10 +1,9 @@
 import React from "react";
-import { Col, Container, Form, Row, Card } from "react-bootstrap";
+import { Col, Container, Form, Row, Card, Button } from "react-bootstrap";
 import Iframe from "react-iframe";
 import Fade from "react-reveal/Fade";
-import "./ContactUs.css"
+import "./ContactUs.css";
 import Swal from "sweetalert2";
-
 import { useState, useRef } from "react";
 import emailjs from "@emailjs/browser";
 import { init } from "@emailjs/browser";
@@ -13,6 +12,7 @@ import {
   validateNames,
   validateMesage,
 } from "../../Helpers/validacionesPacientes";
+
 init("user_qzhExCW0FgIpI81KTZIIe");
 
 const ContactUs = () => {
@@ -59,9 +59,7 @@ const ContactUs = () => {
    }
  };
 
-
-
-
+ 
   return (
     <>
     <Fade bottom>
@@ -77,10 +75,10 @@ const ContactUs = () => {
           <Card className="mb-3">
           <Row>
             <Col sm={12} md={6} className="border-end border-danger" >
-            <Form className="my-4 container text-start " onSubmit={handleSubmit} ref={form} >
+            <Form className="my-4 container text-start "   onSubmit={handleSubmit} ref={form} >
                 <Form.Group
                   className="mb-3"
-                  controlId="exampleForm.ControlInput1"
+                  controlId="exampleForm.ControlInput1" id="nombre"
                 >
                   <Form.Label className="fw-bold text-dark">
                     Nombre y Apellido
@@ -93,7 +91,7 @@ const ContactUs = () => {
                     placeholder="Ej: Andrea Pérez"
                     onChange={(e) => setName(e.target.value)}
                   />
-                </Form.Group>
+                  </Form.Group>
                 <Form.Group
                   className="mb-3"
                   controlId="exampleForm.ControlInput1"
@@ -119,22 +117,21 @@ const ContactUs = () => {
                   className="mb-3"
                   controlId="exampleForm.ControlTextarea1"
                 >
-                                    <Form.Label className="fw-bold text-dark">
+                 <Form.Label className="fw-bold text-dark">
                     Dejanos tu Consulta
                   </Form.Label>
                   <Form.Control
-                    value={mesage}
+                    value={mesage} 
                     as="textarea"
                     rows={3}
                     placeholder="Ingrese su consulta"
                     onChange={(e) => setMesage(e.target.value)}
                   />
                 </Form.Group>
-                <button className="btn btn-danger rounded-pill" type="submit">
+                <Button className="btn btn-danger rounded-pill" type="submit">
                   Enviar
-                </button>
+                </Button>
               </Form>
-              
             </Col>
 
             <Col sm={12} md={6}>
@@ -152,7 +149,7 @@ const ContactUs = () => {
           </Card>
         </Container>
         </div>
-        </Fade>
+      </Fade>
     </>
   );
 };

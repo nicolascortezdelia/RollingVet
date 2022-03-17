@@ -15,6 +15,7 @@ export const validateNombreApellido = (field) => {
 };
 
 
+
 export const validateNombre = (field) => {
   if (regExpNombre.test(field) && field.trim() !== "") {
     return true;
@@ -46,3 +47,7 @@ export const validateFecha = (field) => {
     return false;
   }
 };
+
+
+// const state = {    values: {        name: '',        password: '',    },    errors: {        name: '',        password: '',    }};handleChange = (key: string) => (value: string) => {    this.setState({ values: { ...values, [key]: value } })}getErrors = () => {    const errors = checkErrors(this.state.values);    this.setState({ errors });}render() {    const { errors } = this.state    return (        input name onChange={this.handleChange('name') onBlur={this.getErrors}        <span>{errors.name}</span>        input password  onChange={this.handleChange('password')}        <span>{errors.password}</span>    );};const checkErrors = ({ name, password }) => {    const errors = {};    if (name.length < 6) http://errors.name = 'El nombre tiene que tener mas de 6 caracteres';    if (password.length < 6) errors.password = 'El nombre tiene que tener mas de 6 caracteres';    return errors;}
+// const state = {    values: {        name: '',        password: '',    },    errors: {        name: '',        password: '',    }};handleChange = (key: string) => (value: string) => {    this.setState({ values: { ...values, [key]: value } })}getErrors = () => {    const errors = checkErrors(this.state.values);    this.setState({ errors });}render() {    const { errors } = this.state    return (        input name onChange={this.handleChange('name') onBlur={this.getErrors}        <span>{errors.name}</span>        input password  onChange={this.handleChange('password')}        <span>{errors.password}</span>    );};const checkErrors = ({ name, password }) => ({    name: validateName(name),    password: validatePassword(password),});const validateName = (value: string) => {    if (value.length < 6) return 'El nombre tiene que tener mas de 6 caracteres';}

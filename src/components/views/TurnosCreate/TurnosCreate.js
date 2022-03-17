@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-import { Container, Form } from "react-bootstrap";
+import { Col, Container, Form, Row } from "react-bootstrap";
 import { useNavigate } from "react-router-dom";
 import Swal from "sweetalert2";
 import {
@@ -78,6 +78,17 @@ const TurnosCreate = ({ URL2, getAp }) => {
       <Container className="my-5 container">
         <h3 className="text-center text-danger display-4">Agendar Turnos</h3>
         <hr />
+        <Row>
+          <Col sm={12} md={6}>
+            <div className="my-5">
+              <img
+                src="https://dojiw2m9tvv09.cloudfront.net/11787/product/royalcaninlatasvetdietrecoveryfeline-canine145gr25347.png"
+                alt="perro en blanco y negro con su amigo el gato"
+                className="img-fluid mt-5"
+              />
+            </div>
+          </Col>
+        <Col sm={12} md={6} className="my-4">
         <Form className="my-3" onSubmit={handleSubmit}>
           <Form.Group className="mb-3" controlId="exampleForm.ControlInput1">
             <Form.Label className="fw-bold">Nombre de la Mascota</Form.Label>
@@ -87,14 +98,15 @@ const TurnosCreate = ({ URL2, getAp }) => {
               onChange={({ target }) => setTurnoPetName(target.value)}
             />
           </Form.Group>
-          <Form.Group className="mb-3" controlId="exampleForm.ControlInput1">
-            <Form.Label className="fw-bold" >Nombre Del Profesional</Form.Label>
-            <Form.Control
-              type="text"
-              placeholder="Nombre del Profesional"
-              onChange={({ target }) => setTurnoDoctor(target.value)}
-            />
-          </Form.Group>
+          <Form.Group className="mb-3" controlId="formBasicCheckbox">
+                <Form.Label className="fw-bolder">Profesionales*</Form.Label>
+                <Form.Select onChange={({ target }) => setTurnoDoctor(target.value)}>
+                  <option value="">Seleccione al profesional</option>
+                  <option value="Dra Liza Morgan">Dra Liza Morgan</option>
+                  <option value="Dr Adrian Munir">Dr Adrian Munir</option> 
+                  
+                </Form.Select>
+              </Form.Group>
           <Form.Group className="mb-3" controlId="exampleForm.ControlTextarea1">
             <Form.Label className="fw-bold" >Detalle De la Cita</Form.Label>
             <Form.Control
@@ -121,6 +133,8 @@ const TurnosCreate = ({ URL2, getAp }) => {
           </Form.Group>
           <button className="btn btn-success">Guardar</button>
         </Form>
+        </Col>
+        </Row>
       </Container>
     </div>
   );

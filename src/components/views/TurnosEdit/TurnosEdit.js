@@ -1,5 +1,5 @@
 import React, { useEffect, useRef, useState } from "react";
-import { Container, Form } from "react-bootstrap";
+import { Col, Container, Form, Row } from "react-bootstrap";
 import { useNavigate, useParams } from "react-router-dom";
 import Swal from "sweetalert2";
 import {
@@ -8,9 +8,9 @@ import {
   validateNombre,
   validateNombreApellido,
   validatetextarea,
-} from "../../Helpers/validacionesTurnos"
+} from "../../Helpers/validacionesTurnos";
 
-const TurnosEdit = ({ URL2,getAp }) => {
+const TurnosEdit = ({ URL2, getAp }) => {
   const [TurnoEd, setTurnoEd] = useState({});
   const { id } = useParams();
   const TurnoPetNameRef = useRef("");
@@ -19,7 +19,7 @@ const TurnosEdit = ({ URL2,getAp }) => {
   const TurnoFechaRef = useRef("");
   const TurnoHoraRef = useRef("");
 
-  const navigate = useNavigate()
+  const navigate = useNavigate();
 
   useEffect(async () => {
     try {
@@ -57,8 +57,8 @@ const TurnosEdit = ({ URL2,getAp }) => {
       title: "Esta Seguro?",
       text: "No podra revertir el cambio",
       icon: "warning",
-      confirmButtonColor: '#3085d6',
-      cancelButtonColor: '#d33',
+      confirmButtonColor: "#3085d6",
+      cancelButtonColor: "#d33",
       showCancelButton: true,
       confirmButtonText: "Editar!",
     }).then(async (result) => {
@@ -75,7 +75,6 @@ const TurnosEdit = ({ URL2,getAp }) => {
             Swal.fire("Actualizado!", "Turno Editado.", "success");
             getAp();
             navigate("/Turnos/Tabla");
-
           }
         } catch (error) {
           console.log(error);
@@ -86,8 +85,19 @@ const TurnosEdit = ({ URL2,getAp }) => {
   return (
     <div>
       <Container className="my-5 container">
-        <h1 className="text-danger display-4">Editar Turnos</h1>
+      <h3 className="text-center text-danger display-4">Editar Turnos</h3>
         <hr />
+        <Row>
+          <Col sm={12} md={6}>
+            <div className="my-5">
+              <img
+                src="https://dojiw2m9tvv09.cloudfront.net/11787/product/royalcaninlatasvetdietrecoveryfeline-canine145gr25347.png"
+                alt="perro en blanco y negro con su amigo el gato"
+                className="img-fluid mt-5"
+              />
+            </div>
+          </Col>
+          <Col sm={12} md={6} className="my-4">
         <Form className="my-3" onSubmit={handleSubmit}>
           <Form.Group className="mb-3" controlId="exampleForm.ControlInput1">
             <Form.Label className="fw-bold">Nombre de la Mascota</Form.Label>
@@ -98,14 +108,13 @@ const TurnosEdit = ({ URL2,getAp }) => {
               ref={TurnoPetNameRef}
             />
           </Form.Group>
-          <Form.Group className="mb-3" controlId="exampleForm.ControlInput1">
-            <Form.Label className="fw-bold">Nombre Del Profesional</Form.Label>
-            <Form.Control
-              type="text"
-              placeholder="Nombre del Profesional"
-              defaultValue={TurnoEd.TurnoDoctor}
-              ref={TurnoDoctorRef}
-            />
+          <Form.Group className="mb-3" controlId="formBasicCheckbox">
+            <Form.Label className="fw-bolder">Profesionales*</Form.Label>
+            <Form.Select  value={TurnoEd.TurnoDoctor} onChange={({target})=> setTurnoEd({...TurnoEd, TurnoDoctor: target.value})} ref={TurnoDoctorRef}>
+              <option value="">Seleccione al profesional</option>
+              <option value="Dra Liza Morgan">Dra Liza Morgan</option>
+              <option value="Dr Adrian Munir">Dr Adrián Munir</option>
+            </Form.Select>
           </Form.Group>
           <Form.Group className="mb-3" controlId="exampleForm.ControlTextarea1">
             <Form.Label className="fw-bold">Detalle De la Cita</Form.Label>
@@ -134,8 +143,10 @@ const TurnosEdit = ({ URL2,getAp }) => {
               ref={TurnoHoraRef}
             />
           </Form.Group>
-          <button className="btn btn-success">Editar</button>
+          <button className="btn btn-success">Guardar</button>
         </Form>
+        </Col>
+        </Row>
       </Container>
     </div>
   );
