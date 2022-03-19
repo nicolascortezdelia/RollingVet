@@ -17,7 +17,6 @@ const TurnosTabla = ({ turnos, URL2 , getAp}) => {
         <Table bordered hover responsive className="align-middle mt-3">
           <thead>
             <tr>
-              <th>N°</th>
               <th>Nombre Mascota</th>
               <th>Veterinario</th>
               <th>Detalle de la cita</th>

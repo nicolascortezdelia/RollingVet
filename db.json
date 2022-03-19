@@ -5,16 +5,15 @@
       "TurnoDoctor": "Dra Cuco",
       "TurnoDetalle": "Lavado de estomago",
       "TurnoFecha": "2021-02-14",
-      "TurnoHora": "2021-02-14",
-      "id": 14
-    },
+      "TurnoHora": "2021-02-14"
+      },
     {
       "TurnoPetName": "pepito",
       "TurnoDoctor": "Dr Rivera",
       "TurnoDetalle": "Se trago una cuerda",
       "TurnoFecha": "2022-03-04",
-      "TurnoHora": "16:00",
-      "id": 15
+      "TurnoHora": "16:00"
+      
     }
   ],
   "Clientes": [
@@ -25,8 +24,8 @@
       "telefono": "54911235674",
       "nombreMascota": "Fufy",
       "especie": "perro",
-      "raza": "callejero",
-      "id": 6
+      "raza": "callejero"
+      
     },
     {
       "nombre": "jUAN",
@@ -35,8 +34,7 @@
       "telefono": "54911545454",
       "nombreMascota": "juan",
       "especie": "perro",
-      "raza": "bulldog",
-      "id": 8
+      "raza": "bulldog"
     }
   ],
   "comments": [
@@ -45,8 +43,7 @@
       "TurnoDoctor": "Dr Hongo",
       "TurnoDetalle": "lalalal",
       "TurnoFecha": "2022-03-03",
-      "TurnoHora": "15:45",
-      "id": 14
+      "TurnoHora": "15:45"
     }
   ]
 }

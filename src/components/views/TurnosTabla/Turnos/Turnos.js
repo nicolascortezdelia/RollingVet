@@ -34,7 +34,6 @@ const Turnos = ({ turno, URL2, getAp }) => {
 
   return (
     <tr>
-      <td>{turno._id}</td>
       <td>{turno.TurnoPetName}</td>
       <td>{turno.TurnoDoctor}</td>
       <td>{turno.TurnoDetalle}</td>
