@@ -10,7 +10,7 @@ import { useParams } from "react-router-dom";
 import { useNavigate } from "react-router-dom";
 import ListaClientes from "./ListaClientes";
 
-const EditClientes = ({ URL, getApi}) => {
+const EditClientes = ({ URL, getApi }) => {
   const [producto, setProducto] = useState({});
   //parametro
   const { id } = useParams();
@@ -50,7 +50,7 @@ const EditClientes = ({ URL, getApi}) => {
       !validateNames(razaRef.current.value)
     ) {
       Swal.fire("Perfecto!", "Validación correcta.", "success");
-     // return 
+      // return
     }
     console.log("datos correctos");
     // Guardar los datos modificados
@@ -61,25 +61,29 @@ const EditClientes = ({ URL, getApi}) => {
       telefono: telefonoRef.current.value,
       nombreMascota: nombreMascotaRef.current.value,
       especie: especieRef.current.value,
-      raza: razaRef.current.value
-    }
-     console.log(productoEditado);
-     Swal.fire({
-      title: 'Estas seguro?',
+      raza: razaRef.current.value,
+    };
+    console.log(productoEditado);
+    Swal.fire({
+      title: "Estas seguro?",
       text: "No podrás revertir esto!",
-      icon: 'warning',
+      icon: "warning",
       showCancelButton: true,
-      confirmButtonText: 'Editar!'
+      confirmButtonText: "Editar!",
     }).then(async (result) => {
       if (result.isConfirmed) {
         try {
-          const res = await fetch(`${URL}/${id}`, {method: "PUT", headers:{"Content-Type": "application/json"}, body: JSON.stringify(productoEditado)})
+          const res = await fetch(`${URL}/${id}`, {
+            method: "PUT",
+            headers: { "Content-Type": "application/json" },
+            body: JSON.stringify(productoEditado),
+          });
           console.log(res);
-          if(res.status === 200){
+          if (res.status === 200) {
             Swal.fire(
-              'Modificado!',
-              'Tu archivo ha sido modificado.',
-              'success'
+              "Modificado!",
+              "Tu archivo ha sido modificado.",
+              "success"
             );
             getApi();
             navegacion("/admin/clientes");
@@ -87,20 +91,17 @@ const EditClientes = ({ URL, getApi}) => {
         } catch (error) {
           console.log(error);
         }
-        Swal.fire(
-          'Modificado!',
-          'Datos modificados.',
-          'success'
-        )
+        Swal.fire("Modificado!", "Datos modificados.", "success");
       }
-    })
+    });
   };
 
-  
   return (
     <div>
       <Container className="py-5">
-        <h3 className="text-center text-danger display-4">Administrar Clientes</h3>
+        <h3 className="text-center text-danger display-4">
+          Administrar Clientes
+        </h3>
         <hr />
         <Row>
           <Col sm={12} md={6}>
@@ -120,77 +121,89 @@ const EditClientes = ({ URL, getApi}) => {
             </div>
           </Col>
           <Col sm={12} md={6} className="my-4">
-        <Form className="my-5" onSubmit={hundleSubmit}>
-          <Form.Group className="mb-3" controlId="formBasicEmail">
-            <Form.Label className="fw-bolder">Nombre</Form.Label>
-            <Form.Control
-              type="text"
-              placeholder="Escriba su Nombre"
-              defaultValue={producto.nombre}
-              ref={nombreRef}
-            />
-          </Form.Group>
-          <Form.Group className="mb-3" controlId="formBasicPassword">
-            <Form.Label className="fw-bolder">Apellido</Form.Label>
-            <Form.Control
-              type="text"
-              placeholder="Escriba su Apellido"
-              defaultValue={producto.apellido}
-              ref={apellidoRef}
-            />
-          </Form.Group>
-          <Form.Group className="mb-3" controlId="formBasicPassword">
-            <Form.Label className="fw-bolder">Correo Electronico</Form.Label>
-            <Form.Control
-              type="email"
-              placeholder="Ejemplo@correo.com"
-              defaultValue={producto.eMail}
-              ref={eMailRef}
-            />
-          </Form.Group>
-          <Form.Group className="mb-3" controlId="formBasicPassword">
-            <Form.Label className="fw-bolder">Numero De telefono</Form.Label>
-            <Form.Control
-              type="number"
-              placeholder="+549XXXXXXXXXX"
-              defaultValue={producto.telefono}
-              ref={telefonoRef}
-            />
-          </Form.Group>
-          <hr />
-          <h4 className="text-danger">Informacion de la Mascotta</h4>
-          <Form.Group className="mb-3" controlId="formBasicPassword">
-            <Form.Label className="fw-bolder">Nombre de la Mascota</Form.Label>
-            <Form.Control
-              type="text"
-              placeholder="Escriba el nombre de su mascota"
-              defaultValue={producto.nombreMascota}
-              ref={nombreMascotaRef}
-            />
-          </Form.Group>
-          <Form.Group className="mb-3" controlId="formBasicCheckbox">
+            <Form className="my-5" onSubmit={hundleSubmit}>
+              <Form.Group className="mb-3" controlId="formBasicEmail">
+                <Form.Label className="fw-bolder">Nombre</Form.Label>
+                <Form.Control
+                  type="text"
+                  placeholder="Escriba su Nombre"
+                  defaultValue={producto.nombre}
+                  ref={nombreRef}
+                />
+              </Form.Group>
+              <Form.Group className="mb-3" controlId="formBasicPassword">
+                <Form.Label className="fw-bolder">Apellido</Form.Label>
+                <Form.Control
+                  type="text"
+                  placeholder="Escriba su Apellido"
+                  defaultValue={producto.apellido}
+                  ref={apellidoRef}
+                />
+              </Form.Group>
+              <Form.Group className="mb-3" controlId="formBasicPassword">
+                <Form.Label className="fw-bolder">
+                  Correo Electronico
+                </Form.Label>
+                <Form.Control
+                  type="email"
+                  placeholder="Ejemplo@correo.com"
+                  defaultValue={producto.eMail}
+                  ref={eMailRef}
+                />
+              </Form.Group>
+              <Form.Group className="mb-3" controlId="formBasicPassword">
+                <Form.Label className="fw-bolder">
+                  Numero De telefono
+                </Form.Label>
+                <Form.Control
+                  type="number"
+                  placeholder="+549XXXXXXXXXX"
+                  defaultValue={producto.telefono}
+                  ref={telefonoRef}
+                />
+              </Form.Group>
+              <hr />
+              <h4 className="text-danger">Informacion de la Mascotta</h4>
+              <Form.Group className="mb-3" controlId="formBasicPassword">
+                <Form.Label className="fw-bolder">
+                  Nombre de la Mascota
+                </Form.Label>
+                <Form.Control
+                  type="text"
+                  placeholder="Escriba el nombre de su mascota"
+                  defaultValue={producto.nombreMascota}
+                  ref={nombreMascotaRef}
+                />
+              </Form.Group>
+              <Form.Group className="mb-3" controlId="formBasicCheckbox">
                 <Form.Label className="fw-bolder">Especie*</Form.Label>
-                <Form.Select value={producto.especie} onChange={({target})=> setProducto({...producto, especie : target.value})} ref={especieRef}>
+                <Form.Select
+                  value={producto.especie}
+                  onChange={({ target }) =>
+                    setProducto({ ...producto, especie: target.value })
+                  }
+                  ref={especieRef}
+                >
                   <option value="">Seleccione una opcion</option>
                   <option value="Perro">Perro</option>
                   <option value="Gato">Gato</option>
                   <option value="Otro">Otro</option>
                 </Form.Select>
               </Form.Group>
-          <Form.Group className="mb-3" controlId="formBasicPassword">
-            <Form.Label className="fw-bolder">Raza</Form.Label>
-            <Form.Control
-              type="text"
-              placeholder="Indique la raza de su mascota"
-              defaultValue={producto.raza}
-              ref={razaRef}
-            />
-          </Form.Group>
-          <div className="text-end">
-            <button className="btn btn-success">Guardar</button>
-          </div>
-        </Form>
-        </Col>
+              <Form.Group className="mb-3" controlId="formBasicPassword">
+                <Form.Label className="fw-bolder">Raza</Form.Label>
+                <Form.Control
+                  type="text"
+                  placeholder="Indique la raza de su mascota"
+                  defaultValue={producto.raza}
+                  ref={razaRef}
+                />
+              </Form.Group>
+              <div className="text-end">
+                <button className="btn btn-success">Guardar</button>
+              </div>
+            </Form>
+          </Col>
         </Row>
       </Container>
     </div>
