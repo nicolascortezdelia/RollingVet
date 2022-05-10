@@ -11,7 +11,7 @@ const Navigation = () => {
       <Navbar bg="white" expand="lg">
         <Container>
           <Navbar.Brand>
-          <Link to = "/" className="text-decoration-none p-0" to="/" >
+          <Link to = "/" className="text-decoration-none p-0">
             <img
               alt="logo RollingVet"
               src="/RollingVet.png"
