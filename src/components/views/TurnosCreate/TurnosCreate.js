@@ -5,7 +5,6 @@ import Swal from "sweetalert2";
 import {
   validateFecha,
   validateHora,
-  validateNombre,
   validateNombreApellido,
   validateProf,
   validatetextarea,
@@ -137,7 +136,7 @@ const TurnosCreate = ({ URL2, getAp }) => {
                 />
               </Form.Group>
               <Form.Group className="mb-3" controlId="formBasicCheckbox">
-                <Form.Label className="fw-bolder">Horario*</Form.Label>
+                <Form.Label className="fw-bolder">Horario</Form.Label>
                 <Form.Select
                   onChange={({ target }) => setTurnoHora(target.value)}
                 >
