@@ -5,7 +5,7 @@ import { Link } from "react-router-dom";
 const AdminHomePage = () => {
     return (
         <Container >
-            <div className="m-2">
+            <div className="mb-2">
                 <h1 className=" display-2  text-danger fst-bold text-center  ">
                   ¡Bienvenido Administrador!
                 </h1>
@@ -13,7 +13,7 @@ const AdminHomePage = () => {
 
                 </div>
         <Row className='mt-5'>
-          <Col sm={12} md={6} className="mb-4">
+          <Col sm={12} md={6} className="mb-5 ">
             <Card className="text-center shadow">
               <Card.Body>
               <img
@@ -30,7 +30,7 @@ const AdminHomePage = () => {
               </Card.Body>
             </Card>
           </Col>
-          <Col sm={12} md={6} className="mb-4">
+          <Col sm={12} md={6} className="mb-5">
             <Card className="text-center shadow ">
               <Card.Body>
               <img

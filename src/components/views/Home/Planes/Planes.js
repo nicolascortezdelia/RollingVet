@@ -13,7 +13,7 @@ const Planes = () => {
             <Card.Body>
             <Card.Img
               variant="top"
-              src="https://vsn.shindiristudio.com/wp-content/uploads/2020/01/cat-2.jpg"
+              src="https://images.pexels.com/photos/57416/cat-sweet-kitty-animals-57416.jpeg?auto=compress&cs=tinysrgb&dpr=1&w=500"
               alt='gatito tierno de Primeros pasos'
             />
               <Card.Title className='mt-2'>Plan Primeros Pasos</Card.Title>
