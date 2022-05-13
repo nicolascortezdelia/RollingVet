@@ -22,6 +22,7 @@ import { BrowserRouter, Routes, Route } from "react-router-dom";
 import { useEffect, useState } from "react";
 
 import Nosotros from "./components/Nosotros/Nosotros";
+import AdminHomePage from "./components/views/AdminHomePage/AdminHomePage";
 
 function App() {
   const [turnos, setTurnos] = useState([]);
@@ -90,6 +91,7 @@ function App() {
           <Route exact path="*" element={<Error404 />} />
           <Route exact path="/login" element={<Login admin = {admin}/>} />
           <Route exact path="/planes" element={<PaginaPlanes />} />
+          <Route exact path="/adminhome" element={<AdminHomePage/>} />
           <Route
             exact
             path="/planes/primerospasos"
