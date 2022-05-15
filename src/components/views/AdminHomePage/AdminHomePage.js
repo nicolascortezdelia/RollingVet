@@ -1,8 +1,22 @@
-import React from 'react';
+import React, {useEffect} from 'react';
 import { Container, Row, Col, Card, Button } from "react-bootstrap";
-import { Link } from "react-router-dom";
+import { Link, useNavigate } from "react-router-dom";
 
 const AdminHomePage = () => {
+
+    const redirect = useNavigate();
+    const session = JSON.parse(sessionStorage.getItem("stateSession")) || false;
+  
+    const checkSession=()=>{
+      if (!session) {
+        redirect("/Login");
+      }      
+    }
+  
+    useEffect(()=>{
+      checkSession();
+    },[]);
+
     return (
         <Container >
             <div className="mb-2">

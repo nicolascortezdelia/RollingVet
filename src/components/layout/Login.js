@@ -83,7 +83,7 @@ const Login = ({admin}) => {
       );
 
       setTimeout(() => {
-        navigate("/admin");
+        navigate("/adminhome");
       }, 1000);
 
 
