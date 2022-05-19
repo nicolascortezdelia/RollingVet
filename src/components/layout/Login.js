@@ -77,9 +77,9 @@ const Login = ({admin}) => {
 
       session = true;
       sessionStorage.setItem("stateSession", JSON.stringify(session));
-      Swal.fire(
-        'Bienvenido "ADMINISTRADOR"!',
-        "success"
+      Swal.fire({
+        title: '¡Bienvenido Administrador!',
+        icon: 'success'}
       );
 
       setTimeout(() => {
@@ -113,9 +113,10 @@ const Login = ({admin}) => {
            <hr className="text-dark"/>
            </div>
          <Form onSubmit={hundleSubmit} className="mx-3 text-light mt-3 ">
-        <Form.Group className="mb-3 " controlId="formBasicEmail">
+        <Form.Group className="mb-3 " >
           <Form.Label className="text-dark">Dirección</Form.Label>
           <Form.Control
+          controlId="formBasicEmail"
             type="email"
             placeholder="Inserte su e-mail"
             id="inEmail"

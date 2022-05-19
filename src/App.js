@@ -60,6 +60,7 @@ function App() {
 
       
       setCliente(clienteApi);
+      console.log(clienteApi)
     } catch (error) {
       console.log(error);
     }
@@ -71,12 +72,12 @@ function App() {
 
       const adminApi = await res.json();
       setAdmin(adminApi);
+      console.log(adminApi)
       
     } catch (error) {
       console.log(error);
-      
     }
-  }
+  };
 
   return (
     <BrowserRouter>

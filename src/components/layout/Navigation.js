@@ -2,10 +2,49 @@ import React from "react";
 import { Container, Nav } from "react-bootstrap";
 import Navbar from "react-bootstrap/Navbar";
 import "./Navigation.css";
-import { Link } from "react-router-dom";
+import Swal from 'sweetalert2'
+import { Link, useNavigate } from "react-router-dom";
 
 
 const Navigation = () => {
+
+  let session = JSON.parse(sessionStorage.getItem("stateSession") || false);
+  const navigate = useNavigate();
+
+  const handleLogOut = () => {
+    if (session) {
+      session = false;
+      sessionStorage.setItem("stateSession", JSON.stringify(session));
+     
+ 
+      let timerInterval;
+      Swal.fire({
+        title: "Cerrando sesion",
+        
+        timer: 2000,
+        timerProgressBar: true,
+        didOpen: () => {
+          Swal.showLoading();
+          const b = Swal.getHtmlContainer().querySelector("b");
+          timerInterval = setInterval(() => {
+            b.textContent = Swal.getTimerLeft();
+          }, 100);
+        },
+        willClose: () => {
+          clearInterval(timerInterval);
+        },
+      }).then((result) => {
+        /* Read more about handling dismissals below */
+        if (result.dismiss === Swal.DismissReason.timer) {
+          navigate("/");
+        }
+      });
+    }
+  };
+
+
+
+
   return (
     <>
       <Navbar bg="white" expand="lg">
@@ -25,12 +64,9 @@ const Navigation = () => {
           <Navbar.Toggle aria-controls="basic-navbar-nav" />
           <Navbar.Collapse id="basic-navbar-nav" className="justify-content-end">
             <Nav>
-            <Link className="nav-link" to="/turnos/tabla">
-                  Administrar Turnos
-                </Link>
-                <Link className="nav-link" to="/admin/clientes">
-                  Administrar Pacientes
-                </Link>
+          
+            {session ? (
+              <>
             <Link className="nav-link" to="/planes">
                 Planes
               </Link>
@@ -40,12 +76,33 @@ const Navigation = () => {
               <Link className="nav-link" to="/nosotros">
                 Sobre nosotros
               </Link>
+              <Link className="nav-link" to="/adminhome">
+                Administrador
+              </Link>
+              <Link onClick={handleLogOut}  className="nav-link" to="/turnos/tabla">
+                  LogOut
+                </Link>
+              </>
+              ):(
+                <>
+                <Link className="nav-link" to="/planes">
+                Planes
+              </Link>
+              <Link className="nav-link" to="/contactos">
+                Contactanos
+              </Link>
+              <Link className="nav-link" to="/nosotros">
+                Sobre nosotros
+              </Link>
+              
               <Link
                 className=" nav-link outline-dark"
                 to="/login"
               >
                 LOGIN
               </Link>
+              </>
+              )  }
             </Nav>
           </Navbar.Collapse>
         </Container>
