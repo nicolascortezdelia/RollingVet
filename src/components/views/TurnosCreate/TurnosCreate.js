@@ -5,8 +5,8 @@ import Swal from "sweetalert2";
 import {
   validateFecha,
   validateHora,
-  validateNombre,
   validateNombreApellido,
+  validateProf,
   validatetextarea,
 } from "../../Helpers/validacionesTurnos";
 
@@ -23,7 +23,7 @@ const TurnosCreate = ({ URL2, getAp }) => {
 
     if (
       !validateNombreApellido(TurnoPetName) ||
-      !validateNombre(TurnoDoctor) ||
+      !validateProf(TurnoDoctor) ||
       !validatetextarea(TurnoDetalle) ||
       !validateFecha(TurnoFecha) ||
       !validateHora(TurnoHora)
@@ -43,8 +43,8 @@ const TurnosCreate = ({ URL2, getAp }) => {
       title: "Esta seguro?",
       text: "No podra revertir este paso!",
       icon: "warning",
-      confirmButtonColor: '#3085d6',
-      cancelButtonColor: '#d33',
+      confirmButtonColor: "#3085d6",
+      cancelButtonColor: "#d33",
       showCancelButton: true,
       confirmButtonText: "Guardar!",
     }).then(async (result) => {
@@ -88,52 +88,73 @@ const TurnosCreate = ({ URL2, getAp }) => {
               />
             </div>
           </Col>
-        <Col sm={12} md={6} className="my-4">
-        <Form className="my-3" onSubmit={handleSubmit}>
-          <Form.Group className="mb-3" controlId="exampleForm.ControlInput1">
-            <Form.Label className="fw-bold">Nombre de la Mascota</Form.Label>
-            <Form.Control
-              type="text"
-              placeholder="Nombre de la Mascota"
-              onChange={({ target }) => setTurnoPetName(target.value)}
-            />
-          </Form.Group>
-          <Form.Group className="mb-3" controlId="formBasicCheckbox">
+          <Col sm={12} md={6} className="my-4">
+            <Form className="my-3" onSubmit={handleSubmit}>
+              <Form.Group
+                className="mb-3"
+                controlId="exampleForm.ControlInput1"
+              >
+                <Form.Label className="fw-bold">
+                  Nombre de la Mascota
+                </Form.Label>
+                <Form.Control
+                  type="text"
+                  placeholder="Nombre de la Mascota"
+                  onChange={({ target }) => setTurnoPetName(target.value)}
+                />
+              </Form.Group>
+              <Form.Group className="mb-3" controlId="formBasicCheckbox">
                 <Form.Label className="fw-bolder">Profesionales*</Form.Label>
-                <Form.Select onChange={({ target }) => setTurnoDoctor(target.value)}>
+                <Form.Select
+                  onChange={({ target }) => setTurnoDoctor(target.value)}
+                >
                   <option value="">Seleccione al profesional</option>
                   <option value="Dra Liza Morgan">Dra Liza Morgan</option>
-                  <option value="Dr Adrian Munir">Dr Adrian Munir</option> 
-                  
+                  <option value="Dr Adrian Munir">Dr Adrian Munir</option>
                 </Form.Select>
               </Form.Group>
-          <Form.Group className="mb-3" controlId="exampleForm.ControlTextarea1">
-            <Form.Label className="fw-bold" >Detalle De la Cita</Form.Label>
-            <Form.Control
-              as="textarea"
-              rows={3}
-              onChange={({ target }) => setTurnoDetalle(target.value)}
-            />
-          </Form.Group>
-          <Form.Group className="mb-3" controlId="exampleForm.ControlInput1">
-            <Form.Label className="fw-bold">Fecha</Form.Label>
-            <Form.Control
-              type="date"
-              placeholder="Escriba la fecha"
-              onChange={({ target }) => setTurnoFecha(target.value)}
-            />
-          </Form.Group>
-          <Form.Group className="mb-3" controlId="exampleForm.ControlInput1">
-            <Form.Label className="fw-bold">Horario</Form.Label>
-            <Form.Control
-              type="time"
-              placeholder="Escriba el horario"
-              onChange={({ target }) => setTurnoHora(target.value)}
-            />
-          </Form.Group>
-          <button className="btn btn-success">Guardar</button>
-        </Form>
-        </Col>
+              <Form.Group
+                className="mb-3"
+                controlId="exampleForm.ControlTextarea1"
+              >
+                <Form.Label className="fw-bold">Detalle De la Cita</Form.Label>
+                <Form.Control
+                  as="textarea"
+                  rows={3}
+                  onChange={({ target }) => setTurnoDetalle(target.value)}
+                />
+              </Form.Group>
+              <Form.Group
+                className="mb-3"
+                controlId="exampleForm.ControlInput1"
+              >
+                <Form.Label className="fw-bold">Fecha</Form.Label>
+                <Form.Control
+                  type="date"
+                  placeholder="Escriba la fecha"
+                  onChange={({ target }) => setTurnoFecha(target.value)}
+                />
+              </Form.Group>
+              <Form.Group className="mb-3" controlId="formBasicCheckbox">
+                <Form.Label className="fw-bolder">Horario</Form.Label>
+                <Form.Select
+                  onChange={({ target }) => setTurnoHora(target.value)}
+                >
+                  <option value="">Elija el horario</option>
+                  <option value="09:00">09:00</option>
+                  <option value="10:00">10:00</option>
+                  <option value="11:00">11:00</option>
+                  <option value="12:00">12:00</option>
+                  <option value="16:00">16:00</option>
+                  <option value="17:00">17:00</option>
+                  <option value="18:00">18:00</option>
+                  <option value="19:00">19:00</option>
+                  <option value="20:00">20:00</option>
+                </Form.Select>
+              </Form.Group>
+              <button className="btn btn-success">Guardar</button>
+            </Form>
+          </Col>
         </Row>
       </Container>
     </div>

@@ -1,10 +1,9 @@
 const regExpNombreApellido = /^[A-Za-z\s?]+$/;
 const regExpNombre = /^[A-Za-z\s?]+$/;
-const regExpFecha = /^\d{4}([\-/.])(0?[1-9]|1[1-2])\1(3[01]|[12][0-9]|0?[1-9])$/;
-const regExpHora =  /^([01]?[0-9]|2[0-3]):[0-5][0-9](:[0-5][0-9])?$/;
-const regExpTxtArea =  /^[a-zA-Z0-9?$@#()'!,+\-=_:.&€£*%\s]+$/;
-
-
+const regExpFecha =
+  /^\d{4}([\-/.])(0?[1-9]|1[1-2])\1(3[01]|[12][0-9]|0?[1-9])$/;
+const regExpHora = /^([01]?[0-9]|2[0-3]):[0-5][0-9](:[0-5][0-9])?$/;
+const regExpTxtArea = /^[a-zA-Z0-9?$@#()'!,+\-=_:.&€£*%\s]+$/;
 
 export const validateNombreApellido = (field) => {
   if (regExpNombreApellido.test(field) && field.trim() !== "") {
@@ -13,8 +12,6 @@ export const validateNombreApellido = (field) => {
     return false;
   }
 };
-
-
 
 export const validateNombre = (field) => {
   if (regExpNombre.test(field) && field.trim() !== "") {
@@ -32,14 +29,6 @@ export const validatetextarea = (field) => {
   }
 };
 
-export const validateHora = (field) => {
-  if (regExpHora.test(field) && field.trim() !== "") {
-    return true;
-  } else {
-    return false;
-  }
-};
-
 export const validateFecha = (field) => {
   if (regExpFecha.test(field) && field.trim() !== "") {
     return true;
@@ -48,6 +37,34 @@ export const validateFecha = (field) => {
   }
 };
 
+export const validateProf = (field) => {
+  if (
+    regExpNombre.test(field) &&
+    field.trim() !== "" &&
+    (field === "Dra Liza Morgan" || field === "Dr Adrian Munir")
+  ) {
+    return true;
+  } else {
+    return false;
+  }
+};
 
-// const state = {    values: {        name: '',        password: '',    },    errors: {        name: '',        password: '',    }};handleChange = (key: string) => (value: string) => {    this.setState({ values: { ...values, [key]: value } })}getErrors = () => {    const errors = checkErrors(this.state.values);    this.setState({ errors });}render() {    const { errors } = this.state    return (        input name onChange={this.handleChange('name') onBlur={this.getErrors}        <span>{errors.name}</span>        input password  onChange={this.handleChange('password')}        <span>{errors.password}</span>    );};const checkErrors = ({ name, password }) => {    const errors = {};    if (name.length < 6) http://errors.name = 'El nombre tiene que tener mas de 6 caracteres';    if (password.length < 6) errors.password = 'El nombre tiene que tener mas de 6 caracteres';    return errors;}
-// const state = {    values: {        name: '',        password: '',    },    errors: {        name: '',        password: '',    }};handleChange = (key: string) => (value: string) => {    this.setState({ values: { ...values, [key]: value } })}getErrors = () => {    const errors = checkErrors(this.state.values);    this.setState({ errors });}render() {    const { errors } = this.state    return (        input name onChange={this.handleChange('name') onBlur={this.getErrors}        <span>{errors.name}</span>        input password  onChange={this.handleChange('password')}        <span>{errors.password}</span>    );};const checkErrors = ({ name, password }) => ({    name: validateName(name),    password: validatePassword(password),});const validateName = (value: string) => {    if (value.length < 6) return 'El nombre tiene que tener mas de 6 caracteres';}
+export const validateHora = (field) => {
+  if (
+    regExpHora.test(field) &&
+    field.trim() !== "" &&
+    (field === "10:00" ||
+      field === "11:00" ||
+      field === "12:00" ||
+      field === "13:00" ||
+      field === "16:00" ||
+      field === "17:00" ||
+      field === "18:00" ||
+      field === "19:00" ||
+      field === "20:00")
+  ) {
+    return true;
+  } else {
+    return false;
+  }
+};

@@ -16,14 +16,11 @@ const AdminClientesCreate = ({ URL, getApi }) => {
   const [nombreMascota, setNombreMascota] = useState("");
   const [especie, setEspecie] = useState("");
   const [raza, setRaza] = useState("");
-
-  // funion para navegar entre rutas
   const navegacion = useNavigate();
-  //funcion para crear un objeto
+  
   const hundleSubmit = async (e) => {
     e.preventDefault();
 
-    //validacion de los campos
     if (
       !validateNames(nombre) ||
       !validateNames(apellido) ||
@@ -33,10 +30,10 @@ const AdminClientesCreate = ({ URL, getApi }) => {
       !validateNames(especie) ||
       !validateNames(raza)
     ) {
-      Swal.fire("Ops!", "Algunos datos ingresados no son validos", "error");
-      // return
+      Swal.fire("Ops!", "Llene correctamente los casilleros.", "error");
+      return;
     }
-    //envio de los datos para guardarlos
+
     const newPaciente = {
       nombre,
       apellido,
@@ -50,6 +47,8 @@ const AdminClientesCreate = ({ URL, getApi }) => {
       title: "Estás seguro?",
       text: "Quieres guardar los datos",
       icon: "warning",
+      confirmButtonColor: "#3085d6",
+      cancelButtonColor: "#d33",
       showCancelButton: true,
       confirmButtonText: "Guardar Datos",
     }).then(async (result) => {
@@ -60,7 +59,6 @@ const AdminClientesCreate = ({ URL, getApi }) => {
             headers: { "Content-Type": "application/json" },
             body: JSON.stringify(newPaciente),
           });
-          // console.log(res);
           if (res.status === 201) {
             Swal.fire("Creado!", "Turno creado.", "success");
             getApi();
@@ -147,7 +145,9 @@ const AdminClientesCreate = ({ URL, getApi }) => {
               </Form.Group>
               <Form.Group className="mb-3" controlId="formBasicCheckbox">
                 <Form.Label className="fw-bolder">Especie*</Form.Label>
-                <Form.Select  onChange={({ target }) => setEspecie(target.value)}>
+                <Form.Select
+                  onChange={({ target }) => setEspecie(target.value)}
+                >
                   <option value="">Seleccione una opcion</option>
                   <option value="Perro">Perro</option>
                   <option value="Gato">Gato</option>
