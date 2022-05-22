@@ -1,6 +1,7 @@
 import React from "react";
 import { Link } from "react-router-dom";
 import Swal from "sweetalert2";
+import Moment from "react-moment"
 
 const Turnos = ({ turno, URL2, getAp }) => {
   const handleDelete = (id) => {
@@ -38,7 +39,7 @@ const Turnos = ({ turno, URL2, getAp }) => {
       <td>{turno.TurnoPetName}</td>
       <td>{turno.TurnoDoctor}</td>
       <td>{turno.TurnoDetalle}</td>
-      <td>{turno.TurnoFecha}</td>
+      <td><Moment format="DD/MM/YY">{turno.TurnoFecha}</Moment></td>
       <td>{turno.TurnoHora}</td>
       <td className="w-25">
         <div className="d-flex justify-content-center ">
