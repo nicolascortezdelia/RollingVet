@@ -1,7 +1,6 @@
 const regExpNombreApellido = /^[A-Za-z\s?]+$/;
 const regExpNombre = /^[A-Za-z\s?]+$/;
-const regExpFecha =
-  /^\d{4}([\-/.])(0?[1-9]|1[1-2])\1(3[01]|[12][0-9]|0?[1-9])$/;
+
 const regExpHora = /^([01]?[0-9]|2[0-3]):[0-5][0-9](:[0-5][0-9])?$/;
 const regExpTxtArea = /^[a-zA-Z0-9?$@#()'!,+\-=_:.&€£*%\s]+$/;
 
@@ -29,13 +28,24 @@ export const validatetextarea = (field) => {
   }
 };
 
-export const validateFecha = (field) => {
-  if (regExpFecha.test(field) && field.trim() !== "") {
-    return true;
-  } else {
-    return false;
+let date = new Date()
+let output = date.getFullYear()+ '-'+ `${(date.getMonth()+1)}`.padStart(2,'0') + '-' + `${(date.getDate())}`.padStart(2,'0') 
+let output2 = date.getFullYear()+ '-'+ `${(date.getMonth()+1) + 1}`.padStart(2,'0') + '-' + `${(date.getDate())}`.padStart(2,'0') 
+
+
+
+export const validateFecha =(campo)=>{
+
+  console.log(output)
+  console.log(campo)
+  if( campo <= output2 && campo > output) {
+  return true
+  }else{
+    return false
   }
 };
+
+
 
 export const validateProf = (field) => {
   if (
