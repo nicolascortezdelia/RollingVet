@@ -16,14 +16,16 @@ export const validateNames = (campo) => {
     return true;
   } else {
     return false;
+    console.log("error nombre")
   }
 };
 
 export const validateTel = (campo) => {
   if (regExTel.test(campo)) {
-
+    return true;
   } else {
     return false;
+    console.log(validateTel);
   }
 };
 
