@@ -71,7 +71,7 @@ const PlanMadurando = () => {
             <Card.Body>
             <Card.Img
               variant="top"
-              src="https://vsn.shindiristudio.com/wp-content/uploads/2019/01/Savet-Pas-1.jpg"
+              src="https://media.istockphoto.com/photos/border-collie-dog-picture-id537392394?k=20&m=537392394&s=612x612&w=0&h=sKKL2aRbm7MOEltcQ5JrKsR2mq8MMZIsDGNSRKgvJRA="
               alt='perro mirando al frente del Plan Madurando'
             />
               <h5 className="text-danger">Plan Madurando</h5>

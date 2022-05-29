@@ -47,7 +47,7 @@ const PaginaPlanes = () => {
                 <Card.Img
                   variant="top"
                   src="https://media.istockphoto.com/photos/cute-cat-sleeping-and-relaxed-snuggling-on-the-bed-animal-friendly-picture-id1219352486?k=20&m=1219352486&s=612x612&w=0&h=l1C4u64mkhkC2wUfSvS1QitJqhwug2S8ACfJKaL1o-Y="
-                  alt="gatito siendo abrazado"
+                  alt="gatito tierno de Primeros pasos"
                 />
               </Col>
               <Col sm={12} md={7}>
@@ -109,7 +109,7 @@ const PaginaPlanes = () => {
                 <Card.Img
                   variant="top"
                   src="https://media.istockphoto.com/photos/dog-golden-retriever-picture-id1287445691?k=20&m=1287445691&s=612x612&w=0&h=NMAx1FBqf0dh0EZtlf7Zf8M0EKLVyanBEk0wwG128-A="
-                  alt="perro acostado"
+                  alt="perro con pelaje canoso del Plan Adultos"
                 />
               </Col>
               <Col sm={12} md={7}>
