@@ -17,13 +17,13 @@ const Servicios = () => {
           <Card style={{ width: "18rem", height: "25rem" }} className="shadow">
             <Card.Img
               variant="top"
-              src="https://vsn.shindiristudio.com/wp-content/uploads/2020/01/Emergency-Vet.jpg"
+              src="https://veterinarskastanicanis.rs/wp-content/uploads/2021/05/Vakcinacija-pasa-Carousel.jpg"
               alt="celular"
             />
             <Card.Body>
-              <Card.Title>Emergencias</Card.Title>
+              <Card.Title>Vacunación</Card.Title>
               <Card.Text>
-                Llamanos las 24 hs y te agendamos un examen urgente o respondemos tu consulta de emergencia 
+                Colocamos a tu mascota las vacunas que necesita durante todas las etapas
               </Card.Text>
               <Link className="text-secondary" to="*">Ver Más</Link>
             </Card.Body>
@@ -33,7 +33,7 @@ const Servicios = () => {
           <Card style={{ width: "18rem", height: "25rem" }} className="shadow">
             <Card.Img
               variant="top"
-              src="https://vsn.shindiristudio.com/wp-content/uploads/2020/01/About-Us.jpg"
+              src="https://veterinarskastanicanis.rs/wp-content/uploads/2021/05/Interna-medicina-Carousel.jpg"
               alt="pastor aleman con una veterinaria"
             />
             <Card.Body>
@@ -50,7 +50,7 @@ const Servicios = () => {
           <Card style={{ width: "18rem", height: "25rem" }} className="shadow">
             <Card.Img
               variant="top"
-              src="https://vsn.shindiristudio.com/wp-content/uploads/2020/01/Diagnostics-Surgery.jpg"
+              src="https://veterinarskastanicanis.rs/wp-content/uploads/2021/05/Dermatologija-Carousel.jpg"
               alt="perro con un veterinario"
             />
             <Card.Body>
@@ -67,7 +67,7 @@ const Servicios = () => {
           <Card style={{ width: "18rem", height: "25rem" }} className="shadow">
             <Card.Img
               variant="top"
-              src="https://vsn.shindiristudio.com/wp-content/uploads/2018/07/03-Lecenje.jpg"
+              src="https://veterinarskastanicanis.rs/wp-content/uploads/2021/05/Vakcinacija-macaka-Carousel.jpg"
               alt="gatito acostado tapado"
             />
             <Card.Body>

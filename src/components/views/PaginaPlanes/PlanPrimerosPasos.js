@@ -65,7 +65,7 @@ const PlanPrimerosPasos = () => {
             <Card.Body>
             <Card.Img
               variant="top"
-              src="https://vsn.shindiristudio.com/wp-content/uploads/2020/01/cat-2.jpg"
+              src="https://media.istockphoto.com/photos/cute-cat-sleeping-and-relaxed-snuggling-on-the-bed-animal-friendly-picture-id1219352486?k=20&m=1219352486&s=612x612&w=0&h=l1C4u64mkhkC2wUfSvS1QitJqhwug2S8ACfJKaL1o-Y="
               alt='gatito siendo abrazod del Plan Primeros Pasos'
             />
               <h5 className="text-danger">Plan Primeros Pasos</h5>

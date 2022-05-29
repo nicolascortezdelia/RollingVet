@@ -13,7 +13,7 @@ const Planes = () => {
             <Card.Body>
             <Card.Img
               variant="top"
-              src="https://vsn.shindiristudio.com/wp-content/uploads/2020/01/cat-2.jpg"
+              src="https://media.istockphoto.com/photos/cute-cat-sleeping-and-relaxed-snuggling-on-the-bed-animal-friendly-picture-id1219352486?k=20&m=1219352486&s=612x612&w=0&h=l1C4u64mkhkC2wUfSvS1QitJqhwug2S8ACfJKaL1o-Y="
               alt='gatito tierno de Primeros pasos'
             />
               <Card.Title className='mt-2'>Plan Primeros Pasos</Card.Title>
@@ -29,7 +29,7 @@ const Planes = () => {
             <Card.Body>
             <Card.Img
               variant="top"
-              src="https://vsn.shindiristudio.com/wp-content/uploads/2019/01/Savet-Pas-1.jpg"
+              src="https://media.istockphoto.com/photos/happy-dog-running-and-having-fun-picture-id654620372?k=20&m=654620372&s=612x612&w=0&h=ukkojV4c3xI-exarS63LC5mnAPHdjypcicX-SNY9xfU="
               alt='perro mirando al frente del Plan Madurando'
             />
               <Card.Title className='mt-2'>Plan Madurando</Card.Title>
@@ -46,7 +46,7 @@ const Planes = () => {
             <Card.Body>
             <Card.Img
               variant="top"
-              src="https://vsn.shindiristudio.com/wp-content/uploads/2019/01/Savet-Pas-4.jpg"
+              src="https://media.istockphoto.com/photos/dog-golden-retriever-picture-id1287445691?k=20&m=1287445691&s=612x612&w=0&h=NMAx1FBqf0dh0EZtlf7Zf8M0EKLVyanBEk0wwG128-A="
               alt='perro acostado del Plan Adultos  '
             />
               <Card.Title className='mt-2'>Plan Adultos</Card.Title>
