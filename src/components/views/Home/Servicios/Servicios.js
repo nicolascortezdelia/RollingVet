@@ -56,8 +56,7 @@ const Servicios = () => {
             <Card.Body>
               <Card.Title>Cirugía</Card.Title>
               <Card.Text>
-                Contamos con los mejores especialistas en intervenciones quirúrgicas de múltiples
-                especialidades.
+                Contamos con los mejores especialistas en intervenciones quirúrgicas 
               </Card.Text>
               <Link className="text-secondary" to="*">Ver Más</Link>
             </Card.Body>
@@ -71,10 +70,9 @@ const Servicios = () => {
               alt="gatito acostado tapado"
             />
             <Card.Body>
-              <Card.Title>Tratamiento Ambulatorio</Card.Title>
+              <Card.Title>Tratamiento Primeros Días</Card.Title>
               <Card.Text>
-                Podés dejar a tus mascotas en nuestra clínica para que sean
-                cuidadas por unas horas
+                Nuestros especialistas cuidan la salud de tu mascota desde sus primeros días 
               </Card.Text>
               <Link className="text-secondary" to="*">Ver Más</Link>
             </Card.Body>
