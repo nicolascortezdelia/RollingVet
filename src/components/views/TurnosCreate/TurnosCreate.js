@@ -46,7 +46,7 @@ const TurnosCreate = ({ URL2, getAp }) => {
       confirmButtonColor: "#3085d6",
       cancelButtonColor: "#d33",
       showCancelButton: true,
-      confirmButtonText: "Guardar!",
+      confirmButtonText: "Agendar!",
     }).then(async (result) => {
       if (result.isConfirmed) {
         try {
@@ -59,8 +59,8 @@ const TurnosCreate = ({ URL2, getAp }) => {
           });
           if (res.status === 201) {
             Swal.fire(
-              "Turno Agregado!",
-              "Su turno fue creado exitosamente.",
+              "Turno Agendado!",
+              "Su turno fue agendado exitosamente.",
               "success"
             );
             getAp();
