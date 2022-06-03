@@ -7,7 +7,7 @@ import {
   validatePassword,
 } from "../Helpers/validacionesPacientes";
 import Swal from "sweetalert2";
-import bcrypt from "bcryptjs/dist/bcrypt";
+import bcrypt from "bcryptjs";
 
 
 import "./login.css";
