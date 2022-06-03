@@ -36,7 +36,7 @@ const ContactUs = () => {
     ) {
       Swal.fire({
         icon: "error",
-        title: "Ay!",
+        title: "Ops!",
         text: "Ingresaste algun dato incorrecto, por favor revisá el formulario",
       });
     } else {
