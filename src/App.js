@@ -22,6 +22,7 @@ import { BrowserRouter, Routes, Route } from "react-router-dom";
 import { useEffect, useState } from "react";
 
 import Nosotros from "./components/Nosotros/Nosotros";
+import AdminHomePage from "./components/views/AdminHomePage/AdminHomePage";
 
 function App() {
   const [turnos, setTurnos] = useState([]);
@@ -30,9 +31,13 @@ function App() {
   const [cliente, setCliente] = useState([]);
   const URL = process.env.REACT_APP_CLIENTES;
 
+  const [admin, setAdmin] = useState([])
+  const URLadmin = process.env.REACT_APP_ADMIN;
+
   useEffect(() => {
     getAp();
     getApi();
+    getAdmin();
   }, []);
 
   const getAp = async () => {
@@ -55,6 +60,20 @@ function App() {
 
       
       setCliente(clienteApi);
+      console.log(clienteApi)
+    } catch (error) {
+      console.log(error);
+    }
+  };
+
+  const getAdmin = async () => {
+    try {
+      const res = await fetch(URLadmin);
+
+      const adminApi = await res.json();
+      setAdmin(adminApi);
+      console.log(adminApi)
+      
     } catch (error) {
       console.log(error);
     }
@@ -71,8 +90,9 @@ function App() {
           <Route exact path="/contactos" element={<ContactUs />} />
           <Route exact path="/nosotros" element={<Nosotros/>} />
           <Route exact path="*" element={<Error404 />} />
-          <Route exact path="/login" element={<Login />} />
+          <Route exact path="/login" element={<Login admin = {admin}/>} />
           <Route exact path="/planes" element={<PaginaPlanes />} />
+          <Route exact path="/adminhome" element={<AdminHomePage/>} />
           <Route
             exact
             path="/planes/primerospasos"

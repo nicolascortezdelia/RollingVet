@@ -1,8 +1,13 @@
 
+
 const regExTel = /^([0-9]{5})+((-{1})*)+([0-9]{6})$/;
 const regEx4Names = /^[A-Za-z\s?]+$/;
-const regExp4Email = /^[a-z0-9!#$%&'*+/=?^_`{|}~-]+(?:\.[a-z0-9!#$%&'*+/=?^_`{|}~-]+)*@(?:[a-z0-9](?:[a-z0-9-]*[a-z0-9])?\.)+[a-z0-9](?:[a-z0-9-]*[a-z0-9])?$/;
-const regExp4Number = /^([0-9])*$/
+
+const regExp4Email =
+  /^[a-z0-9!#$%&'*+/=?^_`{|}~-]+(?:\.[a-z0-9!#$%&'*+/=?^_`{|}~-]+)*@(?:[a-z0-9](?:[a-z0-9-]*[a-z0-9])?\.)+[a-z0-9](?:[a-z0-9-]*[a-z0-9])?$/;
+const regExp4Number = /^([0-9])*$/;
+
+const regExp4Pass =  /^(?=.*[a-z])(?=.*[A-Z])(?=.*[0-9]).{8,30}$/;
 
 
 
@@ -14,18 +19,16 @@ export const validateNames = (campo) => {
     campo !== ""
   ) {
     return true;
+    campo.className = `Form.Control.Feedback Looks good!`;
   } else {
     return false;
-    console.log("error nombre")
+    campo.className = `Form.Control.Feedback Looks good!`;
   }
 };
 
 export const validateTel = (campo) => {
   if (regExTel.test(campo)) {
-    return true;
   } else {
-    return false;
-    console.log(validateTel);
   }
 };
 
@@ -53,3 +56,11 @@ export const validateNumber = (campo) => {
   }
 };
 
+export const validatePassword = (campo)=>{
+  if(regExp4Pass.test(campo)){
+    return true
+  }else{
+    return false
+  }
+
+};
