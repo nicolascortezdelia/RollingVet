@@ -18,6 +18,8 @@ const TurnosCreate = ({ URL2, getAp }) => {
   const [TurnoHora, setTurnoHora] = useState("");
   const navigate = useNavigate();
 
+  const parseDate = (day, hour) => new Date(new Date(date).setHours(hour)).toISOString();
+
   const handleSubmit = (e) => {
     e.preventDefault();
 
@@ -31,12 +33,14 @@ const TurnosCreate = ({ URL2, getAp }) => {
       Swal.fire("Ops!", "Llene correctamente los casilleros.", "error");
       return;
     }
+
+    const horario = parseDate(TurnoFecha, TurnoHora);
+
     const nuevoTurno = {
       TurnoPetName,
       TurnoDoctor,
       TurnoDetalle,
-      TurnoFecha,
-      TurnoHora,
+      horario,
     };
 
     Swal.fire({
@@ -132,7 +136,7 @@ const TurnosCreate = ({ URL2, getAp }) => {
                 <Form.Control
                   type="date"
                   placeholder="Escriba la fecha"
-                  onChange={({ target }) => setTurnoFecha(target.value)}
+                  onChange={({ target }) => setTurnoFecha(target.valueAsNumber)}
                 />
               </Form.Group>
               <Form.Group className="mb-3" controlId="formBasicCheckbox">
@@ -141,15 +145,15 @@ const TurnosCreate = ({ URL2, getAp }) => {
                   onChange={({ target }) => setTurnoHora(target.value)}
                 >
                   <option value="">Elija el horario</option>
-                  <option value="09:00">09:00</option>
-                  <option value="10:00">10:00</option>
-                  <option value="11:00">11:00</option>
-                  <option value="12:00">12:00</option>
-                  <option value="16:00">16:00</option>
-                  <option value="17:00">17:00</option>
-                  <option value="18:00">18:00</option>
-                  <option value="19:00">19:00</option>
-                  <option value="20:00">20:00</option>
+                  <option value="9">09:00</option>
+                  <option value="10">10:00</option>
+                  <option value="11">11:00</option>
+                  <option value="12">12:00</option>
+                  <option value="16">16:00</option>
+                  <option value="17">17:00</option>
+                  <option value="18">18:00</option>
+                  <option value="19">19:00</option>
+                  <option value="20">20:00</option>
                 </Form.Select>
               </Form.Group>
               <button className="btn btn-success">Guardar</button>
