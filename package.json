@@ -1,9 +1,6 @@
 {
   "name": "rollingvet",
   "version": "0.1.0",
-  "engines": {
-    "npm": "16.13.1"
-  },
   "private": true,
   "dependencies": {
     "@emailjs/browser": "^3.4.0",
