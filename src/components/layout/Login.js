@@ -89,13 +89,13 @@ const Login = ({admin}) => {
 
 
     }else if (testEmail()){
-      Swal.fire("Ay!", "Por favor ingrese un email valido", "error");
+      Swal.fire("Ops!", "Por favor ingrese un email valido", "error");
       inEmail.className = "form-control is-invalid";
     }else if (testPassword()) {
-      Swal.fire("Ay!", "Por favor ingrese una contraseña valida", "error");
+      Swal.fire("Ops!", "Por favor ingrese una contraseña valida", "error");
       inPassword.className = "form-control is-invalid";
     } else {
-      Swal.fire("Ay!", "Debe completar todos los campos", "error");
+      Swal.fire("Ops!", "Debe completar todos los campos", "error");
       inEmail.className = "form-control is-invalid";
       inPassword.className = "form-control is-invalid";
     }

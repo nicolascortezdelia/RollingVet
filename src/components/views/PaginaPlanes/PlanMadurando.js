@@ -30,7 +30,7 @@ const PlanMadurando = () => {
    if (!validateNames(name) || !validateEmail(email) || !validateMesage(mesage)) {
      Swal.fire({
        icon: "error",
-       title: "Ay!",
+       title: "Ops!",
        text: "Ingresaste algun dato incorrecto, por favor revisá el formulario",
      });
    } else {

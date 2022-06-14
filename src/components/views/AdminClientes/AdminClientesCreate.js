@@ -30,7 +30,7 @@ const AdminClientesCreate = ({ URL, getApi }) => {
       !validateNames(especie) ||
       !validateNames(raza)
     ) {
-      Swal.fire("Ops!", "Llene correctamente los casilleros.", "error");
+      Swal.fire("Ops!", "Llene correctamente los campos.", "error");
       return;
     }
 
