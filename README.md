@@ -13,6 +13,13 @@ y se guardan en una base de datos en la nube llamada Mongo Atlas_
 
 [Netlify](https://rollingvetc18.netlify.app)
 
+## Iniciar Sesión
+
+Para iniciar sesión como Administrador:
+
+usuario: admin@rollingvet.com 
+password: Rollingvetadmin1
+
 ## Construido con:
 
 - ReactJS
