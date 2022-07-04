@@ -24,6 +24,8 @@ import { useEffect, useState } from "react";
 
 import Nosotros from "./components/Nosotros/Nosotros";
 import AdminHomePage from "./components/views/AdminHomePage/AdminHomePage";
+import config from 'react-reveal/globals';
+
 
 function App() {
   const [turnos, setTurnos] = useState([]);
@@ -79,6 +81,8 @@ function App() {
       console.log(error);
     }
   };
+
+  config({ ssrFadeout: true });
 
   return (
     <BrowserRouter>

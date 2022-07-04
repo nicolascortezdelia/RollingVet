@@ -17,7 +17,7 @@ const Navigation = () => {
       sessionStorage.setItem("stateSession", JSON.stringify(session));
      
  
-      let timerInterval;
+      let timerInterval;  
       Swal.fire({
         title: "Cerrando sesion",
         
@@ -25,10 +25,7 @@ const Navigation = () => {
         timerProgressBar: true,
         didOpen: () => {
           Swal.showLoading();
-          const b = Swal.getHtmlContainer().querySelector("b");
-          timerInterval = setInterval(() => {
-            b.textContent = Swal.getTimerLeft();
-          }, 100);
+          
         },
         willClose: () => {
           clearInterval(timerInterval);
@@ -36,6 +33,10 @@ const Navigation = () => {
       }).then((result) => {
         /* Read more about handling dismissals below */
         if (result.dismiss === Swal.DismissReason.timer) {
+          Swal.fire({
+            title:'Sesión cerrada correctamente',
+            icon: 'success'
+          })
           navigate("/");
         }
       });
