@@ -11,7 +11,7 @@ import {
   validateEmail,
   validateNames,
   validateMesage,
-} from "../../Helpers/ValidacionesPacientes";
+} from "../../Helpers/validacionesPacientes";
 
 init("user_qzhExCW0FgIpI81KTZIIe");
 
