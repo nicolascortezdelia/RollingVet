@@ -1,4 +1,4 @@
-import React from 'react'
+
 import "./app.css";
 import "bootstrap/dist/css/bootstrap.min.css";
 import Home from "./components/views/Home/Home";
