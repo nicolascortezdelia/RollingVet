@@ -19,10 +19,10 @@ export const validateNames = (campo) => {
     campo !== ""
   ) {
     return true;
-    campo.className = `Form.Control.Feedback Looks good!`;
+   
   } else {
     return false;
-    campo.className = `Form.Control.Feedback Looks good!`;
+   
   }
 };
 
