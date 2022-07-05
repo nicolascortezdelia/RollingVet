@@ -5,7 +5,7 @@ import Fade from "react-reveal/Fade";
 import {
   validateEmail,
   validatePassword,
-} from "../Helpers/validacionesPacientes";
+} from "../Helpers/ValidacionesPacientes";
 import Swal from "sweetalert2";
 import bcrypt from "bcryptjs";
 
