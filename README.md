@@ -17,8 +17,8 @@ y se guardan en una base de datos en la nube llamada Mongo Atlas_
 
 Para iniciar sesión como Administrador:
 
-usuario: admin@rollingvet.com 
-password: Rollingvetadmin1
+-usuario: admin@rollingvet.com 
+-password: Rollingvetadmin1
 
 ## Construido con:
 
@@ -34,7 +34,7 @@ password: Rollingvetadmin1
 - [Bootstrap v.5.1.3](https://getbootstrap.com/)
 - [Sweet alert](https://sweetalert2.github.io/#download)
 
-#Instalación
+## Instalación
 Deberás contar con las siguientes dependencias del proyecto:
 
 Node Package Manager
