@@ -17,8 +17,8 @@ y se guardan en una base de datos en la nube llamada Mongo Atlas_
 
 Para iniciar sesión como Administrador:
 
--usuario: admin@rollingvet.com 
--password: Rollingvetadmin1
+- usuario: admin@rollingvet.com 
+- password: Rollingvetadmin1
 
 ## Construido con:
 
