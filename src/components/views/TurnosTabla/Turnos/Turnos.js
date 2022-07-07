@@ -1,10 +1,17 @@
 import React from "react";
 import { Link } from "react-router-dom";
 import Swal from "sweetalert2";
-import Moment from "react-moment"
+
 
 
 const Turnos = ({ turno, URL2, getAp }) => {
+
+const formatDate = (fecha) =>{
+  const newDate = fecha.split("-").reverse().join("-")
+
+  return newDate
+}
+
   const handleDelete = (id) => {
     Swal.fire({
       title: "Esta Seguro?",
@@ -39,7 +46,7 @@ const Turnos = ({ turno, URL2, getAp }) => {
       <td>{turno.TurnoPetName}</td>
       <td>{turno.TurnoDoctor}</td>
       <td>{turno.TurnoDetalle}</td>
-      <td><Moment format="DD/MM/YYYY">{turno.TurnoFecha}</Moment></td>
+      <td>{formatDate(turno.TurnoFecha)}</td>
       <td>{turno.TurnoHora}</td>
       <td className="w-25">
         <div className="d-flex justify-content-center ">
