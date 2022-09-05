@@ -4,7 +4,7 @@ import Swal from "sweetalert2";
 
 const ListaClientes = ({ clientes, URL, getApi }) => {
   const hundleDelete = (id) => {
-    //console.log(id)
+  
     Swal.fire({
       title: "Estas Seguro?",
       text: "No podrás revertir esto!",
@@ -18,7 +18,7 @@ const ListaClientes = ({ clientes, URL, getApi }) => {
             method: "DELETE",
             headers: { "Content-Type": "application/json" },
           });
-          // console.log(res);
+          
           if (res.status === 200) {
             Swal.fire("Borrado!", "Su turno ha sido eliminado.", "success");
             getApi();

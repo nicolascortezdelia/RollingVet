@@ -23,23 +23,23 @@ const EditClientes = ({ URL, getApi }) => {
   const especieRef = useRef("");
   const razaRef = useRef("");
 
-  // funion para navegar entre rutas
+ 
   const navegacion = useNavigate();
 
   useEffect(async () => {
     try {
       const res = await fetch(`${URL}/${id}`);
       const productoApi = await res.json();
-      // console.log(productoApi);
+      
       setProducto(productoApi);
     } catch (error) {
       console.log(error);
     }
   }, []);
-  // Funcion para editar los datos de los pacientes
+ 
   const hundleSubmit = (e) => {
     e.preventDefault();
-    // validar los datos
+  
     if (
       !validateNames(nombreRef.current.value) ||
       !validateNames(apellidoRef.current.value) ||
@@ -52,8 +52,8 @@ const EditClientes = ({ URL, getApi }) => {
       Swal.fire("Perfecto!", "Validación correcta.", "success");
       // return
     }
-    console.log("datos correctos");
-    // Guardar los datos modificados
+   
+   
     const productoEditado = {
       nombre: nombreRef.current.value,
       apellido: apellidoRef.current.value,
@@ -63,7 +63,7 @@ const EditClientes = ({ URL, getApi }) => {
       especie: especieRef.current.value,
       raza: razaRef.current.value,
     };
-    console.log(productoEditado);
+    
     Swal.fire({
       title: "Estas seguro?",
       text: "No podrás revertir esto!",
@@ -78,7 +78,7 @@ const EditClientes = ({ URL, getApi }) => {
             headers: { "Content-Type": "application/json" },
             body: JSON.stringify(productoEditado),
           });
-          console.log(res);
+          
           if (res.status === 200) {
             Swal.fire(
               "Modificado!",

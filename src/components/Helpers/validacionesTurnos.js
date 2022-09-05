@@ -35,9 +35,6 @@ let output2 = date.getFullYear()+ '-'+ `${(date.getMonth()+1) + 1}`.padStart(2,'
 
 
 export const validateFecha =(campo)=>{
-
-  console.log(output)
-  console.log(campo)
   if( campo <= output2 && campo > output) {
   return true
   }else{

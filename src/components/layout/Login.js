@@ -25,7 +25,6 @@ const Login = ({admin}) => {
   useEffect(() => {
     setInEmail(document.getElementById("inEmail"));
     setInPassword(document.getElementById("inPassword"));
-    console.log(admin);
   }, []);
 
   //validación de email
@@ -59,11 +58,9 @@ const Login = ({admin}) => {
       logEmail === admin[0].email &&
       bcrypt.compareSync(logPassword, admin[0].password)
     ) {
-      console.log("validado");
-
       return true;
     } else {
-      console.log("no cumple validacion");
+      
 
       return false;
     }
