@@ -4,6 +4,7 @@ import {
   validateNames,
   validateTel,
   validateEmail,
+  validateNumber,
 } from "../../Helpers/validacionesPacientes";
 import Swal from "sweetalert2";
 import { useNavigate } from "react-router-dom";
@@ -17,7 +18,7 @@ const AdminClientesCreate = ({ URL, getApi }) => {
   const [especie, setEspecie] = useState("");
   const [raza, setRaza] = useState("");
   const navegacion = useNavigate();
-  
+
   const hundleSubmit = async (e) => {
     e.preventDefault();
 
@@ -25,7 +26,7 @@ const AdminClientesCreate = ({ URL, getApi }) => {
       !validateNames(nombre) ||
       !validateNames(apellido) ||
       !validateEmail(eMail) ||
-      !validateTel(telefono) ||
+      !validateNumber(telefono) ||
       !validateNames(nombreMascota) ||
       !validateNames(especie) ||
       !validateNames(raza)

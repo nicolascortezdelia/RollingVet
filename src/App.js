@@ -12,7 +12,6 @@ import AdminClientesCreate from "./components/views/AdminClientes/AdminClientesC
 import ListaClientes from "./components/views/AdminClientes/ListaClientes/ListaClientes";
 import AdminClientes from "./components/views/AdminClientes/AdminClientes";
 import PlanPrimerosPasos from "./components/views/PaginaPlanes/PlanPrimerosPasos";
-
 import PlanAdultos from "./components/views/PaginaPlanes/PlanAdultos";
 import PlanMadurando from "./components/views/PaginaPlanes/PlanMadurando";
 import TurnosCreate from "./components/views/TurnosCreate/TurnosCreate";
@@ -21,7 +20,6 @@ import TurnosTabla from "./components/views/TurnosTabla/TurnosTabla";
 import EditClientes from "./components/views/AdminClientes/ListaClientes/EditClientes";
 import { BrowserRouter, Routes, Route } from "react-router-dom";
 import { useEffect, useState } from "react";
-
 import Nosotros from "./components/Nosotros/Nosotros";
 import AdminHomePage from "./components/views/AdminHomePage/AdminHomePage";
 import config from 'react-reveal/globals';
