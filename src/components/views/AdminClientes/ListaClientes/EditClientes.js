@@ -4,6 +4,7 @@ import {
   validateNames,
   validateTel,
   validateEmail,
+  validateNumber,
 } from "../../../Helpers/validacionesPacientes";
 import Swal from "sweetalert2";
 import { useParams } from "react-router-dom";
@@ -12,9 +13,7 @@ import { useNavigate } from "react-router-dom";
 
 const EditClientes = ({ URL, getApi }) => {
   const [producto, setProducto] = useState({});
-  //parametro
   const { id } = useParams();
-  // Referencias
   const nombreRef = useRef("");
   const apellidoRef = useRef("");
   const eMailRef = useRef("");
@@ -44,13 +43,13 @@ const EditClientes = ({ URL, getApi }) => {
       !validateNames(nombreRef.current.value) ||
       !validateNames(apellidoRef.current.value) ||
       !validateEmail(eMailRef.current.value) ||
-      !validateTel(telefonoRef.current.value) ||
+      !validateNumber(telefonoRef.current.value) ||
       !validateNames(nombreMascotaRef.current.value) ||
       !validateNames(especieRef.current.value) ||
       !validateNames(razaRef.current.value)
     ) {
       Swal.fire("Perfecto!", "Validación correcta.", "success");
-      // return
+       return;
     }
    
    
