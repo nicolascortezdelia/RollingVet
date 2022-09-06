@@ -1,37 +1,37 @@
-import React from "react";
-import { Link } from "react-router-dom";
-import Swal from "sweetalert2";
-
-
+import React from 'react';
+import { Link } from 'react-router-dom';
+import Swal from 'sweetalert2';
 
 const Turnos = ({ turno, URL2, getAp }) => {
+  const formatDate = (fecha) => {
+    const newDate = fecha
+      .split('-')
+      .reverse()
+      .join('-');
 
-const formatDate = (fecha) =>{
-  const newDate = fecha.split("-").reverse().join("-")
-
-  return newDate
-}
+    return newDate;
+  };
 
   const handleDelete = (id) => {
     Swal.fire({
-      title: "Esta Seguro?",
-      text: "Una vez eliminado el turno no hay forma de revertirlo!",
-      icon: "warning",
-      confirmButtonColor: "#3085d6",
-      cancelButtonColor: "#d33",
+      title: 'Esta Seguro?',
+      text: 'Una vez eliminado el turno no hay forma de revertirlo!',
+      icon: 'warning',
+      confirmButtonColor: '#3085d6',
+      cancelButtonColor: '#d33',
       showCancelButton: true,
-      confirmButtonText: "Eliminar",
+      confirmButtonText: 'Eliminar',
     }).then(async (result) => {
       if (result.isConfirmed) {
         try {
           const res = await fetch(`${URL2}/${id}`, {
-            method: "DELETE",
+            method: 'DELETE',
             headers: {
-              "Content-Type": "application/json",
+              'Content-Type': 'application/json',
             },
           });
           if (res.status === 200) {
-            Swal.fire("Eliminado!", "Su turno fue eliminado.", "success");
+            Swal.fire('Eliminado!', 'Su turno fue eliminado.', 'success');
             getAp();
           }
         } catch (error) {

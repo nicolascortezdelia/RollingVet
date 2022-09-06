@@ -33,7 +33,6 @@ const TurnosEdit = ({ URL2, getAp }) => {
 
   const handleSubmit = (e) => {
     e.preventDefault();
-    console.log(TurnoPetNameRef.current.value);
 
     if (
       !validateNombreApellido(TurnoPetNameRef.current.value) ||

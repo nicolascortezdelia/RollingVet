@@ -1,9 +1,9 @@
-import React from "react";
-import { Container, Table } from "react-bootstrap";
-import { Link } from "react-router-dom";
-import Turnos from "./Turnos/Turnos";
+import React from 'react';
+import { Container, Table } from 'react-bootstrap';
+import { Link } from 'react-router-dom';
+import Turnos from './Turnos/Turnos';
 
-const TurnosTabla = ({ turnos, URL2 , getAp}) => {
+const TurnosTabla = ({ turnos, URL2, getAp }) => {
   return (
     <div>
       <Container className="py-5">

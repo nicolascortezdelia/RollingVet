@@ -1,21 +1,21 @@
-import React, { useState } from "react";
-import { Col, Container, Form, Row } from "react-bootstrap";
-import { useNavigate } from "react-router-dom";
-import Swal from "sweetalert2";
+import React, { useState } from 'react';
+import { Col, Container, Form, Row } from 'react-bootstrap';
+import { useNavigate } from 'react-router-dom';
+import Swal from 'sweetalert2';
 import {
   validateFecha,
   validateHora,
   validateNombreApellido,
   validateProf,
   validatetextarea,
-} from "../../Helpers/validacionesTurnos";
+} from '../../Helpers/validacionesTurnos';
 
 const TurnosCreate = ({ URL2, getAp }) => {
-  const [TurnoPetName, setTurnoPetName] = useState("");
-  const [TurnoDoctor, setTurnoDoctor] = useState("");
-  const [TurnoDetalle, setTurnoDetalle] = useState("");
-  const [TurnoFecha, setTurnoFecha] = useState("");
-  const [TurnoHora, setTurnoHora] = useState("");
+  const [TurnoPetName, setTurnoPetName] = useState('');
+  const [TurnoDoctor, setTurnoDoctor] = useState('');
+  const [TurnoDetalle, setTurnoDetalle] = useState('');
+  const [TurnoFecha, setTurnoFecha] = useState('');
+  const [TurnoHora, setTurnoHora] = useState('');
   const navigate = useNavigate();
 
   const handleSubmit = (e) => {
@@ -28,7 +28,7 @@ const TurnosCreate = ({ URL2, getAp }) => {
       !validateFecha(TurnoFecha) ||
       !validateHora(TurnoHora)
     ) {
-      Swal.fire("Ops!", "Llene correctamente los casilleros.", "error");
+      Swal.fire('Ops!', 'Llene correctamente los casilleros.', 'error');
       return;
     }
     const nuevoTurno = {
@@ -40,31 +40,31 @@ const TurnosCreate = ({ URL2, getAp }) => {
     };
 
     Swal.fire({
-      title: "Esta seguro?",
-      text: "No podra revertir este paso!",
-      icon: "warning",
-      confirmButtonColor: "#3085d6",
-      cancelButtonColor: "#d33",
+      title: 'Esta seguro?',
+      text: 'No podra revertir este paso!',
+      icon: 'warning',
+      confirmButtonColor: '#3085d6',
+      cancelButtonColor: '#d33',
       showCancelButton: true,
-      confirmButtonText: "Agendar!",
+      confirmButtonText: 'Agendar!',
     }).then(async (result) => {
       if (result.isConfirmed) {
         try {
           const res = await fetch(URL2, {
-            method: "POST",
+            method: 'POST',
             headers: {
-              "Content-Type": "application/json",
+              'Content-Type': 'application/json',
             },
             body: JSON.stringify(nuevoTurno),
           });
           if (res.status === 201) {
             Swal.fire(
-              "Turno Agendado!",
-              "Su turno fue agendado exitosamente.",
-              "success"
+              'Turno Agendado!',
+              'Su turno fue agendado exitosamente.',
+              'success'
             );
             getAp();
-            navigate("/Turnos/Tabla");
+            navigate('/Turnos/Tabla');
           }
         } catch (error) {
           console.log(error);
