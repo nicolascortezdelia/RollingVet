@@ -1,91 +1,88 @@
-import React, { useRef } from "react";
-import { Container, Row, Col, Card, Form } from "react-bootstrap";
-import Swal from "sweetalert2";
+import React, { useRef } from 'react';
+import { Container, Row, Col, Card, Form } from 'react-bootstrap';
+import Swal from 'sweetalert2';
 
-import { useState } from "react";
-import emailjs from "@emailjs/browser";
-import { init } from "@emailjs/browser";
+import { useState } from 'react';
+import emailjs from '@emailjs/browser';
+import { init } from '@emailjs/browser';
 import {
   validateEmail,
   validateNames,
   validateMesage,
-} from "../../Helpers/validacionesPacientes";
-init("user_qzhExCW0FgIpI81KTZIIe");
+} from '../../Helpers/validacionesPacientes';
+init('user_qzhExCW0FgIpI81KTZIIe');
 
 const PlanAdultos = () => {
+  const [name, setName] = useState('');
+  const [email, setEmail] = useState('');
+  const [mesage, setMesage] = useState('');
 
+  const form = useRef();
 
-   // States
+  const handleSubmit = (e) => {
+    e.preventDefault();
 
-   const [name, setName] = useState("");
-   const [email, setEmail] = useState("");
-   const [mesage, setMesage] = useState("");
- 
-   // EmailJs
-   const form = useRef();
- 
-   const handleSubmit = (e) => {
-     e.preventDefault();
- 
-     // validamos datos
-     if (!validateNames(name) || !validateEmail(email) || !validateMesage(mesage)) {
-       Swal.fire({
-         icon: "error",
-         title: "Ops!",
-         text: "Ingresaste algun dato incorrecto, por favor revisá el formulario",
-       });
-     } else {
-       // Email js
-       emailjs.sendForm("service_dihrpp7", "template_qe3arwq", form.current)
-         .then(
-           (result) => {
-             console.log(result.text);
-           },
-           (error) => {
-             console.log(error.text);
-           }
-         );
-       setName("");
-       setEmail("");
-       setMesage("");
- 
-       Swal.fire({
-         icon: "success",
-         title: "Listo!",
-         text: "Gracias por tu consulta, pronto nos pondremos en contacto con vos",
-       });
-     }
-   };
+    if (
+      !validateNames(name) ||
+      !validateEmail(email) ||
+      !validateMesage(mesage)
+    ) {
+      Swal.fire({
+        icon: 'error',
+        title: 'Ops!',
+        text:
+          'Ingresaste algun dato incorrecto, por favor revisá el formulario',
+      });
+    } else {
+      emailjs
+        .sendForm('service_dihrpp7', 'template_qe3arwq', form.current)
+        .then(
+          (result) => {
+            console.log(result.text);
+          },
+          (error) => {
+            console.log(error.text);
+          }
+        );
+      setName('');
+      setEmail('');
+      setMesage('');
 
+      Swal.fire({
+        icon: 'success',
+        title: 'Listo!',
+        text:
+          'Gracias por tu consulta, pronto nos pondremos en contacto con vos',
+      });
+    }
+  };
 
-    return (
-        <div>
-          
-             <Container >
-      
-        
+  return (
+    <div>
+      <Container>
         <Card className="text-center shadow m-4 ">
-        <Row>
-        <Col sm={12} md={6} className="mb-2">
-          
-            <Card.Body>
-            <Card.Img
-              variant="top"
-              src="https://media.istockphoto.com/photos/dog-golden-retriever-picture-id1287445691?k=20&m=1287445691&s=612x612&w=0&h=NMAx1FBqf0dh0EZtlf7Zf8M0EKLVyanBEk0wwG128-A="
-              alt='perro con pelaje canoso del Plan Adultos'
-            />
-              <h4 className="text-danger">Plan Adultos</h4>
-              <Card.Text>
-                Servicios para mascotas de más de 10 años.
-              </Card.Text>
-              
-            </Card.Body>
-          
-        </Col>
-        <Col sm={12} md={6} className="mt-3 container"> 
-        <h3 className="text-danger">Consultá por este Plan</h3>
-        
-        <Form className="my-4 container text-start " onSubmit={handleSubmit} ref={form} >
+          <Row>
+            <Col sm={12} md={6} className="mb-2">
+              <Card.Body>
+                <Card.Img
+                  variant="top"
+                  src="https://media.istockphoto.com/photos/dog-golden-retriever-picture-id1287445691?k=20&m=1287445691&s=612x612&w=0&h=NMAx1FBqf0dh0EZtlf7Zf8M0EKLVyanBEk0wwG128-A="
+                  alt="perro con pelaje canoso del Plan Adultos"
+                />
+                <h4 className="text-danger">Plan Adultos</h4>
+                <Card.Text>
+                  Servicios para mascotas de más de 10 años.
+                </Card.Text>
+              </Card.Body>
+            </Col>
+            <Col sm={12} md={6} className="mt-3 container">
+              <h3 className="text-danger">Consultá por este Plan</h3>
+
+              <Form
+                className="my-4 container text-start "
+                onSubmit={handleSubmit}
+                ref={form}
+              >
                 <Form.Group
                   className="mb-3"
                   controlId="exampleForm.ControlInput1"
@@ -138,14 +135,12 @@ const PlanAdultos = () => {
                   Enviar
                 </button>
               </Form>
-        </Col>
-        </Row>
+            </Col>
+          </Row>
         </Card>
-        
-    </Container>
-            
-        </div>
-    );
+      </Container>
+    </div>
+  );
 };
 
 export default PlanAdultos;

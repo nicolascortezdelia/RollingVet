@@ -1,28 +1,27 @@
-import React from "react";
-import { Container, Row, Col, Card, Button} from "react-bootstrap";
-import Fade from "react-reveal/Fade";
-import { Link } from "react-router-dom";
+import React from 'react';
+import { Container, Row, Col, Card, Button } from 'react-bootstrap';
+import Fade from 'react-reveal/Fade';
+import { Link } from 'react-router-dom';
 
 const PaginaPlanes = () => {
   return (
     <div className="mb-5">
       <Fade bottom>
-        <Container >
+        <Container>
           <Card className="border-white">
-            <Row >
-              <Col sm={12} md={7}  >
+            <Row>
+              <Col sm={12} md={7}>
                 <div className="mt-5">
-                <h1 className=" display-2  text-danger fst-bold text-center  ">
-                  Nuestros planes
-                </h1>
-                <Card.Text className="text-center p-4">
-                  Cuidá la salud y la nutrición de tu mascota en todas las etapas de su vida.
-                   Explorá nuestros planes y
-                  la información que aparece a continuación y elegí el que mejor para tu mascota.
-                </Card.Text>
-
+                  <h1 className=" display-2  text-danger fst-bold text-center  ">
+                    Nuestros planes
+                  </h1>
+                  <Card.Text className="text-center p-4">
+                    Cuidá la salud y la nutrición de tu mascota en todas las
+                    etapas de su vida. Explorá nuestros planes y la información
+                    que aparece a continuación y elegí el que mejor para tu
+                    mascota.
+                  </Card.Text>
                 </div>
-                
               </Col>
               <Col sm={12} md={5}>
                 <div className="mb-1">
@@ -33,11 +32,9 @@ const PaginaPlanes = () => {
                   />
                 </div>
               </Col>
-            <hr />
+              <hr />
             </Row>
-            
           </Card>
-         
         </Container>
 
         <Container>
@@ -55,7 +52,7 @@ const PaginaPlanes = () => {
                   <h3 className="text-danger display-5">Plan Primeros Pasos</h3>
                   <Card.Text>Servicios para mascotas de 0 a 5 años.</Card.Text>
                   <Link to="/planes/primerospasos">
-                    {" "}
+                    {' '}
                     <Button
                       variant="danger"
                       className="color-navbar rounded-pill"
@@ -73,8 +70,8 @@ const PaginaPlanes = () => {
               <Col
                 sm={12}
                 md={7}
-                xs={{ order: "last" }}
-                xl={{ order: "first" }}
+                xs={{ order: 'last' }}
+                xl={{ order: 'first' }}
               >
                 <Card.Body>
                   <h3 className="text-danger display-5">Plan Madurando</h3>
@@ -92,8 +89,8 @@ const PaginaPlanes = () => {
               <Col
                 sm={12}
                 md={5}
-                xs={{ order: "first" }}
-                xl={{ order: "last" }}
+                xs={{ order: 'first' }}
+                xl={{ order: 'last' }}
               >
                 <Card.Img
                   variant="top"
@@ -130,7 +127,6 @@ const PaginaPlanes = () => {
               </Col>
             </Row>
           </Card>
-          
         </Container>
       </Fade>
     </div>
