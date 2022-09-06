@@ -1,12 +1,12 @@
-import React, {  useState } from "react";
-import { Row, Col } from "react-bootstrap";
+import React, { useState } from 'react';
+import { Row, Col } from 'react-bootstrap';
 
 const Clima = () => {
   const [clima, setClima] = useState([]);
   const [icono, setIcono] = useState({});
-  const [temperatura, setTemperatura] = useState("");
+  const [temperatura, setTemperatura] = useState('');
 
-  window.addEventListener("load", () => {
+  window.addEventListener('load', () => {
     let long;
     let lat;
 
@@ -24,48 +24,34 @@ const Clima = () => {
           .then((data) => {
             setClima(data);
             setIcono(data.weather[0]);
-            setTemperatura(Math.round(data.main.feels_like-273));
+            setTemperatura(Math.round(data.main.feels_like - 273));
           });
       });
     }
   });
 
   return (
-      <div className="bg-danger text-white">
-         
-
-      <Row className="m-0" >
-     <Col className="text-center"   >
-     <p className="text-white fw-bold mb-5 "> Ciudad: </p>
-     
-     <p className="mt-4" >{clima.name}</p>
-     </Col> 
-     <Col className="text-center"  >
-         <p className="text-white fw-bold mb-5"> Temperatura: </p>
-     
-        <p className="mt-4" > {temperatura}ºC </p> 
-         </Col>
+    <div className="bg-danger text-white">
+      <Row className="m-0">
         <Col className="text-center">
-            
-       <p className="text-white fw-bold"> {icono.main}</p> 
-        <img
+          <p className="text-white fw-bold mb-5 "> Ciudad: </p>
+
+          <p className="mt-4">{clima.name}</p>
+        </Col>
+        <Col className="text-center">
+          <p className="text-white fw-bold mb-5"> Temperatura: </p>
+
+          <p className="mt-4"> {temperatura}ºC </p>
+        </Col>
+        <Col className="text-center">
+          <p className="text-white fw-bold"> {icono.main}</p>
+          <img
             src={`http://openweathermap.org/img/wn/${icono.icon}@2x.png`}
             alt="Clima"
             className="img-responsive"
           />
-    
- 
-            
-            </Col>
-            
-      
-
+        </Col>
       </Row>
- 
-          
-        
-
-        
     </div>
   );
 };

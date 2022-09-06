@@ -1,22 +1,22 @@
-import React, { useState } from "react";
-import { Col, Container, Form, Row } from "react-bootstrap";
+import React, { useState } from 'react';
+import { Col, Container, Form, Row } from 'react-bootstrap';
 import {
   validateNames,
   validateTel,
   validateEmail,
   validateNumber,
-} from "../../Helpers/validacionesPacientes";
-import Swal from "sweetalert2";
-import { useNavigate } from "react-router-dom";
+} from '../../Helpers/validacionesPacientes';
+import Swal from 'sweetalert2';
+import { useNavigate } from 'react-router-dom';
 
 const AdminClientesCreate = ({ URL, getApi }) => {
-  const [nombre, setNombre] = useState("");
-  const [apellido, setApellido] = useState("");
-  const [eMail, setEmail] = useState("");
+  const [nombre, setNombre] = useState('');
+  const [apellido, setApellido] = useState('');
+  const [eMail, setEmail] = useState('');
   const [telefono, setTelefono] = useState(0);
-  const [nombreMascota, setNombreMascota] = useState("");
-  const [especie, setEspecie] = useState("");
-  const [raza, setRaza] = useState("");
+  const [nombreMascota, setNombreMascota] = useState('');
+  const [especie, setEspecie] = useState('');
+  const [raza, setRaza] = useState('');
   const navegacion = useNavigate();
 
   const hundleSubmit = async (e) => {
@@ -31,7 +31,7 @@ const AdminClientesCreate = ({ URL, getApi }) => {
       !validateNames(especie) ||
       !validateNames(raza)
     ) {
-      Swal.fire("Ops!", "Llene correctamente los campos.", "error");
+      Swal.fire('Ops!', 'Llene correctamente los campos.', 'error');
       return;
     }
 
@@ -45,25 +45,25 @@ const AdminClientesCreate = ({ URL, getApi }) => {
       raza,
     };
     Swal.fire({
-      title: "Estás seguro?",
-      text: "Quieres guardar los datos",
-      icon: "warning",
-      confirmButtonColor: "#3085d6",
-      cancelButtonColor: "#d33",
+      title: 'Estás seguro?',
+      text: 'Quieres guardar los datos',
+      icon: 'warning',
+      confirmButtonColor: '#3085d6',
+      cancelButtonColor: '#d33',
       showCancelButton: true,
-      confirmButtonText: "Guardar Datos",
+      confirmButtonText: 'Guardar Datos',
     }).then(async (result) => {
       if (result.isConfirmed) {
         try {
           const res = await fetch(URL, {
-            method: "POST",
-            headers: { "Content-Type": "application/json" },
+            method: 'POST',
+            headers: { 'Content-Type': 'application/json' },
             body: JSON.stringify(newPaciente),
           });
           if (res.status === 201) {
-            Swal.fire("Creado!", "Turno creado.", "success");
+            Swal.fire('Creado!', 'Turno creado.', 'success');
             getApi();
-            navegacion("/admin/clientes");
+            navegacion('/admin/clientes');
           }
         } catch (error) {
           console.log(error);
